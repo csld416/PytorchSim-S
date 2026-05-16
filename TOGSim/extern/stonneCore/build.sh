@@ -1,0 +1,1 @@
+g++ -std=c++17 -g -O0 -I/workspace/PyTorchSim/PyTorchSimBackend/extern/stonneCore/include -L/workspace/PyTorchSim/PyTorchSimBackend/extern/stonneCore/lib/ -Wl,-rpath=/workspace/PyTorchSim/PyTorchSimBackend/extern/stonneCore/lib main.cpp -lsstStonne -o main

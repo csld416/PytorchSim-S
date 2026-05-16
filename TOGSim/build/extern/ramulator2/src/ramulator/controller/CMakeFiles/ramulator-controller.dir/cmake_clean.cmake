@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/controller_base.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/controller_base.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o.d"
+  "CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o"
+  "CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ramulator-controller.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
