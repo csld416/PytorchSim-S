@@ -4,14 +4,14 @@
 ssh eclab3090_2
 ```
 
-建立 `/mnt/nvme0/ollie/workspace` 目錄：
+建立 `/mnt/nvme0/ollie/PyTorchSim` 目錄：
 ```bash
-mkdir -p /mnt/nvme0/ollie/workspace
+mkdir -p /mnt/nvme0/ollie/PyTorchSim
 ```
 
 啟動 Container 並掛載目錄：
 ```bash
-docker run -d -it --ipc=host --gpus '"device=1"' --mount type=bind,source=/mnt/nvme0/ollie/workspace,target=/workspace -w /workspace/PyTorchSim -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent --name ollie-PyTorchSim ghcr.io/psal-postech/torchsim-ci:v1.1.0
+docker run -d -it --ipc=host --gpus '"device=1"' --mount type=bind,source=/mnt/nvme0/ollie/PyTorchSim,target=/workspace/PyTorchSim -w /workspace/PyTorchSim -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent --name ollie-PyTorchSim ghcr.io/psal-postech/torchsim-ci:v1.1.0
 ```
 
 進入容器並執行命令：
