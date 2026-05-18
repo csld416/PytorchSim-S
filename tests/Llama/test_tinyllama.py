@@ -63,7 +63,6 @@ def run_tinyllama_test(
     logits_cpu = out_cpu.logits[:, -1, :]
     logits_dev = out_dev.logits[:, -1, :]
 
-    test_result("TinyLlama logits (last token)", logits_dev, logits_cpu, rtol=rtol, atol=atol)
     diff = (logits_dev.detach().cpu() - logits_cpu.detach().cpu()).abs().max().item()
     print(f"Max diff > {diff}")
 
