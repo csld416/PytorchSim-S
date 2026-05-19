@@ -1,4 +1,5 @@
 #include "TileGraphParser.h"
+#include "SsdTrace.h"
 
 void printIndexMap(std::string prefix, const std::map<std::string, int>& indexMap) {
     std::ostringstream oss;
@@ -693,6 +694,7 @@ TileGraphParser::TileGraphParser(std::string onnx_path, std::string attribute_pa
   onnx::ModelProto model_proto;
  
   /* Attribute parsing */
+  std::vector<std::string> runtime_inputs;
   if (_attribute_config["address_info"]) {
     const auto& address_info = _attribute_config["address_info"];
     for (YAML::const_iterator it = address_info.begin(); it != address_info.end(); ++it) {
@@ -700,9 +702,11 @@ TileGraphParser::TileGraphParser(std::string onnx_path, std::string attribute_pa
       uint64_t value = it->second.as<uint64_t>();
 
       _arg_to_address[key] = value;
+      runtime_inputs.push_back(key);
       spdlog::trace("[TOGParser/Attribute] Address Attribute key: {} address: 0x{:x}", key, value);
     }
   }
+  SsdTraceManager::instance().set_runtime_inputs(runtime_inputs);
 
   if (_attribute_config["address_numa_stride"]) {
     const auto& address_numa_stride = _attribute_config["address_numa_stride"];

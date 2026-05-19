@@ -15,7 +15,7 @@ def run_tinyllama_test(
     dtype="float32",
     rtol=1e-3,
     atol=1e-3,
-    compile_model=False,
+    max_new_tokens=5,
     cpu_only=False,
 ):
     print("\n[Running TinyLlama-1.1B HF Test]")
@@ -49,9 +49,8 @@ def run_tinyllama_test(
     input_ids_dev = input_ids_cpu.to(device)
     attention_mask_dev = attention_mask_cpu.to(device)
 
-    if compile_model:
-        print("Compiling TinyLlama with torch.compile(...)")
-        dev_model = torch.compile(dev_model, dynamic=False)
+    print("Compiling TinyLlama with torch.compile(...)")
+    dev_model = torch.compile(dev_model, dynamic=False)
 
     print("Running CPU forward...")
     out_cpu = cpu_model(input_ids=input_ids_cpu, attention_mask=attention_mask_cpu)
@@ -75,8 +74,7 @@ if __name__ == "__main__":
     parser.add_argument("--atol", type=float, default=1e-3)
     parser.add_argument("--max_new_tokens", type=int, default=16)
     parser.add_argument("--hf_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-    parser.add_argument("--prompt", type=str, default="Hello!")
-    parser.add_argument("--compile", action="store_true")
+    parser.add_argument("--prompt", type=str, default="How are you?")
     parser.add_argument("--cpu_only", action="store_true")
     args = parser.parse_args()
 
@@ -93,6 +91,5 @@ if __name__ == "__main__":
         dtype=args.dtype,
         rtol=args.rtol,
         atol=args.atol,
-        compile_model=args.compile,
         cpu_only=args.cpu_only,
     )

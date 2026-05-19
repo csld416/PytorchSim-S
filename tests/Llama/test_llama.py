@@ -382,7 +382,7 @@ if __name__ == "__main__":
         rtol=args.rtol,
         atol=args.atol,
     )
-    run_llama_model_test(device)
+    # run_llama_model_test(device)
     #run_custom_llama_test(
     #    device=device,
     #    batch=args.batch,

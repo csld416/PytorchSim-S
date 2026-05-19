@@ -19,7 +19,7 @@ struct VectorCompare {
 
 class DMA {
  public:
-  DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled);
+  DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled, uint32_t core_freq_mhz);
 
   void issue_tile(std::shared_ptr<Instruction> inst);
   bool is_finished() { return _finished; }
@@ -130,6 +130,7 @@ class DMA {
   uint32_t _tile_idx;
   bool _finished=true;
   bool _l2_datacache_enabled = false;
+  uint32_t _core_freq_mhz = 0;
   std::map<int, std::map<std::vector<int64_t>, uint32_t>> tag_table;
   std::map<int, std::map<std::vector<int64_t>, std::vector<std::shared_ptr<Instruction>>>> waiters;
   std::queue<mem_fetch*> _pending_accesses;

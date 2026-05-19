@@ -1,11 +1,13 @@
 #include "DMA.h"
+#include "SsdTrace.h"
 #include "TileGraph.h"
 #include "TraceLogTags.h"
 
-DMA::DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled) {
+DMA::DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled, uint32_t core_freq_mhz) {
   _id = id;
   _dram_req_size = dram_req_size;
   _l2_datacache_enabled = l2_datacache_enabled;
+  _core_freq_mhz = core_freq_mhz;
   _current_inst = nullptr;
   _finished = true;
 }
@@ -68,6 +70,11 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
           static_cast<void*>(_current_inst.get()));
 
       access->set_cacheable(is_cacheable);
+      SsdTraceManager::instance().maybe_trace_and_mark(
+          _id, core_cycle, _core_freq_mhz, *_current_inst, access);
+      if (access->is_ssd()) {
+        access->set_cacheable(false);
+      }
       _current_inst->inc_waiting_request();
       _pending_accesses.push(access);
     }

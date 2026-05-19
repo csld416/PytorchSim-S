@@ -76,6 +76,15 @@ class mem_fetch {
   void set_start_cycle(uint64_t start_cycle) { m_start_cycle = start_cycle; }
   uint64_t get_start_cycle() { return m_start_cycle; } 
 
+  void set_ssd_latency_cycles(uint64_t cycles) {
+    m_ssd_latency_cycles = cycles;
+    m_is_ssd = true;
+  }
+  bool is_ssd() const { return m_is_ssd; }
+  uint64_t get_ssd_latency_cycles() const { return m_ssd_latency_cycles; }
+  void set_ssd_seq_id(uint64_t seq_id) { m_ssd_seq_id = seq_id; }
+  uint64_t get_ssd_seq_id() const { return m_ssd_seq_id; }
+
   std::string current_state = "NONE";
   uint64_t request_cycle;
   uint64_t response_cycle;
@@ -95,6 +104,9 @@ class mem_fetch {
   void* m_custom_data = NULL;
   uint64_t m_start_cycle = 0ULL;
   bool m_cacheable = true;
+  bool m_is_ssd = false;
+  uint64_t m_ssd_latency_cycles = 0;
+  uint64_t m_ssd_seq_id = 0;
 };
 
 #endif

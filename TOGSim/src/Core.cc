@@ -9,7 +9,7 @@ Core::Core(uint32_t id, SimulationConfig config)
       _core_cycle(0),
       _stat_dma_cycle(0),
       _num_systolic_array_per_core(config.num_systolic_array_per_core),
-      _dma(id, config.dram_req_size, config.l2d_type != L2CacheType::NOCACHE) {
+      _dma(id, config.dram_req_size, config.l2d_type != L2CacheType::NOCACHE, config.core_freq_mhz) {
   _sa_compute_pipeline.resize(_num_systolic_array_per_core);
   _stat_tot_sa_compute_cycle.resize(_num_systolic_array_per_core);
   _stat_sa_compute_cycle.resize(_num_systolic_array_per_core);
