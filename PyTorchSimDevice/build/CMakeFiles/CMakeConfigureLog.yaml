@@ -1255,3 +1255,331 @@ events:
       stdout: |
       exitCode: 255
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e4962/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e4962.dir/build.make CMakeFiles/cmTC_e4962.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e4962.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/usr/local/cuda/include -std=c++17 -o CMakeFiles/cmTC_e4962.dir/detect_cuda_version.cc.o -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_version.cc
+        Linking CXX executable cmTC_e4962
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4962.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_e4962.dir/detect_cuda_version.cc.o -o cmTC_e4962  -Wl,-rpath,/usr/local/cuda/lib64 /usr/local/cuda/lib64/libcudart.so 
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.6
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:314 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31549/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_31549.dir/build.make CMakeFiles/cmTC_31549.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_31549.dir/detect_cuda_compute_capabilities.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 --generate-code=arch=compute_52,code=[compute_52,sm_52] -MD -MT CMakeFiles/cmTC_31549.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_31549.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_31549.dir/detect_cuda_compute_capabilities.cu.o
+        Linking CUDA executable cmTC_31549
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31549.dir/link.txt --verbose=1
+        /usr/bin/g++ @CMakeFiles/cmTC_31549.dir/objects1.rsp -o cmTC_31549 @CMakeFiles/cmTC_31549.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+      exitCode: 255
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b0652/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b0652.dir/build.make CMakeFiles/cmTC_b0652.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b0652.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/usr/local/cuda/include -std=c++17 -o CMakeFiles/cmTC_b0652.dir/detect_cuda_version.cc.o -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_version.cc
+        Linking CXX executable cmTC_b0652
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0652.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b0652.dir/detect_cuda_version.cc.o -o cmTC_b0652  -Wl,-rpath,/usr/local/cuda/lib64 /usr/local/cuda/lib64/libcudart.so 
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.6
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:314 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_07472/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_07472.dir/build.make CMakeFiles/cmTC_07472.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_07472.dir/detect_cuda_compute_capabilities.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 --generate-code=arch=compute_52,code=[compute_52,sm_52] -MD -MT CMakeFiles/cmTC_07472.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_07472.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_07472.dir/detect_cuda_compute_capabilities.cu.o
+        Linking CUDA executable cmTC_07472
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07472.dir/link.txt --verbose=1
+        /usr/bin/g++ @CMakeFiles/cmTC_07472.dir/objects1.rsp -o cmTC_07472 @CMakeFiles/cmTC_07472.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+      exitCode: 255
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b766f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b766f.dir/build.make CMakeFiles/cmTC_b766f.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b766f.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/usr/local/cuda/include -std=c++17 -o CMakeFiles/cmTC_b766f.dir/detect_cuda_version.cc.o -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_version.cc
+        Linking CXX executable cmTC_b766f
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b766f.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b766f.dir/detect_cuda_version.cc.o -o cmTC_b766f  -Wl,-rpath,/usr/local/cuda/lib64 /usr/local/cuda/lib64/libcudart.so 
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.6
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:314 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_40147/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_40147.dir/build.make CMakeFiles/cmTC_40147.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_40147.dir/detect_cuda_compute_capabilities.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 --generate-code=arch=compute_52,code=[compute_52,sm_52] -MD -MT CMakeFiles/cmTC_40147.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_40147.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_40147.dir/detect_cuda_compute_capabilities.cu.o
+        Linking CUDA executable cmTC_40147
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40147.dir/link.txt --verbose=1
+        /usr/bin/g++ @CMakeFiles/cmTC_40147.dir/objects1.rsp -o cmTC_40147 @CMakeFiles/cmTC_40147.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+      exitCode: 255
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_59405/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_59405.dir/build.make CMakeFiles/cmTC_59405.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_59405.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/usr/local/cuda/include -std=c++17 -o CMakeFiles/cmTC_59405.dir/detect_cuda_version.cc.o -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_version.cc
+        Linking CXX executable cmTC_59405
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59405.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_59405.dir/detect_cuda_version.cc.o -o cmTC_59405  -Wl,-rpath,/usr/local/cuda/lib64 /usr/local/cuda/lib64/libcudart.so 
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.6
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:314 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:31 (find_package)"
+    directories:
+      source: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+      binary: "/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2;/opt/conda/lib/python3.11/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_63450/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_63450.dir/build.make CMakeFiles/cmTC_63450.dir/build
+        gmake[1]: Entering directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_63450.dir/detect_cuda_compute_capabilities.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 --generate-code=arch=compute_52,code=[compute_52,sm_52] -MD -MT CMakeFiles/cmTC_63450.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_63450.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /workspace/PyTorchSim/PyTorchSimDevice/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_63450.dir/detect_cuda_compute_capabilities.cu.o
+        Linking CUDA executable cmTC_63450
+        /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63450.dir/link.txt --verbose=1
+        /usr/bin/g++ @CMakeFiles/cmTC_63450.dir/objects1.rsp -o cmTC_63450 @CMakeFiles/cmTC_63450.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+      exitCode: 255
+...

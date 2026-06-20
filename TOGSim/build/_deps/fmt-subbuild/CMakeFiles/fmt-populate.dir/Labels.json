@@ -30,9 +30,6 @@
 		},
 		{
 			"file" : "/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test.rule"
-		},
-		{
-			"file" : "/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update.rule"
 		}
 	],
 	"target" : 

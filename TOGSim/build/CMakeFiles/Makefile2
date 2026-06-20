@@ -406,7 +406,7 @@ src/CMakeFiles/Simulator.dir/all: extern/stonneCore/CMakeFiles/sstStonne.dir/all
 src/CMakeFiles/Simulator.dir/all: extern/onnx/CMakeFiles/onnx_proto.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=1,2 "Built target Simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=1,2,3 "Built target Simulator"
 .PHONY : src/CMakeFiles/Simulator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -439,7 +439,7 @@ extern/ramulator2/CMakeFiles/ramulator.dir/all: extern/ramulator2/src/ramulator/
 extern/ramulator2/CMakeFiles/ramulator.dir/all: extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/ramulator2/CMakeFiles/ramulator.dir/build.make extern/ramulator2/CMakeFiles/ramulator.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/ramulator2/CMakeFiles/ramulator.dir/build.make extern/ramulator2/CMakeFiles/ramulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num= "Built target ramulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=53 "Built target ramulator"
 .PHONY : extern/ramulator2/CMakeFiles/ramulator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1245,12 +1245,12 @@ _deps/fmt-build/CMakeFiles/fmt.dir/clean:
 extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/all:
 	$(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/build.make extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/build.make extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=53 "Built target ramulator-base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num= "Built target ramulator-base"
 .PHONY : extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/all
 
 # Build rule for subdir invocation for target.
 extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/rule
@@ -1401,12 +1401,12 @@ extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/c
 extern/booksim/CMakeFiles/booksim2.dir/all:
 	$(MAKE) $(MAKESILENT) -f extern/booksim/CMakeFiles/booksim2.dir/build.make extern/booksim/CMakeFiles/booksim2.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/booksim/CMakeFiles/booksim2.dir/build.make extern/booksim/CMakeFiles/booksim2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target booksim2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=4,5,6,7,8,9,10 "Built target booksim2"
 .PHONY : extern/booksim/CMakeFiles/booksim2.dir/all
 
 # Build rule for subdir invocation for target.
 extern/booksim/CMakeFiles/booksim2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/booksim/CMakeFiles/booksim2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : extern/booksim/CMakeFiles/booksim2.dir/rule
@@ -1645,12 +1645,12 @@ extern/protobuf/cmake/CMakeFiles/lite-test.dir/all: extern/protobuf/cmake/CMakeF
 extern/protobuf/cmake/CMakeFiles/lite-test.dir/all: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/protobuf/cmake/CMakeFiles/lite-test.dir/build.make extern/protobuf/cmake/CMakeFiles/lite-test.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/protobuf/cmake/CMakeFiles/lite-test.dir/build.make extern/protobuf/cmake/CMakeFiles/lite-test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=42,43 "Built target lite-test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=43 "Built target lite-test"
 .PHONY : extern/protobuf/cmake/CMakeFiles/lite-test.dir/all
 
 # Build rule for subdir invocation for target.
 extern/protobuf/cmake/CMakeFiles/lite-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/protobuf/cmake/CMakeFiles/lite-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : extern/protobuf/cmake/CMakeFiles/lite-test.dir/rule
@@ -1674,12 +1674,12 @@ extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/all: extern/protobuf/cmake/
 extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/all: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/build.make extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/build.make extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=41 "Built target lite-arena-test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=41,42 "Built target lite-arena-test"
 .PHONY : extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/all
 
 # Build rule for subdir invocation for target.
 extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : extern/protobuf/cmake/CMakeFiles/lite-arena-test.dir/rule

@@ -5,6 +5,17 @@ import copy
 import torch
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaForCausalLM, LlamaDecoderLayer, LlamaRMSNorm, LlamaRotaryEmbedding, LlamaModel
+import PyTorchSimFrontend.mlir.mlir_lowering  # registers _safe_softmax override
+
+# import torch._inductor.ir as ir
+# import trace_fill
+# orig = ir.MutationLayoutSHOULDREMOVE.realize_into
+
+# def traced(val, changed_data, unsafe_alias=False):
+#     print("SLOW PATH HIT, changed_data =", changed_data, type(changed_data))
+#     return orig(val, changed_data, unsafe_alias)
+
+# ir.MutationLayoutSHOULDREMOVE.realize_into = staticmethod(traced)
 
 def test_result(name, out, ref, rtol=1e-4, atol=1e-4):
     if torch.allclose(out.cpu(), ref.cpu(), rtol=rtol, atol=atol):
@@ -202,6 +213,15 @@ def run_decoder_layer_test(
 
     print("Compiling LlamaDecoderLayer with torch.compile(...)")
     compiled_layer = torch.compile(model, dynamic=False)
+
+    # Calculate and print the memory range of hidden_states on the device for debugging
+    base = hs_dev.data_ptr()
+    size_bytes = hs_dev.untyped_storage().size()  # total bytes in underlying storage
+    end = base + size_bytes
+    print(f"hs_dev base={base}, end={end}, size_bytes={size_bytes}")
+    used_bytes = hs_dev.numel() * hs_dev.element_size()
+    end_used = base + used_bytes
+    print(f"hs_dev base={base}, end_used={end_used}, used_bytes={used_bytes}")
 
     out_cpu = cpu_layer(
         hidden_states=hidden_states,

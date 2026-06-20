@@ -371,4 +371,5 @@ src/CMakeFiles/Simulator.dir/Core.cc.o: \
  /workspace/PyTorchSim/TOGSim/include/IntervalTree.h \
  /usr/include/c++/11/iostream \
  /workspace/PyTorchSim/TOGSim/include/TraceLogTags.h \
- /workspace/PyTorchSim/TOGSim/include/CoreTraceLog.h
+ /workspace/PyTorchSim/TOGSim/include/CoreTraceLog.h \
+ /workspace/PyTorchSim/TOGSim/include/SsdTrace.h

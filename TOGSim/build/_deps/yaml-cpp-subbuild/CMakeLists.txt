@@ -21,7 +21,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(yaml-cpp-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/jbeder/yaml-cpp.git" "GIT_TAG" "yaml-cpp-0.9.0"
+                     "UPDATE_DISCONNECTED" "True" "GIT_REPOSITORY" "https://github.com/jbeder/yaml-cpp.git" "GIT_TAG" "yaml-cpp-0.9.0"
                     SOURCE_DIR          "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp"
                     BINARY_DIR          "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build"
                     CONFIGURE_COMMAND   ""

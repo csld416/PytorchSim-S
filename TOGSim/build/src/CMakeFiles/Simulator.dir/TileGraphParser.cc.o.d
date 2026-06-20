@@ -463,4 +463,7 @@ src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o: \
  /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/proto_utils.h \
  /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/string_utils.h \
  /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnx-operators_pb.h \
- /workspace/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-operators-ml.pb.h
+ /workspace/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-operators-ml.pb.h \
+ /workspace/PyTorchSim/TOGSim/include/SsdTrace.h \
+ /workspace/PyTorchSim/TOGSim/include/Memfetch.h \
+ /workspace/PyTorchSim/TOGSim/include/Cache_defs.h

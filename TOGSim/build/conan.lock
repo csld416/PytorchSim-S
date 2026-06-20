@@ -57,7 +57,6 @@
     "options": "fPIC=True\nheader_only=False\nno_exceptions=False\nshared=False\nuse_std_fmt=False\nwchar_filenames=False\nwchar_support=False\nfmt:fPIC=True\nfmt:header_only=False\nfmt:shared=False\nfmt:with_fmt_alias=False\nfmt:with_os_api=True",
     "package_id": "012706a2ab6b99a3180c932f394f583ad932fd3f",
     "prev": "0",
-    "modified": true,
     "requires": [
      "7"
     ],
@@ -68,7 +67,6 @@
     "options": "fPIC=True\nheader_only=False\nshared=False\nwith_fmt_alias=False\nwith_os_api=True",
     "package_id": "3bb43d390932310d9ef00e9986e41f02509d79e8",
     "prev": "0",
-    "modified": true,
     "context": "host"
    },
    "8": {
@@ -76,7 +74,6 @@
     "options": "fPIC=True\nshared=False",
     "package_id": "d8d8aba822aaa76849d2f1bafe4a2a62a9f83b74",
     "prev": "0",
-    "modified": true,
     "context": "host"
    }
   },

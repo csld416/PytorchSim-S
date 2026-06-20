@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir"
   "fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch"
   "fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test"
-  "fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update"
 )
 
 # Per-language clean rules from dependency scanning.

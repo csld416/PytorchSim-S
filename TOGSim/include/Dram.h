@@ -48,7 +48,6 @@ class Dram {
   std::vector<std::queue<mem_fetch*>> m_to_crossbar_queue;
   std::vector<std::queue<mem_fetch*>> m_to_mem_queue;
   std::vector<L2CacheBase*> _m_caches;
-  std::vector<std::unique_ptr<DelayQueue<mem_fetch*>>> _ssd_latency_queue;
 };
 
 class DramRamulator2 : public Dram {

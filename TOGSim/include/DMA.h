@@ -22,6 +22,8 @@ class DMA {
   DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled, uint32_t core_freq_mhz);
 
   void issue_tile(std::shared_ptr<Instruction> inst);
+  void update_ssd(cycle_type core_cycle);
+  std::shared_ptr<Instruction> take_ssd_finished();
   bool is_finished() { return _finished; }
   bool empty() { return _current_inst==nullptr; }
   void register_tag(int subgraph_id, std::vector<int64_t>& key) {
@@ -135,5 +137,8 @@ class DMA {
   std::map<int, std::map<std::vector<int64_t>, std::vector<std::shared_ptr<Instruction>>>> waiters;
   std::queue<mem_fetch*> _pending_accesses;
   bool _generated_once = false;
+  bool _ssd_pending = false;
+  cycle_type _ssd_finish_cycle = 0;
+  std::shared_ptr<Instruction> _ssd_finished_inst;
 };
 #endif

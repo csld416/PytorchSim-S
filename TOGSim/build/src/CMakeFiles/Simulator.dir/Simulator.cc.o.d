@@ -429,4 +429,5 @@ src/CMakeFiles/Simulator.dir/Simulator.cc.o: \
  /workspace/PyTorchSim/TOGSim/include/scheduler/Scheduler.h \
  /workspace/PyTorchSim/TOGSim/include/Tile.h \
  /workspace/PyTorchSim/TOGSim/include/TileGraph.h \
- /workspace/PyTorchSim/TOGSim/include/Model.h
+ /workspace/PyTorchSim/TOGSim/include/Model.h \
+ /workspace/PyTorchSim/TOGSim/include/SsdTrace.h

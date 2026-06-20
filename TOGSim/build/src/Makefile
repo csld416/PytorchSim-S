@@ -512,6 +512,30 @@ SparseCore.cc.s:
 	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SparseCore.cc.s
 .PHONY : SparseCore.cc.s
 
+SsdTrace.o: SsdTrace.cc.o
+.PHONY : SsdTrace.o
+
+# target to build an object file
+SsdTrace.cc.o:
+	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdTrace.cc.o
+.PHONY : SsdTrace.cc.o
+
+SsdTrace.i: SsdTrace.cc.i
+.PHONY : SsdTrace.i
+
+# target to preprocess a source file
+SsdTrace.cc.i:
+	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdTrace.cc.i
+.PHONY : SsdTrace.cc.i
+
+SsdTrace.s: SsdTrace.cc.s
+.PHONY : SsdTrace.s
+
+# target to generate assembly for a file
+SsdTrace.cc.s:
+	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdTrace.cc.s
+.PHONY : SsdTrace.cc.s
+
 Tile.o: Tile.cc.o
 .PHONY : Tile.o
 
@@ -711,6 +735,9 @@ help:
 	@echo "... SparseCore.o"
 	@echo "... SparseCore.i"
 	@echo "... SparseCore.s"
+	@echo "... SsdTrace.o"
+	@echo "... SsdTrace.i"
+	@echo "... SsdTrace.s"
 	@echo "... Tile.o"
 	@echo "... Tile.i"
 	@echo "... Tile.s"

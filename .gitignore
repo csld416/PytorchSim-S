@@ -1,9 +1,11 @@
 __pycache__/
 .vscode
+.claude
 *.ipynb_checkpoints
 output
 togsim_results/*
 outputs/*
+ssd_traces/*
 experiments/artifact/logs/*# tutorial generated artifacts
 tutorial/session1/fused/
 tutorial/session1/togsim_results/

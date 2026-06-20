@@ -3,6 +3,8 @@
 #include "TileGraph.h"
 #include "TraceLogTags.h"
 
+#include <cmath>
+
 DMA::DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled, uint32_t core_freq_mhz) {
   _id = id;
   _dram_req_size = dram_req_size;
@@ -14,6 +16,8 @@ DMA::DMA(uint32_t id, uint32_t dram_req_size, bool l2_datacache_enabled, uint32_
 
 void DMA::issue_tile(std::shared_ptr<Instruction> inst) {
   _current_inst = std::move(inst);
+  _ssd_pending = false;
+  _ssd_finish_cycle = 0;
   std::vector<size_t>& tile_size = _current_inst->get_tile_size();
   if (tile_size.size() <= 0 || tile_size.size() > get_max_dim()) {
     spdlog::error("[DMA {}] issued tile is not supported format.. tile.size: {}, tile_size: [{}]", _id, tile_size.size(), fmt::join(tile_size, ", "));
@@ -22,9 +26,47 @@ void DMA::issue_tile(std::shared_ptr<Instruction> inst) {
   _finished = false;
 }
 
+void DMA::update_ssd(cycle_type core_cycle) {
+  if (_ssd_pending && core_cycle >= _ssd_finish_cycle) {
+    _ssd_pending = false;
+    _finished = true;
+    _generated_once = false;
+    if (_current_inst != nullptr) {
+      _ssd_finished_inst = std::move(_current_inst);
+      _current_inst = nullptr;
+    }
+  }
+}
+
+std::shared_ptr<Instruction> DMA::take_ssd_finished() {
+  if (_ssd_finished_inst == nullptr)
+    return nullptr;
+  return std::move(_ssd_finished_inst);
+}
+
 std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_cycle, int nr_req) {
+  auto access_vec = std::make_shared<std::vector<mem_fetch *>>();
+
+  if (_ssd_pending)
+    return access_vec;
 
   if (!_generated_once) {
+    if (_current_inst->is_dma_read()) {
+      uint64_t latency_ns = 0;
+      if (SsdTraceManager::instance().pop_latency_for_instruction(_id, *_current_inst, &latency_ns)) {
+        const double period_ns = _core_freq_mhz > 0 ? 1000.0 / static_cast<double>(_core_freq_mhz) : 0.0;
+        uint64_t latency_cycles = 0;
+        if (period_ns > 0.0) {
+          latency_cycles = static_cast<uint64_t>(std::ceil(static_cast<double>(latency_ns) / period_ns));
+        }
+        if (latency_cycles == 0)
+          latency_cycles = 1;
+        _ssd_pending = true;
+        _ssd_finish_cycle = core_cycle + latency_cycles;
+        _finished = false;
+        return access_vec;
+      }
+    }
     std::shared_ptr<std::set<addr_type>> addr_set =
       _current_inst->get_dram_address(_dram_req_size);
 
@@ -72,9 +114,6 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
       access->set_cacheable(is_cacheable);
       SsdTraceManager::instance().maybe_trace_and_mark(
           _id, core_cycle, _core_freq_mhz, *_current_inst, access);
-      if (access->is_ssd()) {
-        access->set_cacheable(false);
-      }
       _current_inst->inc_waiting_request();
       _pending_accesses.push(access);
     }
@@ -85,7 +124,6 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
     nr_req = _pending_accesses.size();
 
   // Return pending accesses up to nr_req
-  auto access_vec = std::make_shared<std::vector<mem_fetch *>>();
   for (int i = 0; i < nr_req; i++) {
       if (_pending_accesses.empty())
         break;

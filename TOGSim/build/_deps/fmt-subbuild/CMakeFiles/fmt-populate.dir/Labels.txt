@@ -11,4 +11,3 @@
 /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir.rule
 /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch.rule
 /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test.rule
-/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update.rule

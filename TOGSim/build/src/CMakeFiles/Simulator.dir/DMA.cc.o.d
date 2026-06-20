@@ -351,6 +351,9 @@ src/CMakeFiles/Simulator.dir/DMA.cc.o: \
  /workspace/PyTorchSim/TOGSim/include/Memfetch.h \
  /workspace/PyTorchSim/TOGSim/include/Cache_defs.h \
  /usr/include/c++/11/bitset \
+ /workspace/PyTorchSim/TOGSim/include/SsdTrace.h \
+ /usr/include/c++/11/unordered_set \
+ /usr/include/c++/11/bits/unordered_set.h \
  /workspace/PyTorchSim/TOGSim/include/TileGraph.h \
  /workspace/PyTorchSim/TOGSim/include/IntervalTree.h \
  /usr/include/c++/11/iostream \

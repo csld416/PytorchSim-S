@@ -1,5 +1,6 @@
 #include "Core.h"
 #include "CoreTraceLog.h"
+#include "SsdTrace.h"
 #include <spdlog/spdlog.h>
 #include <algorithm>
 
@@ -110,6 +111,13 @@ void Core::compute_cycle() {
 }
 
 void Core::dma_cycle() {
+  _dma.update_ssd(_core_cycle);
+  if (auto ssd_inst = _dma.take_ssd_finished()) {
+    if (ssd_inst->is_dma_read() && ssd_inst->is_async_dma()) {
+      finish_instruction(ssd_inst, InstFinishTraceTag::DmaIssueComplete);
+    }
+    _dma_finished_queue.push_back(std::move(ssd_inst));
+  }
   /* Check finished dma operation */
   while(_dma_finished_queue.size()) {
     std::shared_ptr<Instruction>& instruction = _dma_finished_queue.at(0);

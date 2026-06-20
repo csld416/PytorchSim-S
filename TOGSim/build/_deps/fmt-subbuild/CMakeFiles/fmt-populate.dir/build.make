@@ -71,7 +71,6 @@ CMakeFiles/fmt-populate: CMakeFiles/fmt-populate-complete
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download
-CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure
 CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build
@@ -81,9 +80,6 @@ CMakeFiles/fmt-populate-complete: fmt-populate-prefix/src/fmt-populate-stamp/fmt
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E make_directory /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E touch /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles/fmt-populate-complete
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E touch /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-done
-
-fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update:
-.PHONY : fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update
 
 fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'fmt-populate'"
@@ -112,22 +108,15 @@ fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir:
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -Dcfgdir= -P /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-mkdirs.cmake
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E touch /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir
 
-fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update
+fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'fmt-populate'"
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E echo_append
 	/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E touch /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch
-
-fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update:
-.PHONY : fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update
 
 fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'fmt-populate'"
 	cd /workspace/PyTorchSim/TOGSim/build/_deps/fmt-build && /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E echo_append
 	cd /workspace/PyTorchSim/TOGSim/build/_deps/fmt-build && /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E touch /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test
-
-fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'fmt-populate'"
-	cd /workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt && /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -P /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitupdate.cmake
 
 fmt-populate: CMakeFiles/fmt-populate
 fmt-populate: CMakeFiles/fmt-populate-complete
@@ -138,7 +127,6 @@ fmt-populate: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install
 fmt-populate: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir
 fmt-populate: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch
 fmt-populate: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test
-fmt-populate: fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update
 fmt-populate: CMakeFiles/fmt-populate.dir/build.make
 .PHONY : fmt-populate
 

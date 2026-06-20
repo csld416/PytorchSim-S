@@ -986,6 +986,8 @@ _Python_EXECUTABLE:INTERNAL=/opt/conda/bin/python3.11
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;13;64;;cpython-311-x86_64-linux-gnu;abi3;/opt/conda/lib/python3.11;/opt/conda/lib/python3.11;/opt/conda/lib/python3.11/site-packages;/opt/conda/lib/python3.11/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=1a63c200f2655aa49323c12dae69766d
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
 //Result of TRY_COMPILE

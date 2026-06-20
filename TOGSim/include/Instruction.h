@@ -75,7 +75,7 @@ class Instruction : public std::enable_shared_from_this<Instruction> {
   std::vector<int64_t>& get_tag_stride_list() { return _tag_stride_list; }
   std::vector<int64_t>& get_tag_id() { return _tag_key; }
   void set_addr_name(std::string name, int64_t id) { _addr_name = name; _addr_id = id; }
-  std::string get_addr_name() { return _addr_name; }
+  std::string get_addr_name() const { return _addr_name; }
   int64_t get_addr_id() { return _addr_id; }
   void set_nr_inner_loop(int nr) { _nr_inner_loop = nr; }
   int get_nr_inner_loop() { return _nr_inner_loop; }

@@ -1,4 +1,5 @@
 #include "Simulator.h"
+#include "SsdTrace.h"
 
 #include <fstream>
 #include <sstream>
@@ -8,6 +9,8 @@ Simulator::Simulator(SimulationConfig config, YAML::Node hardware_config_yaml)
     : _config(config),
       _hardware_config_yaml(std::move(hardware_config_yaml)),
       _core_cycles(0) {
+  // Force SSD trace initialization early so tracing can start immediately.
+  SsdTraceManager::instance();
   // Create dram object
   _core_period = 1000000 / (config.core_freq_mhz);
   _icnt_period = 1000000 / (config.icnt_freq_mhz);

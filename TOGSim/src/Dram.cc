@@ -204,7 +204,6 @@ Dram::Dram(SimulationConfig config, cycle_type* core_cycle) {
   for (int ch = 0; ch < _n_ch; ch++) {
     m_to_crossbar_queue.push_back(std::queue<mem_fetch*>());
     m_from_crossbar_queue.push_back(std::queue<mem_fetch*>());
-    _ssd_latency_queue.push_back(std::make_unique<DelayQueue<mem_fetch*>>("SSD", true, -1));
   }
 
   /* Initialize L2 cache */
@@ -242,8 +241,6 @@ DramRamulator2::DramRamulator2(SimulationConfig config, cycle_type* core_cycle) 
 
 bool DramRamulator2::running() {
   for (int ch = 0; ch < _n_ch; ch++) {
-    if (_ssd_latency_queue[ch] && !_ssd_latency_queue[ch]->queue_empty())
-      return true;
     if (mem_fetch* req = _mem[ch]->return_queue_top())
       return true;
     if (mem_fetch* req = _m_caches[ch]->top())
@@ -254,27 +251,12 @@ bool DramRamulator2::running() {
 
 void DramRamulator2::cycle() {
   for (int ch = 0; ch < _n_ch; ch++) {
-    _ssd_latency_queue[ch]->cycle();
     _mem[ch]->cycle();
 
     // From Cache to DRAM
     if (mem_fetch* req = _m_caches[ch]->top()) {
-      if (req->is_ssd()) {
-        const int delay = static_cast<int>(req->get_ssd_latency_cycles());
-        _ssd_latency_queue[ch]->push(req, delay);
-        _m_caches[ch]->pop();
-      } else {
-        _mem[ch]->push(req);
-        _m_caches[ch]->pop();
-      }
-    }
-
-    // From SSD to Cache
-    if (_ssd_latency_queue[ch]->arrived()) {
-      mem_fetch* req = _ssd_latency_queue[ch]->top();
-      req->set_reply();
-      if (_m_caches[ch]->push(req))
-        _ssd_latency_queue[ch]->pop();
+      _mem[ch]->push(req);
+      _m_caches[ch]->pop();
     }
 
     // From DRAM to Cache
@@ -475,8 +457,6 @@ SimpleDRAM::SimpleDRAM(SimulationConfig config, cycle_type* core_cycle) : Dram(c
 
 bool SimpleDRAM::running() {
   for (int ch = 0; ch < _n_ch; ch++) {
-    if (_ssd_latency_queue[ch] && !_ssd_latency_queue[ch]->queue_empty())
-      return true;
     if (!_mem[ch]->queue_empty())
       return true;
     if (mem_fetch* req = _m_caches[ch]->top())
@@ -487,7 +467,6 @@ bool SimpleDRAM::running() {
 
 void SimpleDRAM::cycle() {
   for (int ch = 0; ch < _n_ch; ch++) {
-    _ssd_latency_queue[ch]->cycle();
     _mem[ch]->cycle();
 
     if (_bytes_per_dram_cycle > 0.0)
@@ -504,23 +483,9 @@ void SimpleDRAM::cycle() {
           _bw_credit_bytes[static_cast<size_t>(ch)] -= need;
       }
       if (admit) {
-        if (req->is_ssd()) {
-          const int delay = static_cast<int>(req->get_ssd_latency_cycles());
-          _ssd_latency_queue[ch]->push(req, delay);
-          _m_caches[ch]->pop();
-        } else {
-          _mem[ch]->push(req, _latency);
-          _m_caches[ch]->pop();
-        }
+        _mem[ch]->push(req, _latency);
+        _m_caches[ch]->pop();
       }
-    }
-
-    // From SSD to Cache
-    if (_ssd_latency_queue[ch]->arrived()) {
-      mem_fetch* req = _ssd_latency_queue[ch]->top();
-      req->set_reply();
-      if (_m_caches[ch]->push(req))
-        _ssd_latency_queue[ch]->pop();
     }
 
     // From DRAM to Cache

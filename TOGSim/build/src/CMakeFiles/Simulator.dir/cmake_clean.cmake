@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Simulator.dir/Simulator.cc.o.d"
   "CMakeFiles/Simulator.dir/SparseCore.cc.o"
   "CMakeFiles/Simulator.dir/SparseCore.cc.o.d"
+  "CMakeFiles/Simulator.dir/SsdTrace.cc.o"
+  "CMakeFiles/Simulator.dir/SsdTrace.cc.o.d"
   "CMakeFiles/Simulator.dir/Tile.cc.o"
   "CMakeFiles/Simulator.dir/Tile.cc.o.d"
   "CMakeFiles/Simulator.dir/TileGraph.cc.o"

@@ -6,10 +6,8 @@ import re
 import sys
 import yaml
 import time
-import datetime
 import threading
 from pathlib import Path
-import uuid
 
 import torch
 import numpy as np
@@ -208,9 +206,14 @@ class CycleSimulator():
             #with ProgressBar("[Gem5] Running simulation", silent_mode=is_dryrun):
             output = subprocess.check_output(gem5_cmd, stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError as e:
-            output_error = e.output.decode() if isinstance(e.output, bytes) else str(e.output)
-            logger.debug(f"[Gem5] Gem5 simulation failed with error: \"{output_error}\"")
-            raise RuntimeError(f"Gem5 Simulation Failed: \"{output_error}\"")
+            sto_log_path = os.path.join(dir_path, "sto.log")
+            try:
+                with open(sto_log_path, "r") as f:
+                    sto_log = f.read()
+            except OSError:
+                sto_log = "<sto.log not found>"
+            logger.debug(f"[Gem5] Gem5 simulation failed. sto.log:\n{sto_log}")
+            raise RuntimeError(f"Gem5 Simulation Failed.\nsto.log:\n{sto_log}")
 
         with open(f"{dir_path}/stats.txt", "r") as stat_file:
             raw_list = stat_file.readlines()
@@ -363,11 +366,11 @@ class TOGSimulator():
                 pass
             self._trace_file_handle = None
 
+        stdout_output = ""
         if self.process:
             self.process.wait()
 
             # Read output streams
-            stdout_output = ""
             stderr_output = ""
             if self.process.stdout:
                 stdout_output = self.process.stdout.read()
@@ -379,26 +382,25 @@ class TOGSimulator():
                 sys.stderr.write(stderr_output)
                 sys.stderr.flush()
 
-            # Save stdout to result file
+            self.process = None
+
+        # Save log and trace with a shared sequential index
+        if stdout_output or self.trace_log:
+            log_base_dir = Path(extension_config.CONFIG_TORCHSIM_LOG_PATH)
+            log_base_dir.mkdir(parents=True, exist_ok=True)
+            idx = TOGSimulator._next_result_index(log_base_dir)
+
             if stdout_output:
-                result_path = extension_config.CONFIG_TORCHSIM_LOG_PATH
-                os.makedirs(result_path, exist_ok=True)
-                file_name = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + ".log"
-                result_path = os.path.join(result_path, file_name)
+                result_path = log_base_dir / f"{idx}.log"
                 with open(result_path, "w") as f:
                     f.write(stdout_output)
                 logger.info(f'[TOGSim] Simulation log is stored to "{result_path}"')
-            self.process = None
 
-        # Save trace_log with same name but .trace extension
-        if self.trace_log:
-            result_path = extension_config.CONFIG_TORCHSIM_LOG_PATH
-            os.makedirs(result_path, exist_ok=True)
-            file_name = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + ".trace"
-            trace_path = os.path.join(result_path, file_name)
-            with open(trace_path, "w") as f:
-                f.write(self.trace_log)
-            logger.info(f'[TOGSim] Trace log is stored to "{trace_path}"')
+            if self.trace_log:
+                trace_path = log_base_dir / f"{idx}.trace"
+                with open(trace_path, "w") as f:
+                    f.write(self.trace_log)
+                logger.info(f'[TOGSim] Trace log is stored to "{trace_path}"')
 
         # Clean up FIFOs
         self._cleanup_fifos()
@@ -500,6 +502,18 @@ class TOGSimulator():
             raise KeyError("Key 'core_freq' not found in JSON.")
 
     @staticmethod
+    def _next_result_index(base_dir: Path) -> int:
+        """Return the next sequential index for log/trace file naming."""
+        existing = set()
+        for f in base_dir.iterdir():
+            if f.suffix in (".log", ".trace") and f.stem.isdigit():
+                existing.add(int(f.stem))
+        idx = 1
+        while idx in existing:
+            idx += 1
+        return idx
+
+    @staticmethod
     def get_togsim_command(config_path, togsim_path=None):
         if togsim_path is None:
             togsim_path = os.path.join(extension_config.CONFIG_TORCHSIM_DIR, "TOGSim")
@@ -546,10 +560,9 @@ class TOGSimulator():
             base_dir = Path(extension_config.CONFIG_TORCHSIM_LOG_PATH)
 
         base_dir.mkdir(parents=True, exist_ok=True)
-        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
-        file_name = f"{timestamp}_{uuid.uuid4().hex[:8]}"
-        result_path = base_dir / f"{file_name}.log"
-        trace_file_path = base_dir / f"{file_name}.trace"
+        idx = TOGSimulator._next_result_index(base_dir)
+        result_path = base_dir / f"{idx}.log"
+        trace_file_path = base_dir / f"{idx}.trace"
 
         # Create trace file in result directory
         kernel_id, device_index, stream_index, timestamp = 0, 0, 0, 0
