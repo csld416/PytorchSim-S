@@ -1,8 +1,8 @@
 csrc/CMakeFiles/torch_openreg.dir/aten/native/Minimal.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Minimal.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Minimal.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Minimal.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Common.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Minimal.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/aten/native/Common.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/EmptyTensor.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/TensorBase.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/c10/core/Device.h \
@@ -3211,5 +3211,5 @@ csrc/CMakeFiles/torch_openreg.dir/aten/native/Minimal.cpp.o: \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/autograd/variable_info.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/dynamo/compiled_autograd.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/utils/torch_dispatch_mode.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl

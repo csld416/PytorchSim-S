@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/power/buffer_monitor.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -156,7 +156,7 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/buffer_monitor.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
  /usr/include/c++/11/stack /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_stack.h \
@@ -179,7 +179,7 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/buffer_monitor.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -193,7 +193,7 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/buffer_monitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/cassert \
  /usr/include/assert.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/outputset.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/outputset.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_set.h \

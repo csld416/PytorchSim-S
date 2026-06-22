@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Include any dependencies generated for this target.
 include extern/onnx/CMakeFiles/onnxifi_loader.dir/depend.make
@@ -70,18 +70,18 @@ include extern/onnx/CMakeFiles/onnxifi_loader.dir/progress.make
 include extern/onnx/CMakeFiles/onnxifi_loader.dir/flags.make
 
 extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o: extern/onnx/CMakeFiles/onnxifi_loader.dir/flags.make
-extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o: /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c
+extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c
 extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o: extern/onnx/CMakeFiles/onnxifi_loader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o -MF CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o.d -o CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o -c /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o -MF CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o.d -o CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c
 
 extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c > CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c > CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.i
 
 extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c -o CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_loader.c -o CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.s
 
 # Object files for target onnxifi_loader
 onnxifi_loader_OBJECTS = \
@@ -93,19 +93,19 @@ onnxifi_loader_EXTERNAL_OBJECTS =
 lib/libonnxifi_loader.a: extern/onnx/CMakeFiles/onnxifi_loader.dir/onnx/onnxifi_loader.c.o
 lib/libonnxifi_loader.a: extern/onnx/CMakeFiles/onnxifi_loader.dir/build.make
 lib/libonnxifi_loader.a: extern/onnx/CMakeFiles/onnxifi_loader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ../../lib/libonnxifi_loader.a"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/onnxifi_loader.dir/cmake_clean_target.cmake
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/onnxifi_loader.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ../../lib/libonnxifi_loader.a"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/onnxifi_loader.dir/cmake_clean_target.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/onnxifi_loader.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 extern/onnx/CMakeFiles/onnxifi_loader.dir/build: lib/libonnxifi_loader.a
 .PHONY : extern/onnx/CMakeFiles/onnxifi_loader.dir/build
 
 extern/onnx/CMakeFiles/onnxifi_loader.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/onnxifi_loader.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/onnxifi_loader.dir/cmake_clean.cmake
 .PHONY : extern/onnx/CMakeFiles/onnxifi_loader.dir/clean
 
 extern/onnx/CMakeFiles/onnxifi_loader.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/onnx /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/onnx /workspace/PyTorchSim/TOGSim/build/extern/onnx/CMakeFiles/onnxifi_loader.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx/CMakeFiles/onnxifi_loader.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/onnx/CMakeFiles/onnxifi_loader.dir/depend
 

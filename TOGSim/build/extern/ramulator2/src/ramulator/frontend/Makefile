@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend//CMakeFiles/progress.marks
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend//CMakeFiles/progress.marks
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/clean
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/rule
 .PHONY : extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ ramulator-frontend: extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulato
 
 # fast build rule for target.
 ramulator-frontend/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build
 .PHONY : ramulator-frontend/fast
 
 impl/external.o: impl/external.cpp.o
@@ -181,7 +181,7 @@ impl/external.o: impl/external.cpp.o
 
 # target to build an object file
 impl/external.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.o
 .PHONY : impl/external.cpp.o
 
 impl/external.i: impl/external.cpp.i
@@ -189,7 +189,7 @@ impl/external.i: impl/external.cpp.i
 
 # target to preprocess a source file
 impl/external.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.i
 .PHONY : impl/external.cpp.i
 
 impl/external.s: impl/external.cpp.s
@@ -197,7 +197,7 @@ impl/external.s: impl/external.cpp.s
 
 # target to generate assembly for a file
 impl/external.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.s
 .PHONY : impl/external.cpp.s
 
 impl/memory_trace/latency_throughput_trace.o: impl/memory_trace/latency_throughput_trace.cpp.o
@@ -205,7 +205,7 @@ impl/memory_trace/latency_throughput_trace.o: impl/memory_trace/latency_throughp
 
 # target to build an object file
 impl/memory_trace/latency_throughput_trace.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.o
 .PHONY : impl/memory_trace/latency_throughput_trace.cpp.o
 
 impl/memory_trace/latency_throughput_trace.i: impl/memory_trace/latency_throughput_trace.cpp.i
@@ -213,7 +213,7 @@ impl/memory_trace/latency_throughput_trace.i: impl/memory_trace/latency_throughp
 
 # target to preprocess a source file
 impl/memory_trace/latency_throughput_trace.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.i
 .PHONY : impl/memory_trace/latency_throughput_trace.cpp.i
 
 impl/memory_trace/latency_throughput_trace.s: impl/memory_trace/latency_throughput_trace.cpp.s
@@ -221,7 +221,7 @@ impl/memory_trace/latency_throughput_trace.s: impl/memory_trace/latency_throughp
 
 # target to generate assembly for a file
 impl/memory_trace/latency_throughput_trace.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.s
 .PHONY : impl/memory_trace/latency_throughput_trace.cpp.s
 
 impl/memory_trace/loadstore_trace.o: impl/memory_trace/loadstore_trace.cpp.o
@@ -229,7 +229,7 @@ impl/memory_trace/loadstore_trace.o: impl/memory_trace/loadstore_trace.cpp.o
 
 # target to build an object file
 impl/memory_trace/loadstore_trace.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.o
 .PHONY : impl/memory_trace/loadstore_trace.cpp.o
 
 impl/memory_trace/loadstore_trace.i: impl/memory_trace/loadstore_trace.cpp.i
@@ -237,7 +237,7 @@ impl/memory_trace/loadstore_trace.i: impl/memory_trace/loadstore_trace.cpp.i
 
 # target to preprocess a source file
 impl/memory_trace/loadstore_trace.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.i
 .PHONY : impl/memory_trace/loadstore_trace.cpp.i
 
 impl/memory_trace/loadstore_trace.s: impl/memory_trace/loadstore_trace.cpp.s
@@ -245,7 +245,7 @@ impl/memory_trace/loadstore_trace.s: impl/memory_trace/loadstore_trace.cpp.s
 
 # target to generate assembly for a file
 impl/memory_trace/loadstore_trace.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.s
 .PHONY : impl/memory_trace/loadstore_trace.cpp.s
 
 impl/memory_trace/readwrite_trace.o: impl/memory_trace/readwrite_trace.cpp.o
@@ -253,7 +253,7 @@ impl/memory_trace/readwrite_trace.o: impl/memory_trace/readwrite_trace.cpp.o
 
 # target to build an object file
 impl/memory_trace/readwrite_trace.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.o
 .PHONY : impl/memory_trace/readwrite_trace.cpp.o
 
 impl/memory_trace/readwrite_trace.i: impl/memory_trace/readwrite_trace.cpp.i
@@ -261,7 +261,7 @@ impl/memory_trace/readwrite_trace.i: impl/memory_trace/readwrite_trace.cpp.i
 
 # target to preprocess a source file
 impl/memory_trace/readwrite_trace.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.i
 .PHONY : impl/memory_trace/readwrite_trace.cpp.i
 
 impl/memory_trace/readwrite_trace.s: impl/memory_trace/readwrite_trace.cpp.s
@@ -269,7 +269,7 @@ impl/memory_trace/readwrite_trace.s: impl/memory_trace/readwrite_trace.cpp.s
 
 # target to generate assembly for a file
 impl/memory_trace/readwrite_trace.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.s
 .PHONY : impl/memory_trace/readwrite_trace.cpp.s
 
 impl/processor/simpleO3/core.o: impl/processor/simpleO3/core.cpp.o
@@ -277,7 +277,7 @@ impl/processor/simpleO3/core.o: impl/processor/simpleO3/core.cpp.o
 
 # target to build an object file
 impl/processor/simpleO3/core.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.o
 .PHONY : impl/processor/simpleO3/core.cpp.o
 
 impl/processor/simpleO3/core.i: impl/processor/simpleO3/core.cpp.i
@@ -285,7 +285,7 @@ impl/processor/simpleO3/core.i: impl/processor/simpleO3/core.cpp.i
 
 # target to preprocess a source file
 impl/processor/simpleO3/core.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.i
 .PHONY : impl/processor/simpleO3/core.cpp.i
 
 impl/processor/simpleO3/core.s: impl/processor/simpleO3/core.cpp.s
@@ -293,7 +293,7 @@ impl/processor/simpleO3/core.s: impl/processor/simpleO3/core.cpp.s
 
 # target to generate assembly for a file
 impl/processor/simpleO3/core.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.s
 .PHONY : impl/processor/simpleO3/core.cpp.s
 
 impl/processor/simpleO3/llc.o: impl/processor/simpleO3/llc.cpp.o
@@ -301,7 +301,7 @@ impl/processor/simpleO3/llc.o: impl/processor/simpleO3/llc.cpp.o
 
 # target to build an object file
 impl/processor/simpleO3/llc.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.o
 .PHONY : impl/processor/simpleO3/llc.cpp.o
 
 impl/processor/simpleO3/llc.i: impl/processor/simpleO3/llc.cpp.i
@@ -309,7 +309,7 @@ impl/processor/simpleO3/llc.i: impl/processor/simpleO3/llc.cpp.i
 
 # target to preprocess a source file
 impl/processor/simpleO3/llc.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.i
 .PHONY : impl/processor/simpleO3/llc.cpp.i
 
 impl/processor/simpleO3/llc.s: impl/processor/simpleO3/llc.cpp.s
@@ -317,7 +317,7 @@ impl/processor/simpleO3/llc.s: impl/processor/simpleO3/llc.cpp.s
 
 # target to generate assembly for a file
 impl/processor/simpleO3/llc.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.s
 .PHONY : impl/processor/simpleO3/llc.cpp.s
 
 impl/processor/simpleO3/simpleO3.o: impl/processor/simpleO3/simpleO3.cpp.o
@@ -325,7 +325,7 @@ impl/processor/simpleO3/simpleO3.o: impl/processor/simpleO3/simpleO3.cpp.o
 
 # target to build an object file
 impl/processor/simpleO3/simpleO3.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.o
 .PHONY : impl/processor/simpleO3/simpleO3.cpp.o
 
 impl/processor/simpleO3/simpleO3.i: impl/processor/simpleO3/simpleO3.cpp.i
@@ -333,7 +333,7 @@ impl/processor/simpleO3/simpleO3.i: impl/processor/simpleO3/simpleO3.cpp.i
 
 # target to preprocess a source file
 impl/processor/simpleO3/simpleO3.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.i
 .PHONY : impl/processor/simpleO3/simpleO3.cpp.i
 
 impl/processor/simpleO3/simpleO3.s: impl/processor/simpleO3/simpleO3.cpp.s
@@ -341,7 +341,7 @@ impl/processor/simpleO3/simpleO3.s: impl/processor/simpleO3/simpleO3.cpp.s
 
 # target to generate assembly for a file
 impl/processor/simpleO3/simpleO3.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/build.make extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.s
 .PHONY : impl/processor/simpleO3/simpleO3.cpp.s
 
 # Help Target
@@ -389,7 +389,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

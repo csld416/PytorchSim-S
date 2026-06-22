@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/PyTorchSim/PyTorchSimDevice/torch_openreg")
+  set(CMAKE_INSTALL_PREFIX "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/torch_openreg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY MESSAGE_NEVER FILES "/workspace/PyTorchSim/PyTorchSimDevice/build/third_party/openreg/libopenreg.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY MESSAGE_NEVER FILES "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/third_party/openreg/libopenreg.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenreg.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenreg.so")
     if(CMAKE_INSTALL_DO_STRIP)

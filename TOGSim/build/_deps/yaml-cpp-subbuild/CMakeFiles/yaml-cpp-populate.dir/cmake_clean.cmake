@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/yaml-cpp-populate-mkdir"
   "yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/yaml-cpp-populate-patch"
   "yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/yaml-cpp-populate-test"
+  "yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/yaml-cpp-populate-update"
 )
 
 # Per-language clean rules from dependency scanning.

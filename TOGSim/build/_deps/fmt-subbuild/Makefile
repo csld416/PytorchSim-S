@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

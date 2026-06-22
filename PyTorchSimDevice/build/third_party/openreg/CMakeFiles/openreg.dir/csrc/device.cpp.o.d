@@ -1,7 +1,7 @@
 third_party/openreg/CMakeFiles/openreg.dir/csrc/device.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/csrc/device.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/csrc/device.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
  /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -15,7 +15,7 @@ third_party/openreg/CMakeFiles/openreg.dir/csrc/device.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
  /usr/include/c++/11/pstl/pstl_config.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/stl_function.h \
  /usr/include/c++/11/bits/move.h /usr/include/c++/11/type_traits \
  /usr/include/c++/11/backward/binders.h /usr/include/c++/11/new \

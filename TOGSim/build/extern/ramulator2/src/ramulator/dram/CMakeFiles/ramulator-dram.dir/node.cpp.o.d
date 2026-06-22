@@ -1,7 +1,7 @@
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -218,12 +218,12 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
  /usr/include/c++/11/variant /usr/include/c++/11/bits/parse_numbers.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h

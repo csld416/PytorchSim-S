@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake;-P;/workspace/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitclone.cmake
-source_dir=/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt
-work_dir=/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext
+command=/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake;-P;/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitclone.cmake
+source_dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt
+work_dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext
 repository=https://github.com/fmtlib/fmt.git
 remote=origin
 init_submodules=TRUE

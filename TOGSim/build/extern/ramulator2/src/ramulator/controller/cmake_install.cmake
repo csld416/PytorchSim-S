@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/controller
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

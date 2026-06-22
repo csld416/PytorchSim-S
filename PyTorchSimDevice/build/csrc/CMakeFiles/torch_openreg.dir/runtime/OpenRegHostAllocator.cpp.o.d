@@ -1,7 +1,7 @@
 csrc/CMakeFiles/torch_openreg.dir/runtime/OpenRegHostAllocator.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegHostAllocator.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegHostAllocator.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegHostAllocator.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegHostAllocator.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/CachingHostAllocator.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/c10/core/Allocator.h \
  /usr/include/c++/11/array /usr/include/c++/11/utility \
@@ -264,5 +264,5 @@ csrc/CMakeFiles/torch_openreg.dir/runtime/OpenRegHostAllocator.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl

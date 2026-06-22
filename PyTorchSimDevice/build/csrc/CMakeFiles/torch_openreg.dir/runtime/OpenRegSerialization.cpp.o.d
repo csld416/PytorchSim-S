@@ -1,7 +1,7 @@
 csrc/CMakeFiles/torch_openreg.dir/runtime/OpenRegSerialization.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegSerialization.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegSerialization.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegSerialization.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegSerialization.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/jit/serialization/pickler.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/qualified_name.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/c10/util/ArrayRef.h \

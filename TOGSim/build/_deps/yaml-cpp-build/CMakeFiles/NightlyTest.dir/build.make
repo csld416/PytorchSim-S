@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Utility rule file for NightlyTest.
 
@@ -67,7 +67,7 @@ include _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/compiler_depend.make
 include _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/progress.make
 
 _deps/yaml-cpp-build/CMakeFiles/NightlyTest:
-	cd /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build && /root/.local/lib/python3.11/site-packages/cmake/data/bin/ctest -D NightlyTest
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build && /root/.local/lib/python3.11/site-packages/cmake/data/bin/ctest -D NightlyTest
 
 NightlyTest: _deps/yaml-cpp-build/CMakeFiles/NightlyTest
 NightlyTest: _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/build.make
@@ -78,10 +78,10 @@ _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/build: NightlyTest
 .PHONY : _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/build
 
 _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build && $(CMAKE_COMMAND) -P CMakeFiles/NightlyTest.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build && $(CMAKE_COMMAND) -P CMakeFiles/NightlyTest.dir/cmake_clean.cmake
 .PHONY : _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/clean
 
 _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/yaml-cpp-build/CMakeFiles/NightlyTest.dir/depend
 

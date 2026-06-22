@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dopenreg_EXPORTS
 
-CXX_INCLUDES = -I/opt/conda/include/python3.11 -I/workspace/PyTorchSim/PyTorchSimDevice -I/workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg
+CXX_INCLUDES = -I/opt/conda/include/python3.11 -I/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice -I/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden
 

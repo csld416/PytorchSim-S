@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/rng_double_wrapper.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/rng_double_wrapper.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/rng_double_wrapper.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/rng-double.c \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/rng-double.c \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

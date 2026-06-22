@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Include any dependencies generated for this target.
 include extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/depend.make
@@ -70,144 +70,144 @@ include extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/progr
 include extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o -MF CMakeFiles/ramulator-dram.dir/node.cpp.o.d -o CMakeFiles/ramulator-dram.dir/node.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o -MF CMakeFiles/ramulator-dram.dir/node.cpp.o.d -o CMakeFiles/ramulator-dram.dir/node.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/node.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp > CMakeFiles/ramulator-dram.dir/node.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp > CMakeFiles/ramulator-dram.dir/node.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/node.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp -o CMakeFiles/ramulator-dram.dir/node.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.cpp -o CMakeFiles/ramulator-dram.dir/node.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o -MF CMakeFiles/ramulator-dram.dir/device.cpp.o.d -o CMakeFiles/ramulator-dram.dir/device.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o -MF CMakeFiles/ramulator-dram.dir/device.cpp.o.d -o CMakeFiles/ramulator-dram.dir/device.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/device.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp > CMakeFiles/ramulator-dram.dir/device.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp > CMakeFiles/ramulator-dram.dir/device.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/device.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp -o CMakeFiles/ramulator-dram.dir/device.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp -o CMakeFiles/ramulator-dram.dir/device.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o -MF CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o.d -o CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o -MF CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o.d -o CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/dram_spec.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp > CMakeFiles/ramulator-dram.dir/dram_spec.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp > CMakeFiles/ramulator-dram.dir/dram_spec.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/dram_spec.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp -o CMakeFiles/ramulator-dram.dir/dram_spec.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.cpp -o CMakeFiles/ramulator-dram.dir/dram_spec.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR3.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR4.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp > CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/DDR5.cpp -o CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM1.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp > CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM3.cpp -o CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.s
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/flags.make
-extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp
+extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o -MF CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o.d -o CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp > CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp > CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.i
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp -o CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/LPDDR5.cpp -o CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.s
 
 ramulator-dram: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o
 ramulator-dram: extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o
@@ -227,10 +227,10 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/build: ramula
 .PHONY : extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/build
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && $(CMAKE_COMMAND) -P CMakeFiles/ramulator-dram.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram && $(CMAKE_COMMAND) -P CMakeFiles/ramulator-dram.dir/cmake_clean.cmake
 .PHONY : extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/clean
 
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/depend
 

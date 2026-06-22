@@ -1,7 +1,7 @@
 extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/request.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.h \
  /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -159,4 +159,4 @@ extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/request.cpp.o
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h

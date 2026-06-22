@@ -1,7 +1,7 @@
 src/CMakeFiles/Simulator.dir/SparseCore.cc.o: \
- /workspace/PyTorchSim/TOGSim/src/SparseCore.cc \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SparseCore.cc \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/include/SparseCore.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/SparseCore.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -186,7 +186,7 @@ src/CMakeFiles/Simulator.dir/SparseCore.cc.o: \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /workspace/PyTorchSim/TOGSim/include/Core.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Core.h \
  /root/.conan/data/robin-hood-hashing/3.11.5/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/robin_hood.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_algobase.h /usr/include/c++/11/iterator \
@@ -268,11 +268,11 @@ src/CMakeFiles/Simulator.dir/SparseCore.cc.o: \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
  /root/.conan/data/fmt/10.0.0/_/_/package/3bb43d390932310d9ef00e9986e41f02509d79e8/include/fmt/core.h \
- /workspace/PyTorchSim/TOGSim/include/Dram.h /usr/include/c++/11/optional \
- /usr/include/c++/11/queue /usr/include/c++/11/deque \
- /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /usr/include/c++/11/bits/stl_queue.h \
- /workspace/PyTorchSim/TOGSim/include/Common.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Dram.h \
+ /usr/include/c++/11/optional /usr/include/c++/11/queue \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Common.h \
  /root/.conan/data/spdlog/1.11.0/_/_/package/012706a2ab6b99a3180c932f394f583ad932fd3f/include/spdlog/fmt/ranges.h \
  /root/.conan/data/spdlog/1.11.0/_/_/package/012706a2ab6b99a3180c932f394f583ad932fd3f/include/spdlog/spdlog.h \
  /root/.conan/data/spdlog/1.11.0/_/_/package/012706a2ab6b99a3180c932f394f583ad932fd3f/include/spdlog/common.h \
@@ -345,81 +345,81 @@ src/CMakeFiles/Simulator.dir/SparseCore.cc.o: \
  /root/.conan/data/yaml-cpp/0.8.0/_/_/package/d8d8aba822aaa76849d2f1bafe4a2a62a9f83b74/include/yaml-cpp/node/detail/impl.h \
  /root/.conan/data/yaml-cpp/0.8.0/_/_/package/d8d8aba822aaa76849d2f1bafe4a2a62a9f83b74/include/yaml-cpp/node/parse.h \
  /root/.conan/data/yaml-cpp/0.8.0/_/_/package/d8d8aba822aaa76849d2f1bafe4a2a62a9f83b74/include/yaml-cpp/node/emit.h \
- /workspace/PyTorchSim/TOGSim/include/SimulationConfig.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/SimulationConfig.h \
  /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
  /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /workspace/PyTorchSim/TOGSim/include/Instruction.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Instruction.h \
  /usr/include/c++/11/fstream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /workspace/PyTorchSim/TOGSim/include/DMA.h \
- /workspace/PyTorchSim/TOGSim/include/Tile.h \
- /workspace/PyTorchSim/TOGSim/include/Memfetch.h \
- /workspace/PyTorchSim/TOGSim/include/Cache_defs.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/DMA.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Tile.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Memfetch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Cache_defs.h \
  /usr/include/c++/11/bitset \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.hh \
- /workspace/PyTorchSim/TOGSim/include/Memfetch.h \
- /workspace/PyTorchSim/TOGSim/include/Hashing.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.hh \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Memfetch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Hashing.h \
  /usr/include/c++/11/stdlib.h \
- /workspace/PyTorchSim/TOGSim/include/Cache.h \
- /workspace/PyTorchSim/TOGSim/include/Cache_stats.h \
- /workspace/PyTorchSim/TOGSim/include/DelayQueue.h \
- /workspace/PyTorchSim/TOGSim/include/L2Cache.h \
- /workspace/PyTorchSim/TOGSim/include/IntervalTree.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Cache.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Cache_stats.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/DelayQueue.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/L2Cache.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/IntervalTree.h \
  /usr/include/c++/11/iostream \
- /workspace/PyTorchSim/TOGSim/include/TraceLogTags.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/sstStonne.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/STONNEModel.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/MSNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DSNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DSwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/types.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DataPackage.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Connection.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Stats.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Unit.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Config.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/MSwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Fifo.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerMSN.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/StonneTile.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerComponent.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DNNLayer.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/MultiplierNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DSNetworkTop.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DistributionNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/ASNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/ASwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerART.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/ReduceNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/AccumulationBuffer.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Accumulator.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/MemoryController.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/lsQueue.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/LookupTable.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CollectionBus.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CollectionBusLine.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/FENetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/FEASwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerFEN.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseSDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseDenseSDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/TemporalRN.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/OSMeshSDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/OSMeshMN.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/MultiplierOS.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerMultiplierMesh.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_MSNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_MSwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_ASNetwork.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_ASwitch.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/OuterLoopSpGEMMSDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/GustavsonsSpGEMMSDMemory.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/Config.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/TraceLogTags.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/sstStonne.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/STONNEModel.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/MSNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DSNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DSwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/types.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DataPackage.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Connection.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Stats.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Unit.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Config.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/MSwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Fifo.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerMSN.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/StonneTile.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerComponent.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DNNLayer.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/MultiplierNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DSNetworkTop.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DistributionNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/ASNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/ASwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerART.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/ReduceNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/AccumulationBuffer.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Accumulator.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/MemoryController.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/lsQueue.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/LookupTable.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CollectionBus.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CollectionBusLine.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/FENetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/FEASwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerFEN.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseSDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseDenseSDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/TemporalRN.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/OSMeshSDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/OSMeshMN.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/MultiplierOS.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/CompilerMultiplierMesh.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_MSNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_MSwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_ASNetwork.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SparseFlex_ASwitch.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/OuterLoopSpGEMMSDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/GustavsonsSpGEMMSDMemory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/Config.h

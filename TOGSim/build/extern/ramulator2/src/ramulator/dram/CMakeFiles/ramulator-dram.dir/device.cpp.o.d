@@ -1,7 +1,7 @@
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/device.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -209,7 +209,7 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o:
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_map.h \
@@ -217,13 +217,13 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o:
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/variant \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/parse_numbers.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc

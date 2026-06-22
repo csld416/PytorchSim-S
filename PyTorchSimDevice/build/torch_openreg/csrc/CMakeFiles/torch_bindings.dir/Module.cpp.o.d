@@ -1,5 +1,5 @@
 torch_openreg/csrc/CMakeFiles/torch_bindings.dir/Module.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/torch_openreg/csrc/Module.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/torch_openreg/csrc/Module.cpp \
  /usr/include/stdc-predef.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/Context.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/BlasBackend.h \
@@ -4885,8 +4885,8 @@ torch_openreg/csrc/CMakeFiles/torch_bindings.dir/Module.cpp.o: \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/VariableHooksInterface.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/utils/tensor_numpy.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/csrc/utils/device_lazy_init.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegFunctions.h \
- /workspace/PyTorchSim/PyTorchSimDevice/include/Macros.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/amp/OpenRegAmp.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
- /workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegFunctions.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/include/Macros.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/amp/OpenRegAmp.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/include/openreg.inl

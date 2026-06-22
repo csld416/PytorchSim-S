@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/PyTorchSim/TOGSim
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,22 +44,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/src/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/extern/booksim/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/booksim/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/extern/stonneCore/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -70,5 +70,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspace/PyTorchSim/TOGSim/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

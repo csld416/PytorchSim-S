@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles /workspace/PyTorchSim/TOGSim/build/extern/stonneCore//CMakeFiles/progress.marks
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore//CMakeFiles/progress.marks
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/clean
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/stonneCore/CMakeFiles/sstStonne.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/CMakeFiles/sstStonne.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/CMakeFiles/sstStonne.dir/rule
 .PHONY : extern/stonneCore/CMakeFiles/sstStonne.dir/rule
 
 # Convenience name for target.
@@ -173,12 +173,12 @@ sstStonne: extern/stonneCore/CMakeFiles/sstStonne.dir/rule
 
 # fast build rule for target.
 sstStonne/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/build
 .PHONY : sstStonne/fast
 
 # Convenience name for target.
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/rule
 .PHONY : extern/stonneCore/CMakeFiles/sstStonne_shared.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ sstStonne_shared: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/rule
 
 # fast build rule for target.
 sstStonne_shared/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build
 .PHONY : sstStonne_shared/fast
 
 src/ASNetwork.o: src/ASNetwork.cpp.o
@@ -195,8 +195,8 @@ src/ASNetwork.o: src/ASNetwork.cpp.o
 
 # target to build an object file
 src/ASNetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o
 .PHONY : src/ASNetwork.cpp.o
 
 src/ASNetwork.i: src/ASNetwork.cpp.i
@@ -204,8 +204,8 @@ src/ASNetwork.i: src/ASNetwork.cpp.i
 
 # target to preprocess a source file
 src/ASNetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i
 .PHONY : src/ASNetwork.cpp.i
 
 src/ASNetwork.s: src/ASNetwork.cpp.s
@@ -213,8 +213,8 @@ src/ASNetwork.s: src/ASNetwork.cpp.s
 
 # target to generate assembly for a file
 src/ASNetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s
 .PHONY : src/ASNetwork.cpp.s
 
 src/ASwitch.o: src/ASwitch.cpp.o
@@ -222,8 +222,8 @@ src/ASwitch.o: src/ASwitch.cpp.o
 
 # target to build an object file
 src/ASwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o
 .PHONY : src/ASwitch.cpp.o
 
 src/ASwitch.i: src/ASwitch.cpp.i
@@ -231,8 +231,8 @@ src/ASwitch.i: src/ASwitch.cpp.i
 
 # target to preprocess a source file
 src/ASwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i
 .PHONY : src/ASwitch.cpp.i
 
 src/ASwitch.s: src/ASwitch.cpp.s
@@ -240,8 +240,8 @@ src/ASwitch.s: src/ASwitch.cpp.s
 
 # target to generate assembly for a file
 src/ASwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s
 .PHONY : src/ASwitch.cpp.s
 
 src/AccumulationBuffer.o: src/AccumulationBuffer.cpp.o
@@ -249,8 +249,8 @@ src/AccumulationBuffer.o: src/AccumulationBuffer.cpp.o
 
 # target to build an object file
 src/AccumulationBuffer.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o
 .PHONY : src/AccumulationBuffer.cpp.o
 
 src/AccumulationBuffer.i: src/AccumulationBuffer.cpp.i
@@ -258,8 +258,8 @@ src/AccumulationBuffer.i: src/AccumulationBuffer.cpp.i
 
 # target to preprocess a source file
 src/AccumulationBuffer.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i
 .PHONY : src/AccumulationBuffer.cpp.i
 
 src/AccumulationBuffer.s: src/AccumulationBuffer.cpp.s
@@ -267,8 +267,8 @@ src/AccumulationBuffer.s: src/AccumulationBuffer.cpp.s
 
 # target to generate assembly for a file
 src/AccumulationBuffer.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/AccumulationBuffer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s
 .PHONY : src/AccumulationBuffer.cpp.s
 
 src/Accumulator.o: src/Accumulator.cpp.o
@@ -276,8 +276,8 @@ src/Accumulator.o: src/Accumulator.cpp.o
 
 # target to build an object file
 src/Accumulator.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o
 .PHONY : src/Accumulator.cpp.o
 
 src/Accumulator.i: src/Accumulator.cpp.i
@@ -285,8 +285,8 @@ src/Accumulator.i: src/Accumulator.cpp.i
 
 # target to preprocess a source file
 src/Accumulator.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i
 .PHONY : src/Accumulator.cpp.i
 
 src/Accumulator.s: src/Accumulator.cpp.s
@@ -294,8 +294,8 @@ src/Accumulator.s: src/Accumulator.cpp.s
 
 # target to generate assembly for a file
 src/Accumulator.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Accumulator.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s
 .PHONY : src/Accumulator.cpp.s
 
 src/CollectionBus.o: src/CollectionBus.cpp.o
@@ -303,8 +303,8 @@ src/CollectionBus.o: src/CollectionBus.cpp.o
 
 # target to build an object file
 src/CollectionBus.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o
 .PHONY : src/CollectionBus.cpp.o
 
 src/CollectionBus.i: src/CollectionBus.cpp.i
@@ -312,8 +312,8 @@ src/CollectionBus.i: src/CollectionBus.cpp.i
 
 # target to preprocess a source file
 src/CollectionBus.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i
 .PHONY : src/CollectionBus.cpp.i
 
 src/CollectionBus.s: src/CollectionBus.cpp.s
@@ -321,8 +321,8 @@ src/CollectionBus.s: src/CollectionBus.cpp.s
 
 # target to generate assembly for a file
 src/CollectionBus.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBus.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s
 .PHONY : src/CollectionBus.cpp.s
 
 src/CollectionBusLine.o: src/CollectionBusLine.cpp.o
@@ -330,8 +330,8 @@ src/CollectionBusLine.o: src/CollectionBusLine.cpp.o
 
 # target to build an object file
 src/CollectionBusLine.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o
 .PHONY : src/CollectionBusLine.cpp.o
 
 src/CollectionBusLine.i: src/CollectionBusLine.cpp.i
@@ -339,8 +339,8 @@ src/CollectionBusLine.i: src/CollectionBusLine.cpp.i
 
 # target to preprocess a source file
 src/CollectionBusLine.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i
 .PHONY : src/CollectionBusLine.cpp.i
 
 src/CollectionBusLine.s: src/CollectionBusLine.cpp.s
@@ -348,8 +348,8 @@ src/CollectionBusLine.s: src/CollectionBusLine.cpp.s
 
 # target to generate assembly for a file
 src/CollectionBusLine.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CollectionBusLine.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s
 .PHONY : src/CollectionBusLine.cpp.s
 
 src/CompilerART.o: src/CompilerART.cpp.o
@@ -357,8 +357,8 @@ src/CompilerART.o: src/CompilerART.cpp.o
 
 # target to build an object file
 src/CompilerART.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o
 .PHONY : src/CompilerART.cpp.o
 
 src/CompilerART.i: src/CompilerART.cpp.i
@@ -366,8 +366,8 @@ src/CompilerART.i: src/CompilerART.cpp.i
 
 # target to preprocess a source file
 src/CompilerART.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i
 .PHONY : src/CompilerART.cpp.i
 
 src/CompilerART.s: src/CompilerART.cpp.s
@@ -375,8 +375,8 @@ src/CompilerART.s: src/CompilerART.cpp.s
 
 # target to generate assembly for a file
 src/CompilerART.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerART.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s
 .PHONY : src/CompilerART.cpp.s
 
 src/CompilerFEN.o: src/CompilerFEN.cpp.o
@@ -384,8 +384,8 @@ src/CompilerFEN.o: src/CompilerFEN.cpp.o
 
 # target to build an object file
 src/CompilerFEN.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o
 .PHONY : src/CompilerFEN.cpp.o
 
 src/CompilerFEN.i: src/CompilerFEN.cpp.i
@@ -393,8 +393,8 @@ src/CompilerFEN.i: src/CompilerFEN.cpp.i
 
 # target to preprocess a source file
 src/CompilerFEN.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i
 .PHONY : src/CompilerFEN.cpp.i
 
 src/CompilerFEN.s: src/CompilerFEN.cpp.s
@@ -402,8 +402,8 @@ src/CompilerFEN.s: src/CompilerFEN.cpp.s
 
 # target to generate assembly for a file
 src/CompilerFEN.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerFEN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s
 .PHONY : src/CompilerFEN.cpp.s
 
 src/CompilerMSN.o: src/CompilerMSN.cpp.o
@@ -411,8 +411,8 @@ src/CompilerMSN.o: src/CompilerMSN.cpp.o
 
 # target to build an object file
 src/CompilerMSN.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o
 .PHONY : src/CompilerMSN.cpp.o
 
 src/CompilerMSN.i: src/CompilerMSN.cpp.i
@@ -420,8 +420,8 @@ src/CompilerMSN.i: src/CompilerMSN.cpp.i
 
 # target to preprocess a source file
 src/CompilerMSN.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i
 .PHONY : src/CompilerMSN.cpp.i
 
 src/CompilerMSN.s: src/CompilerMSN.cpp.s
@@ -429,8 +429,8 @@ src/CompilerMSN.s: src/CompilerMSN.cpp.s
 
 # target to generate assembly for a file
 src/CompilerMSN.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMSN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s
 .PHONY : src/CompilerMSN.cpp.s
 
 src/CompilerMultiplierMesh.o: src/CompilerMultiplierMesh.cpp.o
@@ -438,8 +438,8 @@ src/CompilerMultiplierMesh.o: src/CompilerMultiplierMesh.cpp.o
 
 # target to build an object file
 src/CompilerMultiplierMesh.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o
 .PHONY : src/CompilerMultiplierMesh.cpp.o
 
 src/CompilerMultiplierMesh.i: src/CompilerMultiplierMesh.cpp.i
@@ -447,8 +447,8 @@ src/CompilerMultiplierMesh.i: src/CompilerMultiplierMesh.cpp.i
 
 # target to preprocess a source file
 src/CompilerMultiplierMesh.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i
 .PHONY : src/CompilerMultiplierMesh.cpp.i
 
 src/CompilerMultiplierMesh.s: src/CompilerMultiplierMesh.cpp.s
@@ -456,8 +456,8 @@ src/CompilerMultiplierMesh.s: src/CompilerMultiplierMesh.cpp.s
 
 # target to generate assembly for a file
 src/CompilerMultiplierMesh.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/CompilerMultiplierMesh.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s
 .PHONY : src/CompilerMultiplierMesh.cpp.s
 
 src/Config.o: src/Config.cpp.o
@@ -465,8 +465,8 @@ src/Config.o: src/Config.cpp.o
 
 # target to build an object file
 src/Config.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o
 .PHONY : src/Config.cpp.o
 
 src/Config.i: src/Config.cpp.i
@@ -474,8 +474,8 @@ src/Config.i: src/Config.cpp.i
 
 # target to preprocess a source file
 src/Config.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i
 .PHONY : src/Config.cpp.i
 
 src/Config.s: src/Config.cpp.s
@@ -483,8 +483,8 @@ src/Config.s: src/Config.cpp.s
 
 # target to generate assembly for a file
 src/Config.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Config.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s
 .PHONY : src/Config.cpp.s
 
 src/Connection.o: src/Connection.cpp.o
@@ -492,8 +492,8 @@ src/Connection.o: src/Connection.cpp.o
 
 # target to build an object file
 src/Connection.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o
 .PHONY : src/Connection.cpp.o
 
 src/Connection.i: src/Connection.cpp.i
@@ -501,8 +501,8 @@ src/Connection.i: src/Connection.cpp.i
 
 # target to preprocess a source file
 src/Connection.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i
 .PHONY : src/Connection.cpp.i
 
 src/Connection.s: src/Connection.cpp.s
@@ -510,8 +510,8 @@ src/Connection.s: src/Connection.cpp.s
 
 # target to generate assembly for a file
 src/Connection.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Connection.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s
 .PHONY : src/Connection.cpp.s
 
 src/DNNLayer.o: src/DNNLayer.cpp.o
@@ -519,8 +519,8 @@ src/DNNLayer.o: src/DNNLayer.cpp.o
 
 # target to build an object file
 src/DNNLayer.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o
 .PHONY : src/DNNLayer.cpp.o
 
 src/DNNLayer.i: src/DNNLayer.cpp.i
@@ -528,8 +528,8 @@ src/DNNLayer.i: src/DNNLayer.cpp.i
 
 # target to preprocess a source file
 src/DNNLayer.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i
 .PHONY : src/DNNLayer.cpp.i
 
 src/DNNLayer.s: src/DNNLayer.cpp.s
@@ -537,8 +537,8 @@ src/DNNLayer.s: src/DNNLayer.cpp.s
 
 # target to generate assembly for a file
 src/DNNLayer.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNLayer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s
 .PHONY : src/DNNLayer.cpp.s
 
 src/DNNModel.o: src/DNNModel.cpp.o
@@ -546,8 +546,8 @@ src/DNNModel.o: src/DNNModel.cpp.o
 
 # target to build an object file
 src/DNNModel.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o
 .PHONY : src/DNNModel.cpp.o
 
 src/DNNModel.i: src/DNNModel.cpp.i
@@ -555,8 +555,8 @@ src/DNNModel.i: src/DNNModel.cpp.i
 
 # target to preprocess a source file
 src/DNNModel.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i
 .PHONY : src/DNNModel.cpp.i
 
 src/DNNModel.s: src/DNNModel.cpp.s
@@ -564,8 +564,8 @@ src/DNNModel.s: src/DNNModel.cpp.s
 
 # target to generate assembly for a file
 src/DNNModel.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DNNModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s
 .PHONY : src/DNNModel.cpp.s
 
 src/DSNetwork.o: src/DSNetwork.cpp.o
@@ -573,8 +573,8 @@ src/DSNetwork.o: src/DSNetwork.cpp.o
 
 # target to build an object file
 src/DSNetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o
 .PHONY : src/DSNetwork.cpp.o
 
 src/DSNetwork.i: src/DSNetwork.cpp.i
@@ -582,8 +582,8 @@ src/DSNetwork.i: src/DSNetwork.cpp.i
 
 # target to preprocess a source file
 src/DSNetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i
 .PHONY : src/DSNetwork.cpp.i
 
 src/DSNetwork.s: src/DSNetwork.cpp.s
@@ -591,8 +591,8 @@ src/DSNetwork.s: src/DSNetwork.cpp.s
 
 # target to generate assembly for a file
 src/DSNetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s
 .PHONY : src/DSNetwork.cpp.s
 
 src/DSNetworkTop.o: src/DSNetworkTop.cpp.o
@@ -600,8 +600,8 @@ src/DSNetworkTop.o: src/DSNetworkTop.cpp.o
 
 # target to build an object file
 src/DSNetworkTop.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o
 .PHONY : src/DSNetworkTop.cpp.o
 
 src/DSNetworkTop.i: src/DSNetworkTop.cpp.i
@@ -609,8 +609,8 @@ src/DSNetworkTop.i: src/DSNetworkTop.cpp.i
 
 # target to preprocess a source file
 src/DSNetworkTop.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i
 .PHONY : src/DSNetworkTop.cpp.i
 
 src/DSNetworkTop.s: src/DSNetworkTop.cpp.s
@@ -618,8 +618,8 @@ src/DSNetworkTop.s: src/DSNetworkTop.cpp.s
 
 # target to generate assembly for a file
 src/DSNetworkTop.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSNetworkTop.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s
 .PHONY : src/DSNetworkTop.cpp.s
 
 src/DSwitch.o: src/DSwitch.cpp.o
@@ -627,8 +627,8 @@ src/DSwitch.o: src/DSwitch.cpp.o
 
 # target to build an object file
 src/DSwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o
 .PHONY : src/DSwitch.cpp.o
 
 src/DSwitch.i: src/DSwitch.cpp.i
@@ -636,8 +636,8 @@ src/DSwitch.i: src/DSwitch.cpp.i
 
 # target to preprocess a source file
 src/DSwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i
 .PHONY : src/DSwitch.cpp.i
 
 src/DSwitch.s: src/DSwitch.cpp.s
@@ -645,8 +645,8 @@ src/DSwitch.s: src/DSwitch.cpp.s
 
 # target to generate assembly for a file
 src/DSwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s
 .PHONY : src/DSwitch.cpp.s
 
 src/DataPackage.o: src/DataPackage.cpp.o
@@ -654,8 +654,8 @@ src/DataPackage.o: src/DataPackage.cpp.o
 
 # target to build an object file
 src/DataPackage.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o
 .PHONY : src/DataPackage.cpp.o
 
 src/DataPackage.i: src/DataPackage.cpp.i
@@ -663,8 +663,8 @@ src/DataPackage.i: src/DataPackage.cpp.i
 
 # target to preprocess a source file
 src/DataPackage.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i
 .PHONY : src/DataPackage.cpp.i
 
 src/DataPackage.s: src/DataPackage.cpp.s
@@ -672,8 +672,8 @@ src/DataPackage.s: src/DataPackage.cpp.s
 
 # target to generate assembly for a file
 src/DataPackage.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s
 .PHONY : src/DataPackage.cpp.s
 
 src/FEASwitch.o: src/FEASwitch.cpp.o
@@ -681,8 +681,8 @@ src/FEASwitch.o: src/FEASwitch.cpp.o
 
 # target to build an object file
 src/FEASwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o
 .PHONY : src/FEASwitch.cpp.o
 
 src/FEASwitch.i: src/FEASwitch.cpp.i
@@ -690,8 +690,8 @@ src/FEASwitch.i: src/FEASwitch.cpp.i
 
 # target to preprocess a source file
 src/FEASwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i
 .PHONY : src/FEASwitch.cpp.i
 
 src/FEASwitch.s: src/FEASwitch.cpp.s
@@ -699,8 +699,8 @@ src/FEASwitch.s: src/FEASwitch.cpp.s
 
 # target to generate assembly for a file
 src/FEASwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FEASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s
 .PHONY : src/FEASwitch.cpp.s
 
 src/FENetwork.o: src/FENetwork.cpp.o
@@ -708,8 +708,8 @@ src/FENetwork.o: src/FENetwork.cpp.o
 
 # target to build an object file
 src/FENetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o
 .PHONY : src/FENetwork.cpp.o
 
 src/FENetwork.i: src/FENetwork.cpp.i
@@ -717,8 +717,8 @@ src/FENetwork.i: src/FENetwork.cpp.i
 
 # target to preprocess a source file
 src/FENetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i
 .PHONY : src/FENetwork.cpp.i
 
 src/FENetwork.s: src/FENetwork.cpp.s
@@ -726,8 +726,8 @@ src/FENetwork.s: src/FENetwork.cpp.s
 
 # target to generate assembly for a file
 src/FENetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/FENetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s
 .PHONY : src/FENetwork.cpp.s
 
 src/Fifo.o: src/Fifo.cpp.o
@@ -735,8 +735,8 @@ src/Fifo.o: src/Fifo.cpp.o
 
 # target to build an object file
 src/Fifo.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o
 .PHONY : src/Fifo.cpp.o
 
 src/Fifo.i: src/Fifo.cpp.i
@@ -744,8 +744,8 @@ src/Fifo.i: src/Fifo.cpp.i
 
 # target to preprocess a source file
 src/Fifo.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i
 .PHONY : src/Fifo.cpp.i
 
 src/Fifo.s: src/Fifo.cpp.s
@@ -753,8 +753,8 @@ src/Fifo.s: src/Fifo.cpp.s
 
 # target to generate assembly for a file
 src/Fifo.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Fifo.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s
 .PHONY : src/Fifo.cpp.s
 
 src/GustavsonsSpGEMMSDMemory.o: src/GustavsonsSpGEMMSDMemory.cpp.o
@@ -762,8 +762,8 @@ src/GustavsonsSpGEMMSDMemory.o: src/GustavsonsSpGEMMSDMemory.cpp.o
 
 # target to build an object file
 src/GustavsonsSpGEMMSDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o
 .PHONY : src/GustavsonsSpGEMMSDMemory.cpp.o
 
 src/GustavsonsSpGEMMSDMemory.i: src/GustavsonsSpGEMMSDMemory.cpp.i
@@ -771,8 +771,8 @@ src/GustavsonsSpGEMMSDMemory.i: src/GustavsonsSpGEMMSDMemory.cpp.i
 
 # target to preprocess a source file
 src/GustavsonsSpGEMMSDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
 .PHONY : src/GustavsonsSpGEMMSDMemory.cpp.i
 
 src/GustavsonsSpGEMMSDMemory.s: src/GustavsonsSpGEMMSDMemory.cpp.s
@@ -780,8 +780,8 @@ src/GustavsonsSpGEMMSDMemory.s: src/GustavsonsSpGEMMSDMemory.cpp.s
 
 # target to generate assembly for a file
 src/GustavsonsSpGEMMSDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
 .PHONY : src/GustavsonsSpGEMMSDMemory.cpp.s
 
 src/LookupTable.o: src/LookupTable.cpp.o
@@ -789,8 +789,8 @@ src/LookupTable.o: src/LookupTable.cpp.o
 
 # target to build an object file
 src/LookupTable.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o
 .PHONY : src/LookupTable.cpp.o
 
 src/LookupTable.i: src/LookupTable.cpp.i
@@ -798,8 +798,8 @@ src/LookupTable.i: src/LookupTable.cpp.i
 
 # target to preprocess a source file
 src/LookupTable.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i
 .PHONY : src/LookupTable.cpp.i
 
 src/LookupTable.s: src/LookupTable.cpp.s
@@ -807,8 +807,8 @@ src/LookupTable.s: src/LookupTable.cpp.s
 
 # target to generate assembly for a file
 src/LookupTable.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/LookupTable.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s
 .PHONY : src/LookupTable.cpp.s
 
 src/MSNetwork.o: src/MSNetwork.cpp.o
@@ -816,8 +816,8 @@ src/MSNetwork.o: src/MSNetwork.cpp.o
 
 # target to build an object file
 src/MSNetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o
 .PHONY : src/MSNetwork.cpp.o
 
 src/MSNetwork.i: src/MSNetwork.cpp.i
@@ -825,8 +825,8 @@ src/MSNetwork.i: src/MSNetwork.cpp.i
 
 # target to preprocess a source file
 src/MSNetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i
 .PHONY : src/MSNetwork.cpp.i
 
 src/MSNetwork.s: src/MSNetwork.cpp.s
@@ -834,8 +834,8 @@ src/MSNetwork.s: src/MSNetwork.cpp.s
 
 # target to generate assembly for a file
 src/MSNetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s
 .PHONY : src/MSNetwork.cpp.s
 
 src/MSwitch.o: src/MSwitch.cpp.o
@@ -843,8 +843,8 @@ src/MSwitch.o: src/MSwitch.cpp.o
 
 # target to build an object file
 src/MSwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o
 .PHONY : src/MSwitch.cpp.o
 
 src/MSwitch.i: src/MSwitch.cpp.i
@@ -852,8 +852,8 @@ src/MSwitch.i: src/MSwitch.cpp.i
 
 # target to preprocess a source file
 src/MSwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i
 .PHONY : src/MSwitch.cpp.i
 
 src/MSwitch.s: src/MSwitch.cpp.s
@@ -861,8 +861,8 @@ src/MSwitch.s: src/MSwitch.cpp.s
 
 # target to generate assembly for a file
 src/MSwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s
 .PHONY : src/MSwitch.cpp.s
 
 src/MultiplierOS.o: src/MultiplierOS.cpp.o
@@ -870,8 +870,8 @@ src/MultiplierOS.o: src/MultiplierOS.cpp.o
 
 # target to build an object file
 src/MultiplierOS.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o
 .PHONY : src/MultiplierOS.cpp.o
 
 src/MultiplierOS.i: src/MultiplierOS.cpp.i
@@ -879,8 +879,8 @@ src/MultiplierOS.i: src/MultiplierOS.cpp.i
 
 # target to preprocess a source file
 src/MultiplierOS.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i
 .PHONY : src/MultiplierOS.cpp.i
 
 src/MultiplierOS.s: src/MultiplierOS.cpp.s
@@ -888,8 +888,8 @@ src/MultiplierOS.s: src/MultiplierOS.cpp.s
 
 # target to generate assembly for a file
 src/MultiplierOS.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/MultiplierOS.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s
 .PHONY : src/MultiplierOS.cpp.s
 
 src/OSMeshMN.o: src/OSMeshMN.cpp.o
@@ -897,8 +897,8 @@ src/OSMeshMN.o: src/OSMeshMN.cpp.o
 
 # target to build an object file
 src/OSMeshMN.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o
 .PHONY : src/OSMeshMN.cpp.o
 
 src/OSMeshMN.i: src/OSMeshMN.cpp.i
@@ -906,8 +906,8 @@ src/OSMeshMN.i: src/OSMeshMN.cpp.i
 
 # target to preprocess a source file
 src/OSMeshMN.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i
 .PHONY : src/OSMeshMN.cpp.i
 
 src/OSMeshMN.s: src/OSMeshMN.cpp.s
@@ -915,8 +915,8 @@ src/OSMeshMN.s: src/OSMeshMN.cpp.s
 
 # target to generate assembly for a file
 src/OSMeshMN.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshMN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s
 .PHONY : src/OSMeshMN.cpp.s
 
 src/OSMeshSDMemory.o: src/OSMeshSDMemory.cpp.o
@@ -924,8 +924,8 @@ src/OSMeshSDMemory.o: src/OSMeshSDMemory.cpp.o
 
 # target to build an object file
 src/OSMeshSDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o
 .PHONY : src/OSMeshSDMemory.cpp.o
 
 src/OSMeshSDMemory.i: src/OSMeshSDMemory.cpp.i
@@ -933,8 +933,8 @@ src/OSMeshSDMemory.i: src/OSMeshSDMemory.cpp.i
 
 # target to preprocess a source file
 src/OSMeshSDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i
 .PHONY : src/OSMeshSDMemory.cpp.i
 
 src/OSMeshSDMemory.s: src/OSMeshSDMemory.cpp.s
@@ -942,8 +942,8 @@ src/OSMeshSDMemory.s: src/OSMeshSDMemory.cpp.s
 
 # target to generate assembly for a file
 src/OSMeshSDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OSMeshSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s
 .PHONY : src/OSMeshSDMemory.cpp.s
 
 src/OuterLoopSpGEMMSDMemory.o: src/OuterLoopSpGEMMSDMemory.cpp.o
@@ -951,8 +951,8 @@ src/OuterLoopSpGEMMSDMemory.o: src/OuterLoopSpGEMMSDMemory.cpp.o
 
 # target to build an object file
 src/OuterLoopSpGEMMSDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o
 .PHONY : src/OuterLoopSpGEMMSDMemory.cpp.o
 
 src/OuterLoopSpGEMMSDMemory.i: src/OuterLoopSpGEMMSDMemory.cpp.i
@@ -960,8 +960,8 @@ src/OuterLoopSpGEMMSDMemory.i: src/OuterLoopSpGEMMSDMemory.cpp.i
 
 # target to preprocess a source file
 src/OuterLoopSpGEMMSDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
 .PHONY : src/OuterLoopSpGEMMSDMemory.cpp.i
 
 src/OuterLoopSpGEMMSDMemory.s: src/OuterLoopSpGEMMSDMemory.cpp.s
@@ -969,8 +969,8 @@ src/OuterLoopSpGEMMSDMemory.s: src/OuterLoopSpGEMMSDMemory.cpp.s
 
 # target to generate assembly for a file
 src/OuterLoopSpGEMMSDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
 .PHONY : src/OuterLoopSpGEMMSDMemory.cpp.s
 
 src/SDMemory.o: src/SDMemory.cpp.o
@@ -978,8 +978,8 @@ src/SDMemory.o: src/SDMemory.cpp.o
 
 # target to build an object file
 src/SDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o
 .PHONY : src/SDMemory.cpp.o
 
 src/SDMemory.i: src/SDMemory.cpp.i
@@ -987,8 +987,8 @@ src/SDMemory.i: src/SDMemory.cpp.i
 
 # target to preprocess a source file
 src/SDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i
 .PHONY : src/SDMemory.cpp.i
 
 src/SDMemory.s: src/SDMemory.cpp.s
@@ -996,8 +996,8 @@ src/SDMemory.s: src/SDMemory.cpp.s
 
 # target to generate assembly for a file
 src/SDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s
 .PHONY : src/SDMemory.cpp.s
 
 src/STONNEModel.o: src/STONNEModel.cpp.o
@@ -1005,8 +1005,8 @@ src/STONNEModel.o: src/STONNEModel.cpp.o
 
 # target to build an object file
 src/STONNEModel.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o
 .PHONY : src/STONNEModel.cpp.o
 
 src/STONNEModel.i: src/STONNEModel.cpp.i
@@ -1014,8 +1014,8 @@ src/STONNEModel.i: src/STONNEModel.cpp.i
 
 # target to preprocess a source file
 src/STONNEModel.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i
 .PHONY : src/STONNEModel.cpp.i
 
 src/STONNEModel.s: src/STONNEModel.cpp.s
@@ -1023,8 +1023,8 @@ src/STONNEModel.s: src/STONNEModel.cpp.s
 
 # target to generate assembly for a file
 src/STONNEModel.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/STONNEModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s
 .PHONY : src/STONNEModel.cpp.s
 
 src/SimpleMem.o: src/SimpleMem.cpp.o
@@ -1032,8 +1032,8 @@ src/SimpleMem.o: src/SimpleMem.cpp.o
 
 # target to build an object file
 src/SimpleMem.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o
 .PHONY : src/SimpleMem.cpp.o
 
 src/SimpleMem.i: src/SimpleMem.cpp.i
@@ -1041,8 +1041,8 @@ src/SimpleMem.i: src/SimpleMem.cpp.i
 
 # target to preprocess a source file
 src/SimpleMem.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i
 .PHONY : src/SimpleMem.cpp.i
 
 src/SimpleMem.s: src/SimpleMem.cpp.s
@@ -1050,8 +1050,8 @@ src/SimpleMem.s: src/SimpleMem.cpp.s
 
 # target to generate assembly for a file
 src/SimpleMem.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SimpleMem.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s
 .PHONY : src/SimpleMem.cpp.s
 
 src/SparseDenseSDMemory.o: src/SparseDenseSDMemory.cpp.o
@@ -1059,8 +1059,8 @@ src/SparseDenseSDMemory.o: src/SparseDenseSDMemory.cpp.o
 
 # target to build an object file
 src/SparseDenseSDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o
 .PHONY : src/SparseDenseSDMemory.cpp.o
 
 src/SparseDenseSDMemory.i: src/SparseDenseSDMemory.cpp.i
@@ -1068,8 +1068,8 @@ src/SparseDenseSDMemory.i: src/SparseDenseSDMemory.cpp.i
 
 # target to preprocess a source file
 src/SparseDenseSDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i
 .PHONY : src/SparseDenseSDMemory.cpp.i
 
 src/SparseDenseSDMemory.s: src/SparseDenseSDMemory.cpp.s
@@ -1077,8 +1077,8 @@ src/SparseDenseSDMemory.s: src/SparseDenseSDMemory.cpp.s
 
 # target to generate assembly for a file
 src/SparseDenseSDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseDenseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s
 .PHONY : src/SparseDenseSDMemory.cpp.s
 
 src/SparseFlex_ASNetwork.o: src/SparseFlex_ASNetwork.cpp.o
@@ -1086,8 +1086,8 @@ src/SparseFlex_ASNetwork.o: src/SparseFlex_ASNetwork.cpp.o
 
 # target to build an object file
 src/SparseFlex_ASNetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o
 .PHONY : src/SparseFlex_ASNetwork.cpp.o
 
 src/SparseFlex_ASNetwork.i: src/SparseFlex_ASNetwork.cpp.i
@@ -1095,8 +1095,8 @@ src/SparseFlex_ASNetwork.i: src/SparseFlex_ASNetwork.cpp.i
 
 # target to preprocess a source file
 src/SparseFlex_ASNetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i
 .PHONY : src/SparseFlex_ASNetwork.cpp.i
 
 src/SparseFlex_ASNetwork.s: src/SparseFlex_ASNetwork.cpp.s
@@ -1104,8 +1104,8 @@ src/SparseFlex_ASNetwork.s: src/SparseFlex_ASNetwork.cpp.s
 
 # target to generate assembly for a file
 src/SparseFlex_ASNetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s
 .PHONY : src/SparseFlex_ASNetwork.cpp.s
 
 src/SparseFlex_ASwitch.o: src/SparseFlex_ASwitch.cpp.o
@@ -1113,8 +1113,8 @@ src/SparseFlex_ASwitch.o: src/SparseFlex_ASwitch.cpp.o
 
 # target to build an object file
 src/SparseFlex_ASwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o
 .PHONY : src/SparseFlex_ASwitch.cpp.o
 
 src/SparseFlex_ASwitch.i: src/SparseFlex_ASwitch.cpp.i
@@ -1122,8 +1122,8 @@ src/SparseFlex_ASwitch.i: src/SparseFlex_ASwitch.cpp.i
 
 # target to preprocess a source file
 src/SparseFlex_ASwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i
 .PHONY : src/SparseFlex_ASwitch.cpp.i
 
 src/SparseFlex_ASwitch.s: src/SparseFlex_ASwitch.cpp.s
@@ -1131,8 +1131,8 @@ src/SparseFlex_ASwitch.s: src/SparseFlex_ASwitch.cpp.s
 
 # target to generate assembly for a file
 src/SparseFlex_ASwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s
 .PHONY : src/SparseFlex_ASwitch.cpp.s
 
 src/SparseFlex_MSNetwork.o: src/SparseFlex_MSNetwork.cpp.o
@@ -1140,8 +1140,8 @@ src/SparseFlex_MSNetwork.o: src/SparseFlex_MSNetwork.cpp.o
 
 # target to build an object file
 src/SparseFlex_MSNetwork.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o
 .PHONY : src/SparseFlex_MSNetwork.cpp.o
 
 src/SparseFlex_MSNetwork.i: src/SparseFlex_MSNetwork.cpp.i
@@ -1149,8 +1149,8 @@ src/SparseFlex_MSNetwork.i: src/SparseFlex_MSNetwork.cpp.i
 
 # target to preprocess a source file
 src/SparseFlex_MSNetwork.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i
 .PHONY : src/SparseFlex_MSNetwork.cpp.i
 
 src/SparseFlex_MSNetwork.s: src/SparseFlex_MSNetwork.cpp.s
@@ -1158,8 +1158,8 @@ src/SparseFlex_MSNetwork.s: src/SparseFlex_MSNetwork.cpp.s
 
 # target to generate assembly for a file
 src/SparseFlex_MSNetwork.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s
 .PHONY : src/SparseFlex_MSNetwork.cpp.s
 
 src/SparseFlex_MSwitch.o: src/SparseFlex_MSwitch.cpp.o
@@ -1167,8 +1167,8 @@ src/SparseFlex_MSwitch.o: src/SparseFlex_MSwitch.cpp.o
 
 # target to build an object file
 src/SparseFlex_MSwitch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o
 .PHONY : src/SparseFlex_MSwitch.cpp.o
 
 src/SparseFlex_MSwitch.i: src/SparseFlex_MSwitch.cpp.i
@@ -1176,8 +1176,8 @@ src/SparseFlex_MSwitch.i: src/SparseFlex_MSwitch.cpp.i
 
 # target to preprocess a source file
 src/SparseFlex_MSwitch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i
 .PHONY : src/SparseFlex_MSwitch.cpp.i
 
 src/SparseFlex_MSwitch.s: src/SparseFlex_MSwitch.cpp.s
@@ -1185,8 +1185,8 @@ src/SparseFlex_MSwitch.s: src/SparseFlex_MSwitch.cpp.s
 
 # target to generate assembly for a file
 src/SparseFlex_MSwitch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseFlex_MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s
 .PHONY : src/SparseFlex_MSwitch.cpp.s
 
 src/SparseSDMemory.o: src/SparseSDMemory.cpp.o
@@ -1194,8 +1194,8 @@ src/SparseSDMemory.o: src/SparseSDMemory.cpp.o
 
 # target to build an object file
 src/SparseSDMemory.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o
 .PHONY : src/SparseSDMemory.cpp.o
 
 src/SparseSDMemory.i: src/SparseSDMemory.cpp.i
@@ -1203,8 +1203,8 @@ src/SparseSDMemory.i: src/SparseSDMemory.cpp.i
 
 # target to preprocess a source file
 src/SparseSDMemory.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i
 .PHONY : src/SparseSDMemory.cpp.i
 
 src/SparseSDMemory.s: src/SparseSDMemory.cpp.s
@@ -1212,8 +1212,8 @@ src/SparseSDMemory.s: src/SparseSDMemory.cpp.s
 
 # target to generate assembly for a file
 src/SparseSDMemory.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/SparseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s
 .PHONY : src/SparseSDMemory.cpp.s
 
 src/Stats.o: src/Stats.cpp.o
@@ -1221,8 +1221,8 @@ src/Stats.o: src/Stats.cpp.o
 
 # target to build an object file
 src/Stats.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o
 .PHONY : src/Stats.cpp.o
 
 src/Stats.i: src/Stats.cpp.i
@@ -1230,8 +1230,8 @@ src/Stats.i: src/Stats.cpp.i
 
 # target to preprocess a source file
 src/Stats.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i
 .PHONY : src/Stats.cpp.i
 
 src/Stats.s: src/Stats.cpp.s
@@ -1239,8 +1239,8 @@ src/Stats.s: src/Stats.cpp.s
 
 # target to generate assembly for a file
 src/Stats.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/Stats.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s
 .PHONY : src/Stats.cpp.s
 
 src/StonneTile.o: src/StonneTile.cpp.o
@@ -1248,8 +1248,8 @@ src/StonneTile.o: src/StonneTile.cpp.o
 
 # target to build an object file
 src/StonneTile.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o
 .PHONY : src/StonneTile.cpp.o
 
 src/StonneTile.i: src/StonneTile.cpp.i
@@ -1257,8 +1257,8 @@ src/StonneTile.i: src/StonneTile.cpp.i
 
 # target to preprocess a source file
 src/StonneTile.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i
 .PHONY : src/StonneTile.cpp.i
 
 src/StonneTile.s: src/StonneTile.cpp.s
@@ -1266,8 +1266,8 @@ src/StonneTile.s: src/StonneTile.cpp.s
 
 # target to generate assembly for a file
 src/StonneTile.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/StonneTile.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s
 .PHONY : src/StonneTile.cpp.s
 
 src/TemporalRN.o: src/TemporalRN.cpp.o
@@ -1275,8 +1275,8 @@ src/TemporalRN.o: src/TemporalRN.cpp.o
 
 # target to build an object file
 src/TemporalRN.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o
 .PHONY : src/TemporalRN.cpp.o
 
 src/TemporalRN.i: src/TemporalRN.cpp.i
@@ -1284,8 +1284,8 @@ src/TemporalRN.i: src/TemporalRN.cpp.i
 
 # target to preprocess a source file
 src/TemporalRN.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i
 .PHONY : src/TemporalRN.cpp.i
 
 src/TemporalRN.s: src/TemporalRN.cpp.s
@@ -1293,8 +1293,8 @@ src/TemporalRN.s: src/TemporalRN.cpp.s
 
 # target to generate assembly for a file
 src/TemporalRN.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/TemporalRN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s
 .PHONY : src/TemporalRN.cpp.s
 
 src/sstStonne.o: src/sstStonne.cpp.o
@@ -1302,8 +1302,8 @@ src/sstStonne.o: src/sstStonne.cpp.o
 
 # target to build an object file
 src/sstStonne.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o
 .PHONY : src/sstStonne.cpp.o
 
 src/sstStonne.i: src/sstStonne.cpp.i
@@ -1311,8 +1311,8 @@ src/sstStonne.i: src/sstStonne.cpp.i
 
 # target to preprocess a source file
 src/sstStonne.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i
 .PHONY : src/sstStonne.cpp.i
 
 src/sstStonne.s: src/sstStonne.cpp.s
@@ -1320,8 +1320,8 @@ src/sstStonne.s: src/sstStonne.cpp.s
 
 # target to generate assembly for a file
 src/sstStonne.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/sstStonne.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s
 .PHONY : src/sstStonne.cpp.s
 
 src/testbench.o: src/testbench.cpp.o
@@ -1329,8 +1329,8 @@ src/testbench.o: src/testbench.cpp.o
 
 # target to build an object file
 src/testbench.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o
 .PHONY : src/testbench.cpp.o
 
 src/testbench.i: src/testbench.cpp.i
@@ -1338,8 +1338,8 @@ src/testbench.i: src/testbench.cpp.i
 
 # target to preprocess a source file
 src/testbench.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i
 .PHONY : src/testbench.cpp.i
 
 src/testbench.s: src/testbench.cpp.s
@@ -1347,8 +1347,8 @@ src/testbench.s: src/testbench.cpp.s
 
 # target to generate assembly for a file
 src/testbench.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/testbench.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s
 .PHONY : src/testbench.cpp.s
 
 src/utility.o: src/utility.cpp.o
@@ -1356,8 +1356,8 @@ src/utility.o: src/utility.cpp.o
 
 # target to build an object file
 src/utility.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.o
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o
 .PHONY : src/utility.cpp.o
 
 src/utility.i: src/utility.cpp.i
@@ -1365,8 +1365,8 @@ src/utility.i: src/utility.cpp.i
 
 # target to preprocess a source file
 src/utility.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.i
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i
 .PHONY : src/utility.cpp.i
 
 src/utility.s: src/utility.cpp.s
@@ -1374,8 +1374,8 @@ src/utility.s: src/utility.cpp.s
 
 # target to generate assembly for a file
 src/utility.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.s
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne.dir/build.make extern/stonneCore/CMakeFiles/sstStonne.dir/src/utility.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s
 .PHONY : src/utility.cpp.s
 
 # Help Target
@@ -1535,7 +1535,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

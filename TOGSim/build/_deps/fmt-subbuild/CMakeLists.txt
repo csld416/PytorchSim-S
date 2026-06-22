@@ -21,9 +21,9 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(fmt-populate
-                     "UPDATE_DISCONNECTED" "True" "GIT_REPOSITORY" "https://github.com/fmtlib/fmt.git" "GIT_TAG" "10.2.1"
-                    SOURCE_DIR          "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt"
-                    BINARY_DIR          "/workspace/PyTorchSim/TOGSim/build/_deps/fmt-build"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/fmtlib/fmt.git" "GIT_TAG" "10.2.1"
+                    SOURCE_DIR          "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt"
+                    BINARY_DIR          "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

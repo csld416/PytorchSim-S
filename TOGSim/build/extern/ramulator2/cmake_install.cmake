@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/PyTorchSim/TOGSim/extern/ramulator2
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,16 +44,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/_deps/fmt-build/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/fmt-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/cmake_install.cmake")
 endif()
 

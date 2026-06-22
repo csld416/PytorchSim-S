@@ -10,12 +10,16 @@ fi
 
 TRACE_NAME=$1
 
+export TORCHSIM_DIR=/workspace/legomerged/eclab_legosim/PyTorchSim
 export TOGSIM_DEBUG_LEVEL=info
 export TOGSIM_SSD_TRACE_NAME=${TRACE_NAME}
-export TOGSIM_SSD_TRACE_DIR=/workspace/PyTorchSim/ssd_traces
+
+mkdir -p ${TORCHSIM_DIR}/ssd_traces
+mkdir -p ${TORCHSIM_DIR}/ssd_traces/${TRACE_NAME}
+mkdir -p ${TORCHSIM_DIR}/togsim_results
+mkdir -p ${TORCHSIM_DIR}/togsim_results/${TRACE_NAME}
+export TOGSIM_SSD_TRACE_DIR=${TORCHSIM_DIR}/ssd_traces
+
 LOG_DIR=/workspace/PyTorchSim/togsim_results/${TRACE_NAME}
-if [[ ! -d "${LOG_DIR}" ]]; then
-	mkdir "${LOG_DIR}"
-fi
 export TORCHSIM_LOG_PATH=${LOG_DIR}
-export TOGSIM_CONFIG=/workspace/PyTorchSim/configs/systolic_ws_128x128_c2_simple_noc_tpuv3.yml
+export TOGSIM_CONFIG=${TORCHSIM_DIR}/configs/systolic_ws_128x128_c2_simple_noc_tpuv3.yml

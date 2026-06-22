@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Utility rule file for gen_onnx_proto.
 
@@ -70,15 +70,15 @@ extern/onnx/CMakeFiles/gen_onnx_proto: extern/onnx/onnx/onnx-ml.pb.cc
 extern/onnx/CMakeFiles/gen_onnx_proto: extern/onnx/onnx/onnx-ml.pb.h
 
 extern/onnx/onnx/onnx-ml.pb.cc: extern/onnx/onnx/onnx-ml.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running C++ protocol buffer compiler on /workspace/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-ml.proto"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && ../../bin/protoc-3.18.1.0 /workspace/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-ml.proto -I /workspace/PyTorchSim/TOGSim/build/extern/onnx --cpp_out dllexport_decl=ONNX_API:/workspace/PyTorchSim/TOGSim/build/extern/onnx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running C++ protocol buffer compiler on /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-ml.proto"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && ../../bin/protoc-3.18.1.0 /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx/onnx/onnx-ml.proto -I /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx --cpp_out dllexport_decl=ONNX_API:/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx
 
 extern/onnx/onnx/onnx-ml.pb.h: extern/onnx/onnx/onnx-ml.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate extern/onnx/onnx/onnx-ml.pb.h
 
-extern/onnx/onnx/onnx-ml.proto: /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnx.in.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running gen_proto.py on onnx/onnx.in.proto"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && /opt/conda/bin/python /workspace/PyTorchSim/TOGSim/extern/onnx/onnx/gen_proto.py -p onnx -o /workspace/PyTorchSim/TOGSim/build/extern/onnx/onnx onnx -m
+extern/onnx/onnx/onnx-ml.proto: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnx.in.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running gen_proto.py on onnx/onnx.in.proto"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && /opt/conda/bin/python /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/gen_proto.py -p onnx -o /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx/onnx onnx -m
 
 gen_onnx_proto: extern/onnx/CMakeFiles/gen_onnx_proto
 gen_onnx_proto: extern/onnx/onnx/onnx-ml.pb.cc
@@ -92,10 +92,10 @@ extern/onnx/CMakeFiles/gen_onnx_proto.dir/build: gen_onnx_proto
 .PHONY : extern/onnx/CMakeFiles/gen_onnx_proto.dir/build
 
 extern/onnx/CMakeFiles/gen_onnx_proto.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/gen_onnx_proto.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx && $(CMAKE_COMMAND) -P CMakeFiles/gen_onnx_proto.dir/cmake_clean.cmake
 .PHONY : extern/onnx/CMakeFiles/gen_onnx_proto.dir/clean
 
 extern/onnx/CMakeFiles/gen_onnx_proto.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/onnx /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/onnx /workspace/PyTorchSim/TOGSim/build/extern/onnx/CMakeFiles/gen_onnx_proto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/onnx/CMakeFiles/gen_onnx_proto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/onnx/CMakeFiles/gen_onnx_proto.dir/depend
 

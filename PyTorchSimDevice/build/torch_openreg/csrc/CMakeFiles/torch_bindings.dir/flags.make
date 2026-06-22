@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -Dtorch_bindings_EXPORTS
 
-CXX_INCLUDES = -I/opt/conda/include/python3.11 -I/workspace/PyTorchSim/PyTorchSimDevice -I/workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg -I/workspace/PyTorchSim/PyTorchSimDevice/csrc -isystem /opt/conda/lib/python3.11/site-packages/torch/include
+CXX_INCLUDES = -I/opt/conda/include/python3.11 -I/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice -I/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg -I/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc -isystem /opt/conda/lib/python3.11/site-packages/torch/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden
 

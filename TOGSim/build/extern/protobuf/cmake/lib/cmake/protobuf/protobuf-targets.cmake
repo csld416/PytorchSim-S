@@ -50,14 +50,14 @@ unset(_cmake_expected_targets)
 add_library(protobuf::libprotobuf-lite STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/workspace/PyTorchSim/TOGSim/extern/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/src"
 )
 
 # Create imported target protobuf::libprotobuf
 add_library(protobuf::libprotobuf STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/workspace/PyTorchSim/TOGSim/extern/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/src"
   INTERFACE_LINK_LIBRARIES "ZLIB::ZLIB"
 )
 
@@ -65,7 +65,7 @@ set_target_properties(protobuf::libprotobuf PROPERTIES
 add_library(protobuf::libprotoc STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotoc PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/workspace/PyTorchSim/TOGSim/extern/protobuf/src"
+  INTERFACE_INCLUDE_DIRECTORIES "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/src"
   INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf"
 )
 
@@ -76,27 +76,27 @@ add_executable(protobuf::protoc IMPORTED)
 set_property(TARGET protobuf::libprotobuf-lite APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/workspace/PyTorchSim/TOGSim/build/lib/libprotobuf-lite.a"
+  IMPORTED_LOCATION_RELEASE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/lib/libprotobuf-lite.a"
   )
 
 # Import target "protobuf::libprotobuf" for configuration "Release"
 set_property(TARGET protobuf::libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotobuf PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/workspace/PyTorchSim/TOGSim/build/lib/libprotobuf.a"
+  IMPORTED_LOCATION_RELEASE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/lib/libprotobuf.a"
   )
 
 # Import target "protobuf::libprotoc" for configuration "Release"
 set_property(TARGET protobuf::libprotoc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotoc PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/workspace/PyTorchSim/TOGSim/build/lib/libprotoc.a"
+  IMPORTED_LOCATION_RELEASE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/lib/libprotoc.a"
   )
 
 # Import target "protobuf::protoc" for configuration "Release"
 set_property(TARGET protobuf::protoc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::protoc PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/workspace/PyTorchSim/TOGSim/build/bin/protoc-3.18.1.0"
+  IMPORTED_LOCATION_RELEASE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/bin/protoc-3.18.1.0"
   )
 
 # This file does not depend on other imported targets which have

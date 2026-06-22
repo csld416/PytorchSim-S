@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system//CMakeFiles/progress.marks
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system//CMakeFiles/progress.marks
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/clean
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/rule
 .PHONY : extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ ramulator-memorysystem: extern/ramulator2/src/ramulator/memory_system/CMakeFiles
 
 # fast build rule for target.
 ramulator-memorysystem/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build
 .PHONY : ramulator-memorysystem/fast
 
 channel_mapper/impl/cache_line_interleave.o: channel_mapper/impl/cache_line_interleave.cpp.o
@@ -181,7 +181,7 @@ channel_mapper/impl/cache_line_interleave.o: channel_mapper/impl/cache_line_inte
 
 # target to build an object file
 channel_mapper/impl/cache_line_interleave.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.o
 .PHONY : channel_mapper/impl/cache_line_interleave.cpp.o
 
 channel_mapper/impl/cache_line_interleave.i: channel_mapper/impl/cache_line_interleave.cpp.i
@@ -189,7 +189,7 @@ channel_mapper/impl/cache_line_interleave.i: channel_mapper/impl/cache_line_inte
 
 # target to preprocess a source file
 channel_mapper/impl/cache_line_interleave.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.i
 .PHONY : channel_mapper/impl/cache_line_interleave.cpp.i
 
 channel_mapper/impl/cache_line_interleave.s: channel_mapper/impl/cache_line_interleave.cpp.s
@@ -197,7 +197,7 @@ channel_mapper/impl/cache_line_interleave.s: channel_mapper/impl/cache_line_inte
 
 # target to generate assembly for a file
 channel_mapper/impl/cache_line_interleave.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.s
 .PHONY : channel_mapper/impl/cache_line_interleave.cpp.s
 
 channel_mapper/impl/passthrough_channel_mapper.o: channel_mapper/impl/passthrough_channel_mapper.cpp.o
@@ -205,7 +205,7 @@ channel_mapper/impl/passthrough_channel_mapper.o: channel_mapper/impl/passthroug
 
 # target to build an object file
 channel_mapper/impl/passthrough_channel_mapper.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.o
 .PHONY : channel_mapper/impl/passthrough_channel_mapper.cpp.o
 
 channel_mapper/impl/passthrough_channel_mapper.i: channel_mapper/impl/passthrough_channel_mapper.cpp.i
@@ -213,7 +213,7 @@ channel_mapper/impl/passthrough_channel_mapper.i: channel_mapper/impl/passthroug
 
 # target to preprocess a source file
 channel_mapper/impl/passthrough_channel_mapper.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.i
 .PHONY : channel_mapper/impl/passthrough_channel_mapper.cpp.i
 
 channel_mapper/impl/passthrough_channel_mapper.s: channel_mapper/impl/passthrough_channel_mapper.cpp.s
@@ -221,7 +221,7 @@ channel_mapper/impl/passthrough_channel_mapper.s: channel_mapper/impl/passthroug
 
 # target to generate assembly for a file
 channel_mapper/impl/passthrough_channel_mapper.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.s
 .PHONY : channel_mapper/impl/passthrough_channel_mapper.cpp.s
 
 impl/generic_dram_system.o: impl/generic_dram_system.cpp.o
@@ -229,7 +229,7 @@ impl/generic_dram_system.o: impl/generic_dram_system.cpp.o
 
 # target to build an object file
 impl/generic_dram_system.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.o
 .PHONY : impl/generic_dram_system.cpp.o
 
 impl/generic_dram_system.i: impl/generic_dram_system.cpp.i
@@ -237,7 +237,7 @@ impl/generic_dram_system.i: impl/generic_dram_system.cpp.i
 
 # target to preprocess a source file
 impl/generic_dram_system.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.i
 .PHONY : impl/generic_dram_system.cpp.i
 
 impl/generic_dram_system.s: impl/generic_dram_system.cpp.s
@@ -245,7 +245,7 @@ impl/generic_dram_system.s: impl/generic_dram_system.cpp.s
 
 # target to generate assembly for a file
 impl/generic_dram_system.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/build.make extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.s
 .PHONY : impl/generic_dram_system.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

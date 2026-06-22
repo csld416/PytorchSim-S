@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/power/power_module.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/power_module.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/power_module.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/power_module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/power_module.hpp \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -49,8 +49,8 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/power_module.cpp.o: \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
@@ -183,10 +183,10 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/power_module.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/networks/network.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/networks/network.hpp \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
  /usr/include/c++/11/stack /usr/include/c++/11/bits/stl_stack.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -202,28 +202,28 @@ extern/booksim/CMakeFiles/booksim2.dir/src/power/power_module.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/outputset.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/outputset.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/credit.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/routers/router.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/timed_module.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/flitchannel.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/channel.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/credit.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/routers/router.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/timed_module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/flitchannel.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/channel.hpp \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_queue.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/globals.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/timed_module.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/include/booksim2/Interconnect.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/channel.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/globals.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/switch_monitor.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/routers/iq_router.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/routers/router.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/routefunc.hpp
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/globals.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/timed_module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/include/booksim2/Interconnect.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/flit.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/channel.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/globals.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/switch_monitor.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/power/buffer_monitor.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/routers/iq_router.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/routers/router.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/routefunc.hpp

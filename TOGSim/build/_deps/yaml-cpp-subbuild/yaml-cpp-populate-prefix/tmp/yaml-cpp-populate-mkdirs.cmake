@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/tmp"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src"
-  "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/tmp"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-subbuild/yaml-cpp-populate-prefix/src/yaml-cpp-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

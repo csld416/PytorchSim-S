@@ -1,7 +1,7 @@
 extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/utils.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.h \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

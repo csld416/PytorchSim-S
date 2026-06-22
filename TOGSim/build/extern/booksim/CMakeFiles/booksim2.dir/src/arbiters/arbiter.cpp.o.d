@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/arbiters/arbiter.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/arbiters/arbiter.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/arbiters/arbiter.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/arbiters/arbiter.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/arbiters/arbiter.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -44,8 +44,8 @@ extern/booksim/CMakeFiles/booksim2.dir/src/arbiters/arbiter.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/module.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
@@ -173,7 +173,7 @@ extern/booksim/CMakeFiles/booksim2.dir/src/arbiters/arbiter.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/arbiters/roundrobin_arb.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/arbiters/matrix_arb.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/arbiters/tree_arb.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/arbiters/roundrobin_arb.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/arbiters/matrix_arb.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/arbiters/tree_arb.hpp \
  /usr/include/c++/11/limits

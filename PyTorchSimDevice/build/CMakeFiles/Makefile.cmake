@@ -57,17 +57,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/root/.local/lib/python3.11/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake"
   "/root/.local/lib/python3.11/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/Linux.cmake"
   "/root/.local/lib/python3.11/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
-  "/workspace/PyTorchSim/PyTorchSimDevice/CMakeLists.txt"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/CMakeLists.txt"
   "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "detect_cuda_compute_capabilities.cu"
   "detect_cuda_version.cc"
-  "/workspace/PyTorchSim/PyTorchSimDevice/cmake/TorchPythonTargets.cmake"
-  "/workspace/PyTorchSim/PyTorchSimDevice/csrc/CMakeLists.txt"
-  "/workspace/PyTorchSim/PyTorchSimDevice/third_party/openreg/CMakeLists.txt"
-  "/workspace/PyTorchSim/PyTorchSimDevice/torch_openreg/csrc/CMakeLists.txt"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/cmake/TorchPythonTargets.cmake"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/CMakeLists.txt"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/third_party/openreg/CMakeLists.txt"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/torch_openreg/csrc/CMakeLists.txt"
   )
 
 # The corresponding makefile is:

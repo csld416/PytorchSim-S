@@ -54,10 +54,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/PyTorchSimDevice
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/PyTorchSimDevice/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -132,14 +132,14 @@ torch_openreg/csrc/clean: torch_openreg/csrc/CMakeFiles/torch_bindings.dir/clean
 third_party/openreg/CMakeFiles/openreg.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/openreg/CMakeFiles/openreg.dir/build.make third_party/openreg/CMakeFiles/openreg.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/openreg/CMakeFiles/openreg.dir/build.make third_party/openreg/CMakeFiles/openreg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=1,2,3,4 "Built target openreg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=1,2,3,4 "Built target openreg"
 .PHONY : third_party/openreg/CMakeFiles/openreg.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/openreg/CMakeFiles/openreg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/openreg/CMakeFiles/openreg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
 .PHONY : third_party/openreg/CMakeFiles/openreg.dir/rule
 
 # Convenience name for target.
@@ -158,14 +158,14 @@ third_party/openreg/CMakeFiles/openreg.dir/clean:
 csrc/CMakeFiles/torch_openreg.dir/all: third_party/openreg/CMakeFiles/openreg.dir/all
 	$(MAKE) $(MAKESILENT) -f csrc/CMakeFiles/torch_openreg.dir/build.make csrc/CMakeFiles/torch_openreg.dir/depend
 	$(MAKE) $(MAKESILENT) -f csrc/CMakeFiles/torch_openreg.dir/build.make csrc/CMakeFiles/torch_openreg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target torch_openreg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target torch_openreg"
 .PHONY : csrc/CMakeFiles/torch_openreg.dir/all
 
 # Build rule for subdir invocation for target.
 csrc/CMakeFiles/torch_openreg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csrc/CMakeFiles/torch_openreg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
 .PHONY : csrc/CMakeFiles/torch_openreg.dir/rule
 
 # Convenience name for target.
@@ -184,14 +184,14 @@ csrc/CMakeFiles/torch_openreg.dir/clean:
 torch_openreg/csrc/CMakeFiles/torch_bindings.dir/all: csrc/CMakeFiles/torch_openreg.dir/all
 	$(MAKE) $(MAKESILENT) -f torch_openreg/csrc/CMakeFiles/torch_bindings.dir/build.make torch_openreg/csrc/CMakeFiles/torch_bindings.dir/depend
 	$(MAKE) $(MAKESILENT) -f torch_openreg/csrc/CMakeFiles/torch_bindings.dir/build.make torch_openreg/csrc/CMakeFiles/torch_bindings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=5,6 "Built target torch_bindings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles --progress-num=5,6 "Built target torch_bindings"
 .PHONY : torch_openreg/csrc/CMakeFiles/torch_bindings.dir/all
 
 # Build rule for subdir invocation for target.
 torch_openreg/csrc/CMakeFiles/torch_bindings.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 torch_openreg/csrc/CMakeFiles/torch_bindings.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/CMakeFiles 0
 .PHONY : torch_openreg/csrc/CMakeFiles/torch_bindings.dir/rule
 
 # Convenience name for target.

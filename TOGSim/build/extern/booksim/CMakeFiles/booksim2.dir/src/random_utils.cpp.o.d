@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/random_utils.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/random_utils.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/random_utils.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/random_utils.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/random_utils.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

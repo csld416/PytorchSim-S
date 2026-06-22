@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Include any dependencies generated for this target.
 include extern/protobuf/cmake/CMakeFiles/gmock_main.dir/depend.make
@@ -70,18 +70,18 @@ include extern/protobuf/cmake/CMakeFiles/gmock_main.dir/progress.make
 include extern/protobuf/cmake/CMakeFiles/gmock_main.dir/flags.make
 
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/flags.make
-extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o: /workspace/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc
+extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o -MF CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o.d -o CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o -c /workspace/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o -MF CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o.d -o CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc
 
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.i
 
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/third_party/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.s
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
@@ -93,19 +93,19 @@ gmock_main_EXTERNAL_OBJECTS =
 lib/libgmock_main.a: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/__/third_party/googletest/googlemock/src/gmock_main.cc.o
 lib/libgmock_main.a: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/build.make
 lib/libgmock_main.a: extern/protobuf/cmake/CMakeFiles/gmock_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_main.a"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_main.a"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/build: lib/libgmock_main.a
 .PHONY : extern/protobuf/cmake/CMakeFiles/gmock_main.dir/build
 
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
 .PHONY : extern/protobuf/cmake/CMakeFiles/gmock_main.dir/clean
 
 extern/protobuf/cmake/CMakeFiles/gmock_main.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/protobuf/cmake /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/cmake /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/protobuf/cmake/CMakeFiles/gmock_main.dir/depend
 

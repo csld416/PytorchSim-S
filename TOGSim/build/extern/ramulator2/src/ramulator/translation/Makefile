@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/translation//CMakeFiles/progress.marks
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/translation//CMakeFiles/progress.marks
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/clean
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/rule
 .PHONY : extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ ramulator-translation: extern/ramulator2/src/ramulator/translation/CMakeFiles/ra
 
 # fast build rule for target.
 ramulator-translation/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build
 .PHONY : ramulator-translation/fast
 
 impl/no_translation.o: impl/no_translation.cpp.o
@@ -181,7 +181,7 @@ impl/no_translation.o: impl/no_translation.cpp.o
 
 # target to build an object file
 impl/no_translation.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o
 .PHONY : impl/no_translation.cpp.o
 
 impl/no_translation.i: impl/no_translation.cpp.i
@@ -189,7 +189,7 @@ impl/no_translation.i: impl/no_translation.cpp.i
 
 # target to preprocess a source file
 impl/no_translation.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.i
 .PHONY : impl/no_translation.cpp.i
 
 impl/no_translation.s: impl/no_translation.cpp.s
@@ -197,7 +197,7 @@ impl/no_translation.s: impl/no_translation.cpp.s
 
 # target to generate assembly for a file
 impl/no_translation.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/build.make extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.s
 .PHONY : impl/no_translation.cpp.s
 
 # Help Target
@@ -227,7 +227,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

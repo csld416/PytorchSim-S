@@ -1,5 +1,5 @@
 extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/frontend/impl/memory_trace/readwrite_trace.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/frontend/impl/memory_trace/readwrite_trace.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/filesystem \
  /usr/include/c++/11/bits/fs_fwd.h /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -250,10 +250,10 @@ extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/param.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/param.h \
  /usr/include/c++/11/optional \
  /usr/include/c++/11/bits/enable_special_members.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_map.h \
@@ -262,20 +262,20 @@ extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/frontend/i_frontend.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/frontend/i_frontend.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/base.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/base.h \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/factory.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/debug.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/logger.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/stats.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/memory_system/i_memory_system.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/factory.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/debug.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/logger.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/request.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/stats.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/utils.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/memory_system/i_memory_system.h

@@ -1,8 +1,8 @@
 extern/stonneCore/CMakeFiles/sstStonne.dir/src/DataPackage.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/DataPackage.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/types.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/DataPackage.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/types.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Include any dependencies generated for this target.
 include extern/stonneCore/CMakeFiles/sstStonne_shared.dir/depend.make
@@ -70,620 +70,620 @@ include extern/stonneCore/CMakeFiles/sstStonne_shared.dir/progress.make
 include extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/ASNetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/ASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/ASwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp > CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp > CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp -o CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/AccumulationBuffer.cpp -o CMakeFiles/sstStonne_shared.dir/src/AccumulationBuffer.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp > CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp > CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp -o CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Accumulator.cpp -o CMakeFiles/sstStonne_shared.dir/src/Accumulator.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp > CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp > CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp -o CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBus.cpp -o CMakeFiles/sstStonne_shared.dir/src/CollectionBus.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp > CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp > CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp -o CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CollectionBusLine.cpp -o CMakeFiles/sstStonne_shared.dir/src/CollectionBusLine.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerART.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerART.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerFEN.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerFEN.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMSN.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerMSN.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp > CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/CompilerMultiplierMesh.cpp -o CMakeFiles/sstStonne_shared.dir/src/CompilerMultiplierMesh.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Config.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp > CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp > CMakeFiles/sstStonne_shared.dir/src/Config.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp -o CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Config.cpp -o CMakeFiles/sstStonne_shared.dir/src/Config.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp > CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp > CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp -o CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Connection.cpp -o CMakeFiles/sstStonne_shared.dir/src/Connection.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp > CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp > CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp -o CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNLayer.cpp -o CMakeFiles/sstStonne_shared.dir/src/DNNLayer.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp > CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp > CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp -o CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DNNModel.cpp -o CMakeFiles/sstStonne_shared.dir/src/DNNModel.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSNetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp > CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp > CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSNetworkTop.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSNetworkTop.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/DSwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp > CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp > CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp -o CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/DataPackage.cpp -o CMakeFiles/sstStonne_shared.dir/src/DataPackage.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FEASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/FEASwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/FENetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/FENetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp > CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp > CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp -o CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Fifo.cpp -o CMakeFiles/sstStonne_shared.dir/src/Fifo.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/GustavsonsSpGEMMSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/GustavsonsSpGEMMSDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp > CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp > CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp -o CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/LookupTable.cpp -o CMakeFiles/sstStonne_shared.dir/src/LookupTable.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/MSNetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/MSwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp > CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp > CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp -o CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/MultiplierOS.cpp -o CMakeFiles/sstStonne_shared.dir/src/MultiplierOS.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp > CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp > CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp -o CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshMN.cpp -o CMakeFiles/sstStonne_shared.dir/src/OSMeshMN.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OSMeshSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/OSMeshSDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/OuterLoopSpGEMMSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/OuterLoopSpGEMMSDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp > CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp > CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp -o CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/STONNEModel.cpp -o CMakeFiles/sstStonne_shared.dir/src/STONNEModel.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp > CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp > CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp -o CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp -o CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseDenseSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseDenseSDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASNetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_ASwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_ASwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSNetwork.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSNetwork.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseFlex_MSwitch.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseFlex_MSwitch.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp > CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SparseSDMemory.cpp -o CMakeFiles/sstStonne_shared.dir/src/SparseSDMemory.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp > CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp > CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp -o CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/Stats.cpp -o CMakeFiles/sstStonne_shared.dir/src/Stats.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp > CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp > CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp -o CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/StonneTile.cpp -o CMakeFiles/sstStonne_shared.dir/src/StonneTile.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp > CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp > CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp -o CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/TemporalRN.cpp -o CMakeFiles/sstStonne_shared.dir/src/TemporalRN.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp > CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp > CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp -o CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/sstStonne.cpp -o CMakeFiles/sstStonne_shared.dir/src/sstStonne.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp > CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp > CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp -o CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/testbench.cpp -o CMakeFiles/sstStonne_shared.dir/src/testbench.cpp.s
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/flags.make
-extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o: /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp
+extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o -c /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o -MF CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o.d -o CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp > CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp > CMakeFiles/sstStonne_shared.dir/src/utility.cpp.i
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp -o CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/utility.cpp -o CMakeFiles/sstStonne_shared.dir/src/utility.cpp.s
 
 # Object files for target sstStonne_shared
 sstStonne_shared_OBJECTS = \
@@ -781,18 +781,18 @@ lib/libsstStonne.so: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/testb
 lib/libsstStonne.so: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/utility.cpp.o
 lib/libsstStonne.so: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build.make
 lib/libsstStonne.so: extern/stonneCore/CMakeFiles/sstStonne_shared.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX shared library ../../lib/libsstStonne.so"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sstStonne_shared.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX shared library ../../lib/libsstStonne.so"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sstStonne_shared.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build: lib/libsstStonne.so
 .PHONY : extern/stonneCore/CMakeFiles/sstStonne_shared.dir/build
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/stonneCore && $(CMAKE_COMMAND) -P CMakeFiles/sstStonne_shared.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore && $(CMAKE_COMMAND) -P CMakeFiles/sstStonne_shared.dir/cmake_clean.cmake
 .PHONY : extern/stonneCore/CMakeFiles/sstStonne_shared.dir/clean
 
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/stonneCore /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/stonneCore /workspace/PyTorchSim/TOGSim/build/extern/stonneCore/CMakeFiles/sstStonne_shared.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/stonneCore/CMakeFiles/sstStonne_shared.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/stonneCore/CMakeFiles/sstStonne_shared.dir/depend
 

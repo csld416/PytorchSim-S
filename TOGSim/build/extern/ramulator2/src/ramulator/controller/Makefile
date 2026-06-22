@@ -57,10 +57,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller//CMakeFiles/progress.marks
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/PyTorchSim/TOGSim/build/CMakeFiles 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller//CMakeFiles/progress.marks
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/clean
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/preinstall
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rule:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rule
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rule
 .PHONY : extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ ramulator-controller: extern/ramulator2/src/ramulator/controller/CMakeFiles/ramu
 
 # fast build rule for target.
 ramulator-controller/fast:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build
 .PHONY : ramulator-controller/fast
 
 addr_mapper/addr_mapper_base.o: addr_mapper/addr_mapper_base.cpp.o
@@ -181,7 +181,7 @@ addr_mapper/addr_mapper_base.o: addr_mapper/addr_mapper_base.cpp.o
 
 # target to build an object file
 addr_mapper/addr_mapper_base.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o
 .PHONY : addr_mapper/addr_mapper_base.cpp.o
 
 addr_mapper/addr_mapper_base.i: addr_mapper/addr_mapper_base.cpp.i
@@ -189,7 +189,7 @@ addr_mapper/addr_mapper_base.i: addr_mapper/addr_mapper_base.cpp.i
 
 # target to preprocess a source file
 addr_mapper/addr_mapper_base.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.i
 .PHONY : addr_mapper/addr_mapper_base.cpp.i
 
 addr_mapper/addr_mapper_base.s: addr_mapper/addr_mapper_base.cpp.s
@@ -197,7 +197,7 @@ addr_mapper/addr_mapper_base.s: addr_mapper/addr_mapper_base.cpp.s
 
 # target to generate assembly for a file
 addr_mapper/addr_mapper_base.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.s
 .PHONY : addr_mapper/addr_mapper_base.cpp.s
 
 addr_mapper/impl/ch_ra_ba_ro_co.o: addr_mapper/impl/ch_ra_ba_ro_co.cpp.o
@@ -205,7 +205,7 @@ addr_mapper/impl/ch_ra_ba_ro_co.o: addr_mapper/impl/ch_ra_ba_ro_co.cpp.o
 
 # target to build an object file
 addr_mapper/impl/ch_ra_ba_ro_co.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o
 .PHONY : addr_mapper/impl/ch_ra_ba_ro_co.cpp.o
 
 addr_mapper/impl/ch_ra_ba_ro_co.i: addr_mapper/impl/ch_ra_ba_ro_co.cpp.i
@@ -213,7 +213,7 @@ addr_mapper/impl/ch_ra_ba_ro_co.i: addr_mapper/impl/ch_ra_ba_ro_co.cpp.i
 
 # target to preprocess a source file
 addr_mapper/impl/ch_ra_ba_ro_co.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.i
 .PHONY : addr_mapper/impl/ch_ra_ba_ro_co.cpp.i
 
 addr_mapper/impl/ch_ra_ba_ro_co.s: addr_mapper/impl/ch_ra_ba_ro_co.cpp.s
@@ -221,7 +221,7 @@ addr_mapper/impl/ch_ra_ba_ro_co.s: addr_mapper/impl/ch_ra_ba_ro_co.cpp.s
 
 # target to generate assembly for a file
 addr_mapper/impl/ch_ra_ba_ro_co.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.s
 .PHONY : addr_mapper/impl/ch_ra_ba_ro_co.cpp.s
 
 addr_mapper/impl/mop4clxor.o: addr_mapper/impl/mop4clxor.cpp.o
@@ -229,7 +229,7 @@ addr_mapper/impl/mop4clxor.o: addr_mapper/impl/mop4clxor.cpp.o
 
 # target to build an object file
 addr_mapper/impl/mop4clxor.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o
 .PHONY : addr_mapper/impl/mop4clxor.cpp.o
 
 addr_mapper/impl/mop4clxor.i: addr_mapper/impl/mop4clxor.cpp.i
@@ -237,7 +237,7 @@ addr_mapper/impl/mop4clxor.i: addr_mapper/impl/mop4clxor.cpp.i
 
 # target to preprocess a source file
 addr_mapper/impl/mop4clxor.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.i
 .PHONY : addr_mapper/impl/mop4clxor.cpp.i
 
 addr_mapper/impl/mop4clxor.s: addr_mapper/impl/mop4clxor.cpp.s
@@ -245,7 +245,7 @@ addr_mapper/impl/mop4clxor.s: addr_mapper/impl/mop4clxor.cpp.s
 
 # target to generate assembly for a file
 addr_mapper/impl/mop4clxor.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.s
 .PHONY : addr_mapper/impl/mop4clxor.cpp.s
 
 addr_mapper/impl/passthrough_addr_mapper.o: addr_mapper/impl/passthrough_addr_mapper.cpp.o
@@ -253,7 +253,7 @@ addr_mapper/impl/passthrough_addr_mapper.o: addr_mapper/impl/passthrough_addr_ma
 
 # target to build an object file
 addr_mapper/impl/passthrough_addr_mapper.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o
 .PHONY : addr_mapper/impl/passthrough_addr_mapper.cpp.o
 
 addr_mapper/impl/passthrough_addr_mapper.i: addr_mapper/impl/passthrough_addr_mapper.cpp.i
@@ -261,7 +261,7 @@ addr_mapper/impl/passthrough_addr_mapper.i: addr_mapper/impl/passthrough_addr_ma
 
 # target to preprocess a source file
 addr_mapper/impl/passthrough_addr_mapper.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.i
 .PHONY : addr_mapper/impl/passthrough_addr_mapper.cpp.i
 
 addr_mapper/impl/passthrough_addr_mapper.s: addr_mapper/impl/passthrough_addr_mapper.cpp.s
@@ -269,7 +269,7 @@ addr_mapper/impl/passthrough_addr_mapper.s: addr_mapper/impl/passthrough_addr_ma
 
 # target to generate assembly for a file
 addr_mapper/impl/passthrough_addr_mapper.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.s
 .PHONY : addr_mapper/impl/passthrough_addr_mapper.cpp.s
 
 addr_mapper/impl/ro_ba_ra_co_ch.o: addr_mapper/impl/ro_ba_ra_co_ch.cpp.o
@@ -277,7 +277,7 @@ addr_mapper/impl/ro_ba_ra_co_ch.o: addr_mapper/impl/ro_ba_ra_co_ch.cpp.o
 
 # target to build an object file
 addr_mapper/impl/ro_ba_ra_co_ch.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o
 .PHONY : addr_mapper/impl/ro_ba_ra_co_ch.cpp.o
 
 addr_mapper/impl/ro_ba_ra_co_ch.i: addr_mapper/impl/ro_ba_ra_co_ch.cpp.i
@@ -285,7 +285,7 @@ addr_mapper/impl/ro_ba_ra_co_ch.i: addr_mapper/impl/ro_ba_ra_co_ch.cpp.i
 
 # target to preprocess a source file
 addr_mapper/impl/ro_ba_ra_co_ch.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.i
 .PHONY : addr_mapper/impl/ro_ba_ra_co_ch.cpp.i
 
 addr_mapper/impl/ro_ba_ra_co_ch.s: addr_mapper/impl/ro_ba_ra_co_ch.cpp.s
@@ -293,7 +293,7 @@ addr_mapper/impl/ro_ba_ra_co_ch.s: addr_mapper/impl/ro_ba_ra_co_ch.cpp.s
 
 # target to generate assembly for a file
 addr_mapper/impl/ro_ba_ra_co_ch.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.s
 .PHONY : addr_mapper/impl/ro_ba_ra_co_ch.cpp.s
 
 controller_base.o: controller_base.cpp.o
@@ -301,7 +301,7 @@ controller_base.o: controller_base.cpp.o
 
 # target to build an object file
 controller_base.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.o
 .PHONY : controller_base.cpp.o
 
 controller_base.i: controller_base.cpp.i
@@ -309,7 +309,7 @@ controller_base.i: controller_base.cpp.i
 
 # target to preprocess a source file
 controller_base.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.i
 .PHONY : controller_base.cpp.i
 
 controller_base.s: controller_base.cpp.s
@@ -317,7 +317,7 @@ controller_base.s: controller_base.cpp.s
 
 # target to generate assembly for a file
 controller_base.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.s
 .PHONY : controller_base.cpp.s
 
 impl/generic_ddr_controller.o: impl/generic_ddr_controller.cpp.o
@@ -325,7 +325,7 @@ impl/generic_ddr_controller.o: impl/generic_ddr_controller.cpp.o
 
 # target to build an object file
 impl/generic_ddr_controller.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o
 .PHONY : impl/generic_ddr_controller.cpp.o
 
 impl/generic_ddr_controller.i: impl/generic_ddr_controller.cpp.i
@@ -333,7 +333,7 @@ impl/generic_ddr_controller.i: impl/generic_ddr_controller.cpp.i
 
 # target to preprocess a source file
 impl/generic_ddr_controller.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.i
 .PHONY : impl/generic_ddr_controller.cpp.i
 
 impl/generic_ddr_controller.s: impl/generic_ddr_controller.cpp.s
@@ -341,7 +341,7 @@ impl/generic_ddr_controller.s: impl/generic_ddr_controller.cpp.s
 
 # target to generate assembly for a file
 impl/generic_ddr_controller.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.s
 .PHONY : impl/generic_ddr_controller.cpp.s
 
 impl/hbm_controller.o: impl/hbm_controller.cpp.o
@@ -349,7 +349,7 @@ impl/hbm_controller.o: impl/hbm_controller.cpp.o
 
 # target to build an object file
 impl/hbm_controller.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o
 .PHONY : impl/hbm_controller.cpp.o
 
 impl/hbm_controller.i: impl/hbm_controller.cpp.i
@@ -357,7 +357,7 @@ impl/hbm_controller.i: impl/hbm_controller.cpp.i
 
 # target to preprocess a source file
 impl/hbm_controller.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.i
 .PHONY : impl/hbm_controller.cpp.i
 
 impl/hbm_controller.s: impl/hbm_controller.cpp.s
@@ -365,7 +365,7 @@ impl/hbm_controller.s: impl/hbm_controller.cpp.s
 
 # target to generate assembly for a file
 impl/hbm_controller.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.s
 .PHONY : impl/hbm_controller.cpp.s
 
 impl/lpddr5_controller.o: impl/lpddr5_controller.cpp.o
@@ -373,7 +373,7 @@ impl/lpddr5_controller.o: impl/lpddr5_controller.cpp.o
 
 # target to build an object file
 impl/lpddr5_controller.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o
 .PHONY : impl/lpddr5_controller.cpp.o
 
 impl/lpddr5_controller.i: impl/lpddr5_controller.cpp.i
@@ -381,7 +381,7 @@ impl/lpddr5_controller.i: impl/lpddr5_controller.cpp.i
 
 # target to preprocess a source file
 impl/lpddr5_controller.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.i
 .PHONY : impl/lpddr5_controller.cpp.i
 
 impl/lpddr5_controller.s: impl/lpddr5_controller.cpp.s
@@ -389,7 +389,7 @@ impl/lpddr5_controller.s: impl/lpddr5_controller.cpp.s
 
 # target to generate assembly for a file
 impl/lpddr5_controller.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.s
 .PHONY : impl/lpddr5_controller.cpp.s
 
 plugin/impl/cmd_trace_recorder.o: plugin/impl/cmd_trace_recorder.cpp.o
@@ -397,7 +397,7 @@ plugin/impl/cmd_trace_recorder.o: plugin/impl/cmd_trace_recorder.cpp.o
 
 # target to build an object file
 plugin/impl/cmd_trace_recorder.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o
 .PHONY : plugin/impl/cmd_trace_recorder.cpp.o
 
 plugin/impl/cmd_trace_recorder.i: plugin/impl/cmd_trace_recorder.cpp.i
@@ -405,7 +405,7 @@ plugin/impl/cmd_trace_recorder.i: plugin/impl/cmd_trace_recorder.cpp.i
 
 # target to preprocess a source file
 plugin/impl/cmd_trace_recorder.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.i
 .PHONY : plugin/impl/cmd_trace_recorder.cpp.i
 
 plugin/impl/cmd_trace_recorder.s: plugin/impl/cmd_trace_recorder.cpp.s
@@ -413,7 +413,7 @@ plugin/impl/cmd_trace_recorder.s: plugin/impl/cmd_trace_recorder.cpp.s
 
 # target to generate assembly for a file
 plugin/impl/cmd_trace_recorder.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.s
 .PHONY : plugin/impl/cmd_trace_recorder.cpp.s
 
 plugin/impl/command_counter.o: plugin/impl/command_counter.cpp.o
@@ -421,7 +421,7 @@ plugin/impl/command_counter.o: plugin/impl/command_counter.cpp.o
 
 # target to build an object file
 plugin/impl/command_counter.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o
 .PHONY : plugin/impl/command_counter.cpp.o
 
 plugin/impl/command_counter.i: plugin/impl/command_counter.cpp.i
@@ -429,7 +429,7 @@ plugin/impl/command_counter.i: plugin/impl/command_counter.cpp.i
 
 # target to preprocess a source file
 plugin/impl/command_counter.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.i
 .PHONY : plugin/impl/command_counter.cpp.i
 
 plugin/impl/command_counter.s: plugin/impl/command_counter.cpp.s
@@ -437,7 +437,7 @@ plugin/impl/command_counter.s: plugin/impl/command_counter.cpp.s
 
 # target to generate assembly for a file
 plugin/impl/command_counter.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.s
 .PHONY : plugin/impl/command_counter.cpp.s
 
 plugin/impl/issued_command_validation_hook.o: plugin/impl/issued_command_validation_hook.cpp.o
@@ -445,7 +445,7 @@ plugin/impl/issued_command_validation_hook.o: plugin/impl/issued_command_validat
 
 # target to build an object file
 plugin/impl/issued_command_validation_hook.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o
 .PHONY : plugin/impl/issued_command_validation_hook.cpp.o
 
 plugin/impl/issued_command_validation_hook.i: plugin/impl/issued_command_validation_hook.cpp.i
@@ -453,7 +453,7 @@ plugin/impl/issued_command_validation_hook.i: plugin/impl/issued_command_validat
 
 # target to preprocess a source file
 plugin/impl/issued_command_validation_hook.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.i
 .PHONY : plugin/impl/issued_command_validation_hook.cpp.i
 
 plugin/impl/issued_command_validation_hook.s: plugin/impl/issued_command_validation_hook.cpp.s
@@ -461,7 +461,7 @@ plugin/impl/issued_command_validation_hook.s: plugin/impl/issued_command_validat
 
 # target to generate assembly for a file
 plugin/impl/issued_command_validation_hook.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.s
 .PHONY : plugin/impl/issued_command_validation_hook.cpp.s
 
 refresh/impl/all_bank.o: refresh/impl/all_bank.cpp.o
@@ -469,7 +469,7 @@ refresh/impl/all_bank.o: refresh/impl/all_bank.cpp.o
 
 # target to build an object file
 refresh/impl/all_bank.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o
 .PHONY : refresh/impl/all_bank.cpp.o
 
 refresh/impl/all_bank.i: refresh/impl/all_bank.cpp.i
@@ -477,7 +477,7 @@ refresh/impl/all_bank.i: refresh/impl/all_bank.cpp.i
 
 # target to preprocess a source file
 refresh/impl/all_bank.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.i
 .PHONY : refresh/impl/all_bank.cpp.i
 
 refresh/impl/all_bank.s: refresh/impl/all_bank.cpp.s
@@ -485,7 +485,7 @@ refresh/impl/all_bank.s: refresh/impl/all_bank.cpp.s
 
 # target to generate assembly for a file
 refresh/impl/all_bank.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.s
 .PHONY : refresh/impl/all_bank.cpp.s
 
 refresh/impl/no_refresh.o: refresh/impl/no_refresh.cpp.o
@@ -493,7 +493,7 @@ refresh/impl/no_refresh.o: refresh/impl/no_refresh.cpp.o
 
 # target to build an object file
 refresh/impl/no_refresh.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o
 .PHONY : refresh/impl/no_refresh.cpp.o
 
 refresh/impl/no_refresh.i: refresh/impl/no_refresh.cpp.i
@@ -501,7 +501,7 @@ refresh/impl/no_refresh.i: refresh/impl/no_refresh.cpp.i
 
 # target to preprocess a source file
 refresh/impl/no_refresh.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.i
 .PHONY : refresh/impl/no_refresh.cpp.i
 
 refresh/impl/no_refresh.s: refresh/impl/no_refresh.cpp.s
@@ -509,7 +509,7 @@ refresh/impl/no_refresh.s: refresh/impl/no_refresh.cpp.s
 
 # target to generate assembly for a file
 refresh/impl/no_refresh.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.s
 .PHONY : refresh/impl/no_refresh.cpp.s
 
 refresh/impl/per_bank.o: refresh/impl/per_bank.cpp.o
@@ -517,7 +517,7 @@ refresh/impl/per_bank.o: refresh/impl/per_bank.cpp.o
 
 # target to build an object file
 refresh/impl/per_bank.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o
 .PHONY : refresh/impl/per_bank.cpp.o
 
 refresh/impl/per_bank.i: refresh/impl/per_bank.cpp.i
@@ -525,7 +525,7 @@ refresh/impl/per_bank.i: refresh/impl/per_bank.cpp.i
 
 # target to preprocess a source file
 refresh/impl/per_bank.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.i
 .PHONY : refresh/impl/per_bank.cpp.i
 
 refresh/impl/per_bank.s: refresh/impl/per_bank.cpp.s
@@ -533,7 +533,7 @@ refresh/impl/per_bank.s: refresh/impl/per_bank.cpp.s
 
 # target to generate assembly for a file
 refresh/impl/per_bank.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.s
 .PHONY : refresh/impl/per_bank.cpp.s
 
 rowpolicy/impl/closed_cap.o: rowpolicy/impl/closed_cap.cpp.o
@@ -541,7 +541,7 @@ rowpolicy/impl/closed_cap.o: rowpolicy/impl/closed_cap.cpp.o
 
 # target to build an object file
 rowpolicy/impl/closed_cap.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o
 .PHONY : rowpolicy/impl/closed_cap.cpp.o
 
 rowpolicy/impl/closed_cap.i: rowpolicy/impl/closed_cap.cpp.i
@@ -549,7 +549,7 @@ rowpolicy/impl/closed_cap.i: rowpolicy/impl/closed_cap.cpp.i
 
 # target to preprocess a source file
 rowpolicy/impl/closed_cap.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.i
 .PHONY : rowpolicy/impl/closed_cap.cpp.i
 
 rowpolicy/impl/closed_cap.s: rowpolicy/impl/closed_cap.cpp.s
@@ -557,7 +557,7 @@ rowpolicy/impl/closed_cap.s: rowpolicy/impl/closed_cap.cpp.s
 
 # target to generate assembly for a file
 rowpolicy/impl/closed_cap.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.s
 .PHONY : rowpolicy/impl/closed_cap.cpp.s
 
 rowpolicy/impl/open.o: rowpolicy/impl/open.cpp.o
@@ -565,7 +565,7 @@ rowpolicy/impl/open.o: rowpolicy/impl/open.cpp.o
 
 # target to build an object file
 rowpolicy/impl/open.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o
 .PHONY : rowpolicy/impl/open.cpp.o
 
 rowpolicy/impl/open.i: rowpolicy/impl/open.cpp.i
@@ -573,7 +573,7 @@ rowpolicy/impl/open.i: rowpolicy/impl/open.cpp.i
 
 # target to preprocess a source file
 rowpolicy/impl/open.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.i
 .PHONY : rowpolicy/impl/open.cpp.i
 
 rowpolicy/impl/open.s: rowpolicy/impl/open.cpp.s
@@ -581,7 +581,7 @@ rowpolicy/impl/open.s: rowpolicy/impl/open.cpp.s
 
 # target to generate assembly for a file
 rowpolicy/impl/open.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.s
 .PHONY : rowpolicy/impl/open.cpp.s
 
 scheduler/impl/frfcfs.o: scheduler/impl/frfcfs.cpp.o
@@ -589,7 +589,7 @@ scheduler/impl/frfcfs.o: scheduler/impl/frfcfs.cpp.o
 
 # target to build an object file
 scheduler/impl/frfcfs.cpp.o:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o
 .PHONY : scheduler/impl/frfcfs.cpp.o
 
 scheduler/impl/frfcfs.i: scheduler/impl/frfcfs.cpp.i
@@ -597,7 +597,7 @@ scheduler/impl/frfcfs.i: scheduler/impl/frfcfs.cpp.i
 
 # target to preprocess a source file
 scheduler/impl/frfcfs.cpp.i:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.i
 .PHONY : scheduler/impl/frfcfs.cpp.i
 
 scheduler/impl/frfcfs.s: scheduler/impl/frfcfs.cpp.s
@@ -605,7 +605,7 @@ scheduler/impl/frfcfs.s: scheduler/impl/frfcfs.cpp.s
 
 # target to generate assembly for a file
 scheduler/impl/frfcfs.cpp.s:
-	cd /workspace/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/build.make extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.s
 .PHONY : scheduler/impl/frfcfs.cpp.s
 
 # Help Target
@@ -686,7 +686,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -P /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

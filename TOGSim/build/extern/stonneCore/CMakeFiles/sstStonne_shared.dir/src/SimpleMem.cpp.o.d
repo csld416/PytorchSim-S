@@ -1,7 +1,7 @@
 extern/stonneCore/CMakeFiles/sstStonne_shared.dir/src/SimpleMem.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/src/SimpleMem.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/stonneCore/include/SimpleMem.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

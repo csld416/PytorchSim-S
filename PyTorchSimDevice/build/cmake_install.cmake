@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/PyTorchSim/PyTorchSimDevice
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/PyTorchSim/PyTorchSimDevice/torch_openreg")
+  set(CMAKE_INSTALL_PREFIX "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/torch_openreg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/PyTorchSimDevice/build/third_party/openreg/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/third_party/openreg/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/PyTorchSimDevice/build/csrc/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/csrc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/PyTorchSim/PyTorchSimDevice/build/torch_openreg/csrc/cmake_install.cmake")
+  include("/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/torch_openreg/csrc/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspace/PyTorchSim/PyTorchSimDevice/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

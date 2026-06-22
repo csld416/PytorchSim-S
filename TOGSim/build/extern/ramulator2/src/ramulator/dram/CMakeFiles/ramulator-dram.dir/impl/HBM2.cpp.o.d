@@ -1,7 +1,7 @@
 extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/impl/HBM2.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/ACT.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/ACT.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -148,7 +148,7 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/node.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/memory \
@@ -221,22 +221,22 @@ extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/type.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/dram_spec.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/base/config_node.h \
  /usr/include/c++/11/variant /usr/include/c++/11/bits/parse_numbers.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/PREab.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/PREpb.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/RD.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/ACT2.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/RDA.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/REFab.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/REFpb.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/WR.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/WRA.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/populate.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/func_types.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/PREab.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/PREpb.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/RD.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/ACT2.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/RDA.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/REFab.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/REFpb.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/WR.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/WRA.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/dram/commands/populate.h

@@ -1,7 +1,7 @@
 csrc/CMakeFiles/torch_openreg.dir/runtime/OpenRegGenerator.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegGenerator.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegGenerator.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegGenerator.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegGenerator.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/CPUGeneratorImpl.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/Generator.h \
  /usr/include/c++/11/cstdint \
@@ -339,5 +339,5 @@ csrc/CMakeFiles/torch_openreg.dir/runtime/OpenRegGenerator.cpp.o: \
  /opt/conda/lib/python3.11/site-packages/torch/include/c10/util/safe_numerics.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/MT19937RNGEngine.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/GeneratorForPrivateuseone.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegFunctions.h \
- /workspace/PyTorchSim/PyTorchSimDevice/include/Macros.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/runtime/OpenRegFunctions.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/include/Macros.h

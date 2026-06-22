@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/PyTorchSim/TOGSim/src
+# Install script for directory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

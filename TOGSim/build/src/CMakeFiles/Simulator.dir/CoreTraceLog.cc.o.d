@@ -1,7 +1,7 @@
 src/CMakeFiles/Simulator.dir/CoreTraceLog.cc.o: \
- /workspace/PyTorchSim/TOGSim/src/CoreTraceLog.cc \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/CoreTraceLog.cc \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/include/CoreTraceLog.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/CoreTraceLog.h \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -143,7 +143,7 @@ src/CMakeFiles/Simulator.dir/CoreTraceLog.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /workspace/PyTorchSim/TOGSim/include/Instruction.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Instruction.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
@@ -296,4 +296,4 @@ src/CMakeFiles/Simulator.dir/CoreTraceLog.cc.o: \
  /usr/include/c++/11/pstl/glue_numeric_defs.h /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /workspace/PyTorchSim/TOGSim/include/TraceLogTags.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/TraceLogTags.h

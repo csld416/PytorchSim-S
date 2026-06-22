@@ -1,5 +1,5 @@
 csrc/CMakeFiles/torch_openreg.dir/amp/auto_cast_mode.cpp.o: \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/amp/auto_cast_mode.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/amp/auto_cast_mode.cpp \
  /usr/include/stdc-predef.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/autocast_mode.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/ATen.h \
@@ -4723,5 +4723,5 @@ csrc/CMakeFiles/torch_openreg.dir/amp/auto_cast_mode.cpp.o: \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/function.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/ATen/core/class_type.h \
  /opt/conda/lib/python3.11/site-packages/torch/include/torch/custom_class_detail.h \
- /workspace/PyTorchSim/PyTorchSimDevice/csrc/amp/OpenRegAmp.h \
- /workspace/PyTorchSim/PyTorchSimDevice/include/Macros.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/csrc/amp/OpenRegAmp.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/PyTorchSimDevice/include/Macros.h

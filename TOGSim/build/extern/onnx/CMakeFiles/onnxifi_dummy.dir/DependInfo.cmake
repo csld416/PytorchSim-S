@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspace/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_dummy.c" "extern/onnx/CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o" "gcc" "extern/onnx/CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o.d"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/onnx/onnx/onnxifi_dummy.c" "extern/onnx/CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o" "gcc" "extern/onnx/CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

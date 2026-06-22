@@ -1,7 +1,7 @@
 extern/booksim/CMakeFiles/booksim2.dir/src/booksim_config.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -147,8 +147,8 @@ extern/booksim/CMakeFiles/booksim2.dir/src/booksim_config.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/cassert \
  /usr/include/assert.h \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.hpp \
- /workspace/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/booksim_config.hpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/booksim/src/config_utils.hpp \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/node_handle.h \

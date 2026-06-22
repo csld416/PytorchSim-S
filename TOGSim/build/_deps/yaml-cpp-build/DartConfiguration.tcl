@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp
-BuildDirectory: /workspace/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build
+SourceDirectory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp
+BuildDirectory: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/_deps/yaml-cpp-build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: 3094e8b33b78
+Site: 2913d5a6c284
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake" "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp"
+ConfigureCommand: "/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake" "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp"
 MakeCommand: /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

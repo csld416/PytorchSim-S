@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Include any dependencies generated for this target.
 include extern/ramulator2/CMakeFiles/ramulator.dir/depend.make
@@ -70,18 +70,18 @@ include extern/ramulator2/CMakeFiles/ramulator.dir/progress.make
 include extern/ramulator2/CMakeFiles/ramulator.dir/flags.make
 
 extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o: extern/ramulator2/CMakeFiles/ramulator.dir/flags.make
-extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o: /workspace/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc
+extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc
 extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o: extern/ramulator2/CMakeFiles/ramulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o -MF CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o.d -o CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o -c /workspace/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o -MF CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o.d -o CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc
 
 extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.i"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc > CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.i
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc > CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.i
 
 extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.s"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc -o CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.s
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/resources/wrappers/ramulator2.cc -o CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.s
 
 # Object files for target ramulator
 ramulator_OBJECTS = \
@@ -89,50 +89,50 @@ ramulator_OBJECTS = \
 
 # External object files for target ramulator
 ramulator_EXTERNAL_OBJECTS = \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/factory.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/logger.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/utils.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/config.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/request.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o" \
-"/workspace/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o"
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/factory.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/logger.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/utils.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/config.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/request.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/external.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/loadstore_trace.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/readwrite_trace.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/memory_trace/latency_throughput_trace.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/simpleO3.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/core.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/frontend/CMakeFiles/ramulator-frontend.dir/impl/processor/simpleO3/llc.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/cache_line_interleave.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/channel_mapper/impl/passthrough_channel_mapper.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/memory_system/CMakeFiles/ramulator-memorysystem.dir/impl/generic_dram_system.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/node.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/device.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/dram_spec.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR3.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR4.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/DDR5.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM1.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM2.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/HBM3.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/dram/CMakeFiles/ramulator-dram.dir/impl/LPDDR5.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/controller_base.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/scheduler/impl/frfcfs.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/all_bank.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/per_bank.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/refresh/impl/no_refresh.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/open.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/rowpolicy/impl/closed_cap.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/addr_mapper_base.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ch_ra_ba_ro_co.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/ro_ba_ra_co_ch.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/mop4clxor.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/addr_mapper/impl/passthrough_addr_mapper.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/command_counter.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/cmd_trace_recorder.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/plugin/impl/issued_command_validation_hook.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/generic_ddr_controller.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/lpddr5_controller.cpp.o" \
+"/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/src/ramulator/controller/CMakeFiles/ramulator-controller.dir/impl/hbm_controller.cpp.o"
 
 lib/libramulator.so: extern/ramulator2/CMakeFiles/ramulator.dir/resources/wrappers/ramulator2.cc.o
 lib/libramulator.so: extern/ramulator2/src/ramulator/base/CMakeFiles/ramulator-base.dir/factory.cpp.o
@@ -185,18 +185,18 @@ lib/libramulator.so: lib/libyaml-cpp.a
 lib/libramulator.so: lib/libyaml-cpp.a
 lib/libramulator.so: lib/libfmt.a
 lib/libramulator.so: extern/ramulator2/CMakeFiles/ramulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libramulator.so"
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ramulator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libramulator.so"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ramulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 extern/ramulator2/CMakeFiles/ramulator.dir/build: lib/libramulator.so
 .PHONY : extern/ramulator2/CMakeFiles/ramulator.dir/build
 
 extern/ramulator2/CMakeFiles/ramulator.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 && $(CMAKE_COMMAND) -P CMakeFiles/ramulator.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 && $(CMAKE_COMMAND) -P CMakeFiles/ramulator.dir/cmake_clean.cmake
 .PHONY : extern/ramulator2/CMakeFiles/ramulator.dir/clean
 
 extern/ramulator2/CMakeFiles/ramulator.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/ramulator2 /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/ramulator2 /workspace/PyTorchSim/TOGSim/build/extern/ramulator2/CMakeFiles/ramulator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2 /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2 /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/ramulator2/CMakeFiles/ramulator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/ramulator2/CMakeFiles/ramulator.dir/depend
 

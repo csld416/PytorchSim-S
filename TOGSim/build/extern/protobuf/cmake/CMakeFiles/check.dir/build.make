@@ -53,10 +53,10 @@ RM = /root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/PyTorchSim/TOGSim
+CMAKE_SOURCE_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/PyTorchSim/TOGSim/build
+CMAKE_BINARY_DIR = /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build
 
 # Utility rule file for check.
 
@@ -68,7 +68,7 @@ include extern/protobuf/cmake/CMakeFiles/check.dir/progress.make
 
 extern/protobuf/cmake/CMakeFiles/check: bin/tests
 extern/protobuf/cmake/CMakeFiles/check: bin/test_plugin
-	cd /workspace/PyTorchSim/TOGSim/extern/protobuf && /workspace/PyTorchSim/TOGSim/build/bin/tests
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf && /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/bin/tests
 
 check: extern/protobuf/cmake/CMakeFiles/check
 check: extern/protobuf/cmake/CMakeFiles/check.dir/build.make
@@ -79,10 +79,10 @@ extern/protobuf/cmake/CMakeFiles/check.dir/build: check
 .PHONY : extern/protobuf/cmake/CMakeFiles/check.dir/build
 
 extern/protobuf/cmake/CMakeFiles/check.dir/clean:
-	cd /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake && $(CMAKE_COMMAND) -P CMakeFiles/check.dir/cmake_clean.cmake
 .PHONY : extern/protobuf/cmake/CMakeFiles/check.dir/clean
 
 extern/protobuf/cmake/CMakeFiles/check.dir/depend:
-	cd /workspace/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/PyTorchSim/TOGSim /workspace/PyTorchSim/TOGSim/extern/protobuf/cmake /workspace/PyTorchSim/TOGSim/build /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake /workspace/PyTorchSim/TOGSim/build/extern/protobuf/cmake/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/protobuf/cmake /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/extern/protobuf/cmake/CMakeFiles/check.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extern/protobuf/cmake/CMakeFiles/check.dir/depend
 

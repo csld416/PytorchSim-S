@@ -1,7 +1,7 @@
 _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/directives.cpp.o: \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp/src/directives.cpp \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp/src/directives.cpp \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp/src/directives.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/yaml-cpp/src/directives.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

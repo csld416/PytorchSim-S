@@ -1,7 +1,7 @@
 src/CMakeFiles/Simulator.dir/Instruction.cc.o: \
- /workspace/PyTorchSim/TOGSim/src/Instruction.cc \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Instruction.cc \
  /usr/include/stdc-predef.h \
- /workspace/PyTorchSim/TOGSim/include/Instruction.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Instruction.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

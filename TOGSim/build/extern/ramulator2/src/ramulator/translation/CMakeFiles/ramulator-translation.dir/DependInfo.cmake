@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspace/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/translation/impl/no_translation.cpp" "extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o" "gcc" "extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o.d"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/src/ramulator/translation/impl/no_translation.cpp" "extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o" "gcc" "extern/ramulator2/src/ramulator/translation/CMakeFiles/ramulator-translation.dir/impl/no_translation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

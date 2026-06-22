@@ -55,7 +55,7 @@ add_library(fmt::fmt STATIC IMPORTED)
 
 set_target_properties(fmt::fmt PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
-  INTERFACE_INCLUDE_DIRECTORIES "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt/include"
 )
 
 # Create imported target fmt::fmt-header-only
@@ -64,14 +64,14 @@ add_library(fmt::fmt-header-only INTERFACE IMPORTED)
 set_target_properties(fmt::fmt-header-only PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FMT_HEADER_ONLY=1"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
-  INTERFACE_INCLUDE_DIRECTORIES "/workspace/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2/ext/fmt/include"
 )
 
 # Import target "fmt::fmt" for configuration "Release"
 set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(fmt::fmt PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/workspace/PyTorchSim/TOGSim/build/lib/libfmt.a"
+  IMPORTED_LOCATION_RELEASE "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/lib/libfmt.a"
   )
 
 # This file does not depend on other imported targets which have
