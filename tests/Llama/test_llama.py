@@ -214,6 +214,16 @@ def run_decoder_layer_test(
     print("Compiling LlamaDecoderLayer with torch.compile(...)")
     compiled_layer = torch.compile(model, dynamic=False)
 
+    # Patch TOGSimulator.launch_kernel to trace every NPU dispatch
+    from Simulator.simulator import TOGSimulator
+    _dispatch_log = []
+    _orig_launch = TOGSimulator.launch_kernel
+    def _traced_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp=0):
+        _dispatch_log.append(tog_path)
+        print(f"  [NPU dispatch #{len(_dispatch_log)}] {tog_path}")
+        return _orig_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp)
+    TOGSimulator.launch_kernel = _traced_launch
+
     # Calculate and print the memory range of hidden_states on the device for debugging
     base = hs_dev.data_ptr()
     size_bytes = hs_dev.untyped_storage().size()  # total bytes in underlying storage
@@ -232,14 +242,20 @@ def run_decoder_layer_test(
     if isinstance(out_cpu, tuple):
         out_cpu = out_cpu[0]
 
-    out_dev = compiled_layer(
-        hidden_states=hs_dev,
-        attention_mask=att_dev,
-        position_ids=pos_dev,
-        position_embeddings=pos_emb_dev
-    )
+    with TOGSimulator() as sim:
+        out_dev = compiled_layer(
+            hidden_states=hs_dev,
+            attention_mask=att_dev,
+            position_ids=pos_dev,
+            position_embeddings=pos_emb_dev
+        )
     if isinstance(out_dev, tuple):
         out_dev = out_dev[0]
+
+    TOGSimulator.launch_kernel = _orig_launch  # restore
+    print(f"\n[NPU dispatch summary] {len(_dispatch_log)} kernel(s) launched through NPU simulator")
+    for i, path in enumerate(_dispatch_log):
+        print(f"  {i+1:3d}. {path}")
 
     test_result("LlamaDecoderLayer forward", out_dev, out_cpu, rtol=rtol, atol=atol)
     print("Max diff >", (out_dev.detach().cpu() - out_cpu.detach().cpu()).abs().max().item())

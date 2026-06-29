@@ -303,7 +303,9 @@ class CustomAsyncCompile(AsyncCompile):
                 # Prepare arguments for launch kernel
                 onnx_path = os.path.join(result_path, "tile_graph.onnx")
                 attribute_dir = os.path.join(runtime_path, "attribute")
-                kernel_attribute_path = TOGSimulator.write_kernel_attribute_file(attribute_dir, args)
+                kernel_attribute_path = TOGSimulator.write_kernel_attribute_file(
+                    attribute_dir, args, arg_attributes=arg_attributes
+                )
 
                 TOGSim = torch.npu.get_tog_simulator()
                 if not autotune and TOGSim is not None:

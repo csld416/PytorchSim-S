@@ -1,5 +1,5 @@
 import os
-import sys
+import subprocess, sys
 import argparse
 import copy
 import torch
@@ -131,6 +131,11 @@ def run_tinyllama_gen(
                 f"{name}\tbase={base}\tend={end}\tsize_bytes={size_bytes}"
                 f"\tshape={tuple(p.shape)}\tdtype={p.dtype}\n"
             )
+    # Run merge_weight_ranges.py
+    subprocess.run(
+        [sys.executable, os.path.join(os.path.dirname(__file__), "../../merge_weight_ranges.py")],
+        check=True,
+    )
 
     print("Compiling TinyLlama with torch.compile(...)")
     dev_model.forward = torch.compile(dev_model.forward, dynamic=False)
@@ -283,9 +288,9 @@ if __name__ == "__main__":
     parser.add_argument("--dtype", type=str, default="float32", choices=["float32", "float16", "bfloat16"])
     parser.add_argument("--rtol", type=float, default=1e-3)
     parser.add_argument("--atol", type=float, default=1e-3)
-    parser.add_argument("--max_new_tokens", type=int, default=4)
+    parser.add_argument("--max_new_tokens", type=int, default=10)
     parser.add_argument("--hf_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-    parser.add_argument("--prompt", type=str, default="How are you?\nI am")
+    parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool")
     parser.add_argument("--cpu_only", action="store_true")
     parser.add_argument("--generate", action="store_true")
     args = parser.parse_args()

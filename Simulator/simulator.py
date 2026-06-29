@@ -297,8 +297,8 @@ class TOGSimulator():
         if self.process is None:
             self.process = subprocess.Popen(
                 shlex.split(cmd),
-                #stdout=subprocess.PIPE,
-                #stderr=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
                 universal_newlines=True
             )
         else:
@@ -445,7 +445,7 @@ class TOGSimulator():
             del cls.ALLOC_POOL[buf_name]
 
     @staticmethod
-    def write_kernel_attribute_file(attribute_dir, inputs, alloc_pool=None):
+    def write_kernel_attribute_file(attribute_dir, inputs, alloc_pool=None, arg_attributes=None):
         """
         Write kernel attribute YAML (address_info + sram_alloc) under attribute_dir.
 
@@ -455,6 +455,11 @@ class TOGSimulator():
             attribute_dir: Directory to hold numbered attribute files (created if needed)
             inputs: Kernel input tensors (data_ptr used for address_info)
             alloc_pool: Optional dict like ALLOC_POOL; defaults to TOGSimulator.ALLOC_POOL
+            arg_attributes: Optional list of [arg_name, [direction, dtype, numel, ...]]
+                from MLIRKernelArgs.mlir_argdefs().  When provided, an ``arg_meta``
+                section is written with direction flags and byte sizes so that
+                LegOSim simlets can classify MVIN vs MVOUT arguments without
+                re-parsing the tile graph ONNX.
 
         Returns:
             Path to the written YAML file.
@@ -472,6 +477,17 @@ class TOGSimulator():
         for idx, tensor in enumerate(inputs):
             address_info[f"arg{idx}"] = tensor.data_ptr()
         yaml_content["address_info"] = address_info
+
+        # Optional per-argument metadata for LegOSim simlets.
+        # arg_attributes[i] == [outer_name, [direction, dtype, numel, sizes, strides]]
+        if arg_attributes is not None:
+            arg_meta = {}
+            for idx, (tensor, attr_entry) in enumerate(zip(inputs, arg_attributes)):
+                attr = attr_entry[1]  # [direction, dtype, numel, ...]
+                direction = int(attr[0])
+                nbytes = int(tensor.numel()) * tensor.element_size()
+                arg_meta[f"arg{idx}"] = {"direction": direction, "bytes": nbytes}
+            yaml_content["arg_meta"] = arg_meta
 
         for buf_name, range in alloc_pool.items():
             sram_buffer[buf_name] = range
