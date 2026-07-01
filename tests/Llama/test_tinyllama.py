@@ -153,6 +153,16 @@ def run_tinyllama_gen(
     #     dtype=torch_dtype,
     # )
 
+    # Patch TOGSimulator.launch_kernel to trace every NPU dispatch
+    from Simulator.simulator import TOGSimulator
+    _dispatch_log = []
+    _orig_launch = TOGSimulator.launch_kernel
+    def _traced_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp=0):
+        _dispatch_log.append(tog_path)
+        print(f"  [NPU dispatch #{len(_dispatch_log)}] {tog_path}")
+        return _orig_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp)
+    TOGSimulator.launch_kernel = _traced_launch
+
     for step in range(max_new_tokens):
         if step == 0:
             step_input_ids = gen_ids
@@ -161,14 +171,15 @@ def run_tinyllama_gen(
             step_input_ids = gen_ids[:, -1:]
             # cache_position = torch.tensor([prompt_len + step - 1], device=device)
 
-        out = dev_model.forward(
-            input_ids=step_input_ids,
-            attention_mask=gen_mask,
-            use_cache=True,
-            past_key_values=past_key_values,
-            # cache_position=cache_position,
-            return_dict=True,
-        )
+        with TOGSimulator() as sim:
+            out = dev_model.forward(
+                input_ids=step_input_ids,
+                attention_mask=gen_mask,
+                use_cache=True,
+                past_key_values=past_key_values,
+                # cache_position=cache_position,
+                return_dict=True,
+            )
         next_token = out.logits[:, -1, :].argmax(dim=-1, keepdim=True)
         gen_ids = torch.cat([gen_ids, next_token], dim=1)
         gen_mask = torch.cat([gen_mask, torch.ones_like(next_token)], dim=1)
@@ -288,7 +299,7 @@ if __name__ == "__main__":
     parser.add_argument("--dtype", type=str, default="float32", choices=["float32", "float16", "bfloat16"])
     parser.add_argument("--rtol", type=float, default=1e-3)
     parser.add_argument("--atol", type=float, default=1e-3)
-    parser.add_argument("--max_new_tokens", type=int, default=10)
+    parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--hf_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
     parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool")
     parser.add_argument("--cpu_only", action="store_true")
@@ -298,8 +309,8 @@ if __name__ == "__main__":
     sys.path.append(os.environ.get("PYTORCHSIM_ROOT_PATH", "/workspace/PyTorchSim"))
     device = torch.device("cpu" if args.cpu_only else "npu:0")
     #test_triu(device, size=(32, 128), diagonal=1)
-    # if not args.cpu_only:
-    #     torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
+    if not args.cpu_only:
+        torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
 
     if args.generate:
         run_tinyllama_gen(

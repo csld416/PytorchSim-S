@@ -368,14 +368,12 @@ class TOGSimulator():
 
         stdout_output = ""
         if self.process:
-            self.process.wait()
-
-            # Read output streams
-            stderr_output = ""
-            if self.process.stdout:
-                stdout_output = self.process.stdout.read()
-            if self.process.stderr:
-                stderr_output = self.process.stderr.read()
+            # Use communicate() to drain stdout/stderr pipes while waiting.
+            # process.wait() without draining causes a deadlock when TOGSim's
+            # verbose stats output fills the OS pipe buffer (64 KB on Linux).
+            stdout_bytes, stderr_bytes = self.process.communicate()
+            stdout_output = stdout_bytes if isinstance(stdout_bytes, str) else (stdout_bytes.decode(errors="replace") if stdout_bytes else "")
+            stderr_output = stderr_bytes if isinstance(stderr_bytes, str) else (stderr_bytes.decode(errors="replace") if stderr_bytes else "")
 
             # Print stderr immediately if there's any error output
             if stderr_output:

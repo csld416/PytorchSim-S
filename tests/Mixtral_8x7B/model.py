@@ -168,8 +168,8 @@ class Attention(nn.Module):
 
         # Todo.
         if freqs_cis is not None:
-            q = apply_rotary_emb(q, freqs_cis)
-            k = apply_rotary_emb(k, freqs_cis)
+            q = apply_rotary_emb2(q, freqs_cis)
+            k = apply_rotary_emb2(k, freqs_cis)
 
         q, k, v = map(lambda x: x.transpose(1, 2), (q, k, v))
 

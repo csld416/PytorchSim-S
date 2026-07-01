@@ -242,13 +242,13 @@ def run_decoder_layer_test(
     if isinstance(out_cpu, tuple):
         out_cpu = out_cpu[0]
 
-    with TOGSimulator() as sim:
-        out_dev = compiled_layer(
-            hidden_states=hs_dev,
-            attention_mask=att_dev,
-            position_ids=pos_dev,
-            position_embeddings=pos_emb_dev
-        )
+    # with TOGSimulator() as sim:
+    out_dev = compiled_layer(
+        hidden_states=hs_dev,
+        attention_mask=att_dev,
+        position_ids=pos_dev,
+        position_embeddings=pos_emb_dev
+    )
     if isinstance(out_dev, tuple):
         out_dev = out_dev[0]
 

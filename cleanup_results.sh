@@ -6,4 +6,5 @@ rm -rf ${TORCHSIM_DIR}/togsim_results/${TRACE_NAME}/*
 rm -rf ${TORCHSIM_DIR}/outputs/*
 rm -rf ${TORCHSIM_DIR}/ssd_traces/${TRACE_NAME}/*.csv
 rm -rf ${TORCHSIM_DIR}/ssd_traces/${TRACE_NAME}/*.txt
+rm -rf ${TORCHSIM_DIR}/validation/gemm_candidates/*.txt
 shopt -u dotglob
