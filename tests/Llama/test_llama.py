@@ -408,8 +408,8 @@ if __name__ == "__main__":
     device = torch.device("npu:0")
     #test_triu(device, size=(32, 128), diagonal=1)
     torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
-    #run_rmsnorm_test(device)
-    #run_rotary_embedding_test(device)
+    # run_rmsnorm_test(device, dtype=args.dtype)
+    # run_rotary_embedding_test(device, dtype=args.dtype)
     run_decoder_layer_test(
         device=device,
         batch=args.batch,

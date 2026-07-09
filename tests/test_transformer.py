@@ -2,7 +2,7 @@ import math
 import copy
 import torch
 
-def test_result(name, out, cpu_out, rtol=1e-4, atol=1e-4):
+def test_result(name, out, cpu_out, rtol=1e-3, atol=1e-3):
     if torch.allclose(out.cpu(), cpu_out, rtol=rtol, atol=atol):
         message = f"|{name} Test Passed|"
         print("-" * len(message))
@@ -70,8 +70,8 @@ class EncoderBlock(torch.nn.Module):
         return self.layer_norm(ffn2_result + result)
 
 def test_EncoderBlock(device, head=12, embed_dim=768, input_seq=512):
-    cpu_query = torch.randn(1, input_seq, embed_dim)
-    encoder_block = EncoderBlock(embed_dim, head)
+    cpu_query = torch.randn(1, input_seq, embed_dim, dtype=torch.float16)
+    encoder_block = EncoderBlock(embed_dim, head).to(dtype=torch.float16)
     cpu_res = encoder_block(cpu_query)
 
     query = cpu_query.clone().to(device=device)
@@ -81,7 +81,7 @@ def test_EncoderBlock(device, head=12, embed_dim=768, input_seq=512):
 
     test_result("Encoder Block Forwrad", res, cpu_res)
 
-def test_Attention(device, head=16, seq=512, d_k=64):
+def test_Attention(device, head=16, seq=512, d_k=64, dtype=torch.float16):
     def attention(query, key, value):
         import math
         d_k = query.size(-1)
@@ -90,9 +90,9 @@ def test_Attention(device, head=16, seq=512, d_k=64):
         return torch.matmul(value.transpose(-1, -2), p_attn)
 
     torch.manual_seed(0)
-    query = torch.randn(head, seq, d_k).to(device=device)
-    key = torch.randn(head, seq, d_k).to(device=device)
-    value = torch.randn(head, seq, d_k).to(device=device)
+    query = torch.randn(head, seq, d_k, dtype=dtype).to(device=device)
+    key = torch.randn(head, seq, d_k, dtype=dtype).to(device=device)
+    value = torch.randn(head, seq, d_k, dtype=dtype).to(device=device)
 
     opt_fn = torch.compile(dynamic=False)(attention)
     res = opt_fn(query, key, value)
@@ -101,8 +101,8 @@ def test_Attention(device, head=16, seq=512, d_k=64):
     test_result("Attention Forward", res, cpu_res)
 
 def test_MHA(device, num_heads=12, embed_dim=768, input_seq=512):
-    MHA = my_MultiheadAttention(num_heads, embed_dim)
-    cpu_query = torch.randn(input_seq, embed_dim)
+    MHA = my_MultiheadAttention(num_heads, embed_dim).to(dtype=torch.float16)
+    cpu_query = torch.randn(input_seq, embed_dim, dtype=torch.float16)
     cpu_res = MHA(cpu_query, cpu_query, cpu_query)
 
     query = cpu_query.clone().to(device=device)
@@ -115,5 +115,5 @@ def test_MHA(device, num_heads=12, embed_dim=768, input_seq=512):
 if __name__ == "__main__":
     device = torch.device("npu:0")
     # test_EncoderBlock(device)
-    test_Attention(device, head=16, seq=512, d_k=64)
+    test_Attention(device, head=16, seq=512, d_k=64, dtype=torch.float16)
     # test_MHA(device, num_heads=12, embed_dim=768)

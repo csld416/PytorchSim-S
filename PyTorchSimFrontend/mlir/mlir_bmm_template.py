@@ -168,8 +168,10 @@ class MLIRBMMTemplate(MLIRTemplate):
         X, W, Y, Bias, W_tensor, X_tensor, B, M, N, K, n_extra_node, n_prologue_node = self.extract_info(template_buffer_node, epilogue_nodes, prologue_nodes)
         precision_bytes = mlir_common.get_dtype_nbytes(X.get_dtype())
         if tile_info is None:
+            # print(f"Tile info is not provided. Selecting tile size for BMM kernel (M={M}, N={N}, K={K}, n_extra_node={n_extra_node}, n_prologue_node={n_prologue_node})")
             TILE_M, TILE_N, TILE_K, SUB_TILE_M, SUB_TILE_N, SUB_TILE_K = self.select_tile(kernel, M, N, K, n_extra_node, 0, n_prologue_node, precision_bytes)[0]
         else:
+            # print(f"Tile info is provided. Using tile size for BMM kernel (M={M}, N={N}, K={K}, n_extra_node={n_extra_node}, n_prologue_node={n_prologue_node})")
             TILE_M, TILE_N, TILE_K, SUB_TILE_M, SUB_TILE_N, SUB_TILE_K = tile_info
 
         TOG_latency = M if TILE_M > M else TILE_M

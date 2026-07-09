@@ -8,6 +8,7 @@ from collections import defaultdict
 from functools import reduce
 from operator import mul
 import torch
+import sys
 
 from PyTorchSimFrontend import extension_config
 from torch._inductor.codegen import common
@@ -89,6 +90,10 @@ MLIR_TO_BIT = {
     "bf16": 16,
     "index": 64
 }
+
+# bf16 does not start with "f", so callers must not rely on
+# mlir_type[0] == "f" to detect floating point MLIR types.
+FLOAT_MLIR_TYPES = {"f16", "f32", "f64", "bf16"}
 
 def get_dtype_nbytes(dtype):
     mlir_dtype = DTYPE_TO_MLIR.get(dtype)
@@ -298,6 +303,7 @@ class VectorLaneMapping():
                 # This preserves the assert(vec_len % reduction_size == 0) invariant.
                 capped = (min(result, self.forced_vec_size) // max(val, 1)) * max(val, 1)
                 result = max(capped, val)
+            # print(f"[DEBUG] [get_compute_vec_size] per_lane={per_lane}, reduction_numel={reduction_numel}, nr_rdim={nr_rdim}, val={val}, result={result}, forced_vec_size={self.forced_vec_size}")
             return result
         if self.forced_vec_size is not None:
             return self.forced_vec_size
@@ -825,6 +831,8 @@ class BaseMLIRKernel(common.Kernel, BaseMLIRHardwareInfo):
             # structure assumes compute_vec_size == step, so we must not split them here.
             tile_desc.vmap.forced_vec_size = safe_vec_size
             compute_vec = tile_desc.get_compute_vec_size()
+            # print(f"[DEBUG] [codegen_nodes] Tile size: {tile_desc.get_tile_size()}, stride: {tile_desc.get_tile_stride()}, compute_vec: {compute_vec}, forced_vec_size: {tile_desc.vmap.forced_vec_size}")
+            # sys.stdout.flush()
             # RVV requires vector lengths that produce integer power-of-2 LMUL values.
             # Non-power-of-2 element counts (e.g. 24) cause LLVM WidenVectorResult crashes.
             # Raise BEFORE the try/except so this propagates to make_choices (not retried).
@@ -841,9 +849,9 @@ class BaseMLIRKernel(common.Kernel, BaseMLIRHardwareInfo):
             except RecompileSignal as e:
                 recompile_try += 1
                 if recompile_try > max_retry_compile:
-                    raise RuntimeError("Failed to compile kernel after multiple attempts.")
+                    raise RuntimeError("Failed to compile kernel.")
                 # Retry compile nodes
-                #print(f"Try recompile({recompile_try}/{max_retry_compile}). Reason: {e}")
+                # print(f"Try recompile({recompile_try}/{max_retry_compile}). Reason: {e}")
                 continue
             V.graph.removed_buffers |= self.removed_buffers
             # V.graph.inplaced_to_remove |= self.inplaced_to_remove
@@ -1110,6 +1118,7 @@ class BaseMLIRKernel(common.Kernel, BaseMLIRHardwareInfo):
         # Max LMUL set to 1 to ensure compatibility/safety.
 
         widen_safe_cap = self.vlen // min_lowp_bits
+        # print(f"[DEBUG] [get_safe_vec_size] min_lowp_bits={min_lowp_bits}, widen_safe_cap={widen_safe_cap}, default_vec_size={default_vec_size}")
         if widen_safe_cap <= 0:
             return default_vec_size
 

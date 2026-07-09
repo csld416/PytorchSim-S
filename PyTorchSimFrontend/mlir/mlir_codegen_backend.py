@@ -501,6 +501,18 @@ class MLIRKernel(mlir_common.BaseMLIRKernel):
         index = ops.affine_apply(map_var, indices)
         return index
 
+    def _resolve_mutation_name(self, name):
+        """Resolves `name` to the buffer it actually mutates, the same way
+        `KernelArgs.output()` does internally before consulting `inplace_buffers`.
+        `buffer_types` is keyed by each buffer's own (pre-mutation) name, so a store into a
+        view of a larger in-place-mutated buffer (e.g. a KV-cache slice write) would otherwise
+        report the view's own numel instead of the real underlying buffer's, producing a
+        different declared memref size than the one used for the kernel's function signature
+        (which does resolve mutations, via mlir_argdefs' `other_names[-1]`)."""
+        if V.graph.scheduler:
+            return V.graph.scheduler.mutation_real_name.get(name, name)
+        return name
+
     def load(self, name: str, index: sympy.Expr):
         index, comptute_depedency = self.convert_indirect_indexing(index)
         padding = self.get_padding_type()
@@ -517,7 +529,7 @@ class MLIRKernel(mlir_common.BaseMLIRKernel):
 
         # Extract dram info
         dram_var = self.kernel_group.args.input(name)
-        dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[name])
+        dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[self._resolve_mutation_name(name)])
         dtype = V.graph.get_dtype(name)
         mlir_dtype = mlir_common.DTYPE_TO_MLIR[dtype]
 
@@ -575,7 +587,7 @@ class MLIRKernel(mlir_common.BaseMLIRKernel):
         vlane_split_axis = local_tile_desc.vmap.vlane_split_axis
         vlane_stride = local_tile_desc.vmap.vlane_stride
 
-        dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[name])
+        dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[self._resolve_mutation_name(name)])
         tile_shape = local_tile_desc.get_mlir_shape(mlir_dtype)
         tile_stride = local_tile_desc.get_tile_stride()
         tile_size = local_tile_desc.get_tile_size()
@@ -713,7 +725,7 @@ class MLIRKernel(mlir_common.BaseMLIRKernel):
             vlane_split_axis = local_tile_desc.vmap.vlane_split_axis
             vlane_stride = local_tile_desc.vmap.vlane_stride
 
-            dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[name])
+            dram_shape = mlir_common.MLIRKernelArgs.get_mlir_shape(self.buffer_types[self._resolve_mutation_name(name)])
             tile_shape = local_tile_desc.get_mlir_shape(mlir_dtype)
             tile_stride = local_tile_desc.get_tile_stride()
 
@@ -1473,7 +1485,7 @@ class MLIRKernel(mlir_common.BaseMLIRKernel):
         # Type convert
         if value in ["inf", "-inf", "nan"]:
             value = f"0x{mlir_common.MLIR_INF[value][dtype]:x}"
-        elif dtype[0] == "f":
+        elif dtype in mlir_common.FLOAT_MLIR_TYPES:
             value = float(value)
         else:
             value = int(value)

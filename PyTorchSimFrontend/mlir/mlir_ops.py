@@ -61,12 +61,12 @@ class ExtensionOverrides(common.OpOverrides):
             value = f"0x{mlir_common.MLIR_INF[str_val][src_type]:x}"
         elif isinstance(value, bool):
             value = 1 if value else 0
-            if src_type[0] == "f":
+            if src_type in mlir_common.FLOAT_MLIR_TYPES:
                 value = format(float(value), ".20f")
         # scientific notation check
         elif "e" in str_val:
             value = format(float(value), ".20f")
-        elif src_type[0] == "f":
+        elif src_type in mlir_common.FLOAT_MLIR_TYPES:
             value = format(float(value), ".20f")
         elif src_type[0] == "i":
             value = int(float(value))
@@ -179,19 +179,19 @@ class ExtensionOverrides(common.OpOverrides):
         src_bits = mlir_common.MLIR_TO_BIT[src_mlir_dtype]
         shape = f"vector<{tile_size}x{dst_mlir_dtype}>" if tile_size > 1 else dst_mlir_dtype
         src_shape = f"vector<{tile_size}x{src_mlir_dtype}>" if tile_size > 1 else src_mlir_dtype
-        src_type_char = src_mlir_dtype[0] # 'i' or 'f'
-        dst_type_char = dst_mlir_dtype[0] # 'i' or 'f'o
+        src_is_float = src_mlir_dtype in mlir_common.FLOAT_MLIR_TYPES
+        dst_is_float = dst_mlir_dtype in mlir_common.FLOAT_MLIR_TYPES
 
         op_str = ""
 
         # Case A: Integer -> Float
-        if src_type_char == "i" and dst_type_char == "f":
+        if not src_is_float and dst_is_float:
             op_str = f"arith.uitofp %{operand} : {src_shape} to {shape}"
         # Case B: Float -> Integer
-        elif src_type_char == "f" and dst_type_char == "i":
+        elif src_is_float and not dst_is_float:
             op_str = f"arith.fptosi %{operand} : {src_shape} to {shape}"
         # Case C: Integer -> Integer (Extension / Truncation)
-        elif src_type_char == "i" and dst_type_char == "i":
+        elif not src_is_float and not dst_is_float:
             if dst_bits > src_bits:
                 op_str = f"arith.extsi %{operand} : {src_shape} to {shape}"
             elif dst_bits < src_bits:
@@ -200,7 +200,7 @@ class ExtensionOverrides(common.OpOverrides):
             else:
                 return operand, [tile_size, dst_mlir_dtype]
         # Case D: Float -> Float (Extension / Truncation)
-        elif src_type_char == "f" and dst_type_char == "f":
+        elif src_is_float and dst_is_float:
             if dst_bits > src_bits:
                 op_str = f"arith.extf %{operand} : {src_shape} to {shape}"
             elif dst_bits < src_bits:
@@ -268,7 +268,7 @@ class ExtensionOverrides(common.OpOverrides):
             if op_type1[1] == "index" or op_type2[1] == "index":
                 if op_type1[1] == "index":
                     # index -> target type: 2-step casting if target is float
-                    if op_type2[1][0] == "f":
+                    if op_type2[1] in mlir_common.FLOAT_MLIR_TYPES:
                         operand1 = ops.index_cast(operand1, "i64")
                         operand1 = ops.to_dtype(operand1, op_type2[1])
                         op_type1 = V.kernel.var_info[operand1]
@@ -278,7 +278,7 @@ class ExtensionOverrides(common.OpOverrides):
                         op_type1 = V.kernel.var_info[operand1]
                 if op_type2[1] == "index":
                     # index -> target type: 2-step casting if target is float
-                    if op_type1[1][0] == "f":
+                    if op_type1[1] in mlir_common.FLOAT_MLIR_TYPES:
                         operand2 = ops.index_cast(operand2, "i64")
                         operand2 = ops.to_dtype(operand2, op_type1[1])
                         op_type2 = V.kernel.var_info[operand2]
@@ -286,13 +286,13 @@ class ExtensionOverrides(common.OpOverrides):
                         # index -> integer: direct casting
                         operand2 = ops.index_cast(operand2, op_type1[1])
                         op_type2 = V.kernel.var_info[operand2]
-            elif op_type1[1][0] == "i" and op_type2[1][0] == "f":
+            elif op_type1[1] not in mlir_common.FLOAT_MLIR_TYPES and op_type2[1] in mlir_common.FLOAT_MLIR_TYPES:
                 operand1 = ops.to_dtype(operand1, op_type2[1])
                 op_type1 = V.kernel.var_info[operand1]
-            elif op_type1[1][0] == "f" and op_type2[1][0] == "i":
+            elif op_type1[1] in mlir_common.FLOAT_MLIR_TYPES and op_type2[1] not in mlir_common.FLOAT_MLIR_TYPES:
                 operand2 = ops.to_dtype(operand2, op_type1[1])
                 op_type2 = V.kernel.var_info[operand2]
-            elif op_type1[1][0] == op_type2[1][0]:
+            elif (op_type1[1] in mlir_common.FLOAT_MLIR_TYPES) == (op_type2[1] in mlir_common.FLOAT_MLIR_TYPES):
                 if mlir_common.MLIR_TO_BIT[op_type1[1]] > mlir_common.MLIR_TO_BIT[op_type2[1]]:
                    operand2 = ops.ext(operand2, op_type1[1])
                    op_type2 = V.kernel.var_info[operand2]
@@ -359,8 +359,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
 
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.sqrt %{operand}', shape, **kwargs), [tile_size, dtype]
@@ -375,7 +376,7 @@ class ExtensionOverrides(common.OpOverrides):
     def minimum(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             opcode = f'arith.minimumf'
         else:
             opcode = f'arith.minsi'
@@ -386,7 +387,7 @@ class ExtensionOverrides(common.OpOverrides):
     def maximum(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             opcode = f'arith.maximumf'
         else:
             opcode = f'arith.maxsi'
@@ -409,8 +410,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.cos %{operand}', shape, **kwargs), [tile_size, dtype]
 
@@ -430,8 +432,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.sin %{operand}', shape, **kwargs), [tile_size, dtype]
 
@@ -485,8 +488,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.tanh %{operand}', shape, **kwargs), [tile_size, dtype]
 
@@ -568,8 +572,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
 
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.log %{operand}', shape, **kwargs), [tile_size, dtype]
@@ -626,7 +631,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def bitwise_and(operand1, operand2, *args, **kwargs):
         # Float check
-        if V.kernel.var_info[operand1][1].startswith("f") or V.kernel.var_info[operand2][1].startswith("f"):
+        if V.kernel.var_info[operand1][1] in mlir_common.FLOAT_MLIR_TYPES or V.kernel.var_info[operand2][1] in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError("Bitwise AND not supported for floats")
         result = ops.and_(operand1, operand2)
         return result, V.kernel.var_info[result]
@@ -635,7 +640,7 @@ class ExtensionOverrides(common.OpOverrides):
     def bitwise_not(operand, *args, **kwargs):
         tile_size, dtype = V.kernel.var_info[operand]
         # Float check
-        if V.kernel.var_info[operand][1].startswith("f"):
+        if V.kernel.var_info[operand][1] in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError("Bitwise NOT not supported for floats")
         neg_one = ops.constant(-1, dtype)
         result = ops.xor(operand, neg_one)
@@ -644,7 +649,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def bitwise_or(operand1, operand2, *args, **kwargs):
         # Float check
-        if V.kernel.var_info[operand1][1].startswith("f") or V.kernel.var_info[operand2][1].startswith("f"):
+        if V.kernel.var_info[operand1][1] in mlir_common.FLOAT_MLIR_TYPES or V.kernel.var_info[operand2][1] in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError("Bitwise AND not supported for floats")
 
         result = ops.or_(operand1, operand2)
@@ -653,7 +658,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def bitwise_xor(operand1, operand2, *args, **kwargs):
                 # Float check
-        if V.kernel.var_info[operand1][1].startswith("f") or V.kernel.var_info[operand2][1].startswith("f"):
+        if V.kernel.var_info[operand1][1] in mlir_common.FLOAT_MLIR_TYPES or V.kernel.var_info[operand2][1] in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError("Bitwise AND not supported for floats")
         result = ops.xor(operand1, operand2)
         return result, V.kernel.var_info[result]
@@ -673,8 +678,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
 
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(f'math.rsqrt %{operand}', shape, **kwargs), [tile_size, dtype]
@@ -704,7 +710,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, dtype = V.kernel.var_info[operand]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
 
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             op_str = f"math.roundeven %{operand}"
             return format_mlir_op(op_str, shape, **kwargs), [tile_size, dtype]
         else:
@@ -715,7 +721,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, dtype = V.kernel.var_info[operand]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
 
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             op_str = f"math.floor %{operand}"
             return format_mlir_op(op_str, shape, **kwargs), [tile_size, dtype]
         else:
@@ -730,7 +736,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, dtype = V.kernel.var_info[operand]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
 
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             op_str = f"math.trunc %{operand}"
             return format_mlir_op(op_str, shape, **kwargs), [tile_size, dtype]
         else:
@@ -741,7 +747,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, dtype = V.kernel.var_info[operand]
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
 
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             op_str = f"math.ceil %{operand}"
             return format_mlir_op(op_str, shape, **kwargs), [tile_size, dtype]
         else:
@@ -755,8 +761,9 @@ class ExtensionOverrides(common.OpOverrides):
         dtype = op_type[1]
 
         # Type check & auto cast
-        if dtype.startswith("f"):
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             operand = ops.to_dtype(operand, "f32")
+            dtype = V.kernel.var_info[operand][1]
         op_str = f"arith.negf %{operand}"
         shape = f"vector<{tile_size}x{dtype}>" if tile_size > 1 else dtype
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, dtype]
@@ -766,7 +773,7 @@ class ExtensionOverrides(common.OpOverrides):
         op_type = V.kernel.var_info[operand]
         tile_size, dtype = op_type[0], op_type[1]
         if dtype.startswith("i"):
-            openand = ops.to_dtype(operand, "f32")
+            operand = ops.to_dtype(operand, "f32")
             op_type = V.kernel.var_info[operand]
             tile_size, dtype = op_type[0], op_type[1]
 
@@ -775,7 +782,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def eq(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "oeq"
         elif ret_type[0] == "i":
@@ -791,7 +798,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def ne(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "one"
         elif ret_type[0] == "i":
@@ -807,7 +814,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def lt(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "olt"
         elif ret_type[0] == "i":
@@ -823,7 +830,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def gt(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "ogt"
         elif ret_type[0] == "i":
@@ -839,7 +846,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def le(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "ole"
         elif ret_type[0] == "i":
@@ -855,7 +862,7 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def ge(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             op_type = "arith.cmpf"
             attribute = "oge"
         elif ret_type[0] == "i":
@@ -872,7 +879,7 @@ class ExtensionOverrides(common.OpOverrides):
     def add(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        opcode = f'arith.add{ret_type[0]}'
+        opcode = f'arith.add{"f" if ret_type in mlir_common.FLOAT_MLIR_TYPES else "i"}'
         op_str = f'{opcode} %{operand1}, %{operand2}'
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, ret_type]
 
@@ -880,7 +887,7 @@ class ExtensionOverrides(common.OpOverrides):
     def sub(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        opcode = f'arith.sub{ret_type[0]}'
+        opcode = f'arith.sub{"f" if ret_type in mlir_common.FLOAT_MLIR_TYPES else "i"}'
         op_str = f'{opcode} %{operand1}, %{operand2}'
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, ret_type]
 
@@ -888,7 +895,7 @@ class ExtensionOverrides(common.OpOverrides):
     def mul(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        opcode = f'arith.mul{ret_type[0]}'
+        opcode = f'arith.mul{"f" if ret_type in mlir_common.FLOAT_MLIR_TYPES else "i"}'
         op_str = f'{opcode} %{operand1}, %{operand2}'
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, ret_type]
 
@@ -896,15 +903,13 @@ class ExtensionOverrides(common.OpOverrides):
     def pow(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         # Type check & auto cast
-        if ret_type.startswith("f"):
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             operand1 = ops.to_dtype(operand1, "f32")
-
-        # Type check & auto cast
-        if ret_type.startswith("f"):
             operand2 = ops.to_dtype(operand2, "f32")
+            ret_type = V.kernel.var_info[operand1][1]
 
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        op_str = f"math.pow{ret_type[0]} %{operand1}, %{operand2}"
+        op_str = f'math.pow{"f" if ret_type in mlir_common.FLOAT_MLIR_TYPES else "i"} %{operand1}, %{operand2}'
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, ret_type]
 
     @staticmethod
@@ -944,7 +949,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
 
-        if ret_type.startswith("f"):
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError("truncdiv is strictly for integers. Use truediv for floats.")
 
         # arith.divsi: Signed Integer Division (Result is truncated)
@@ -956,7 +961,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
 
-        if ret_type.startswith("f"):
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
              # Float의 floor division은 보통 divf 후 floor를 하므로 여기선 정수만 처리
              raise ValueError("floordiv implementation expects integers based on definition.")
 
@@ -969,7 +974,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
 
-        if not ret_type.startswith("f"):
+        if ret_type not in mlir_common.FLOAT_MLIR_TYPES:
             raise ValueError(f"truediv expects float inputs, but got {ret_type}. Use int_truediv for integers.")
 
         op_str = f'arith.divf %{operand1}, %{operand2}'
@@ -982,7 +987,7 @@ class ExtensionOverrides(common.OpOverrides):
         Promotes integers to floats, then performs floating-point division.
         """
         tile_size, src_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
-        if not src_type.startswith("f"):
+        if src_type not in mlir_common.FLOAT_MLIR_TYPES:
             target_float_type = "f32"
             operand1 = ops.to_dtype(operand1, target_float_type)
             operand2 = ops.to_dtype(operand2, target_float_type)
@@ -995,7 +1000,7 @@ class ExtensionOverrides(common.OpOverrides):
     def mod(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        if ret_type[0] == "f":
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             raise NotImplementedError("Not support remainder operation for floating point")
         else:
             opcode = f'arith.remsi'
@@ -1007,7 +1012,7 @@ class ExtensionOverrides(common.OpOverrides):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
 
-        if ret_type.startswith("f"):
+        if ret_type in mlir_common.FLOAT_MLIR_TYPES:
             opcode = 'arith.remf'
         else:
             opcode = 'arith.remsi' # Signed Integer Remainder (LHS sign)
@@ -1048,7 +1053,7 @@ class ExtensionOverrides(common.OpOverrides):
         op_type = V.kernel.var_info[operand]
         shape = f"vector<{op_type[0]}x{op_type[1]}>" if op_type[0] > 1 else f"{op_type[1]}"
         target_type = f"vector<{op_type[0]}x{dtype}>" if op_type[0] > 1 else f"{dtype}"
-        if dtype[0] == "f":
+        if dtype in mlir_common.FLOAT_MLIR_TYPES:
             opcode = f'arith.extf'
         else:
             opcode = f'arith.extui'
@@ -1137,7 +1142,7 @@ class ExtensionOverrides(common.OpOverrides):
     def vlane_offset(operand1, operand2, *args, **kwargs):
         tile_size, ret_type, operand1, operand2 = ExtensionOverrides.binary_elementwise_common(operand1, operand2)
         shape = f"vector<{tile_size}x{ret_type}>" if tile_size > 1 else ret_type
-        opcode = f'arith.add{ret_type[0]}'
+        opcode = f'arith.add{"f" if ret_type in mlir_common.FLOAT_MLIR_TYPES else "i"}'
         op_str = f'{opcode} %{operand1}, %{operand2}'
         return format_mlir_op(op_str, shape, **kwargs), [tile_size, ret_type]
 
