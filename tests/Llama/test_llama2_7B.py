@@ -7,7 +7,8 @@ import torch
 from huggingface_hub import snapshot_download
 from safetensors import safe_open
 from accelerate.utils import set_module_tensor_to_device
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, StaticCache
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers.cache_utils import DynamicCache, StaticCache
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaForCausalLM, LlamaDecoderLayer, LlamaRMSNorm, LlamaRotaryEmbedding, LlamaModel
 
@@ -336,15 +337,17 @@ def run_llama_gen_streamed_npu(
     loader.load_module_(model.lm_head, "lm_head", device, torch_dtype)
 
     # Dynamo treats `self.self_attn.layer_idx` (a plain int attribute read inside
-    # LlamaAttention.forward) as a static guard value, so with the real per-layer index left in
-    # place, every layer forces its own specialized compile of the shared LlamaDecoderLayer.forward
-    # code object -- nothing else about the computation differs between layers. Force every layer
-    # to report layer_idx=0 so they all share one guard and Dynamo compiles a single kernel that's
-    # reused for all of them (SimStaticCache.update() ignores this value anyway and uses
-    # set_active_layer() instead, so cache correctness doesn't depend on it). Only the
-    # prefill-vs-decode sequence-length shape still forces a second, legitimate specialization.
-    for decoder_layer in model.model.layers:
-        decoder_layer.self_attn.layer_idx = 0
+    # LlamaAttention.forward) as a static guard value, so every layer's distinct layer_idx forces
+    # its own specialized compile of the shared LlamaDecoderLayer.forward code object -- as does
+    # prefill (q_len>1) vs. decode (q_len==1) shape, on top of that. That's on purpose (each layer
+    # needs its own compiled kernel anyway for the weight-streaming glue in between), but it means
+    # the number of specializations for this one code object can exceed Dynamo's default
+    # cache_size_limit (8), which would otherwise make it silently give up and fall back to eager
+    # for the remaining layers -- confirmed: layers past the limit dropped to 0 compiled kernels
+    # and ~43 individual eager ops each instead of 1 compiled kernel. Raise the limit so every
+    # layer actually gets compiled.
+    
+    torch._dynamo.config.recompile_limit = max(256, config.num_hidden_layers * 4)
 
     print("Compiling each decoder layer once (weights are swapped between calls, not the graph)")
     for decoder_layer in model.model.layers:
