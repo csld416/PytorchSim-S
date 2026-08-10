@@ -141,6 +141,18 @@ def __getattr__(name):
     if name == "CONFIG_TORCHSIM_LOG_PATH":
         return os.environ.get('TORCHSIM_LOG_PATH', default = os.path.join(CONFIG_TORCHSIM_DIR, "togsim_results"))
 
+    # LegoSim live SSD/DRAM latency integration (see TOGSim/include/SsdLegoSimLink.h).
+    # When enabled, run_standalone() runs TOGSim under interchiplet, paired
+    # with an SSD simlet, instead of running the TOGSim binary directly.
+    if name == "CONFIG_TOGSIM_LEGOSIM_SSD":
+        return os.environ.get("TOGSIM_LEGOSIM_SSD", "0") == "1"
+    if name == "CONFIG_LEGOSIM_ROOT":
+        return os.environ.get("SIMULATOR_ROOT", "/workspace/legomerged/eclab_legosim")
+    if name == "CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS":
+        return float(os.environ.get("TOGSIM_LEGOSIM_SSD_BANDWIDTH_GBPS", "8.0"))
+    if name == "CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS":
+        return float(os.environ.get("TOGSIM_LEGOSIM_SSD_BASE_LATENCY_NS", "100.0"))
+
 # SRAM Buffer allocation plan
 def load_plan_from_module(module_path):
     if module_path is None:

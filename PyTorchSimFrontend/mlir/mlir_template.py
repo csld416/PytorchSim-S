@@ -240,7 +240,8 @@ class MLIRTemplateKernel(MLIRKernel, BaseMLIRHardwareInfo):
                     used_spad_size_per_lane = (weight_size_per_lane + input_size_per_lane + output_size_per_lane) * precision_bytes
                     check_spad_size = (used_spad_size < max_spad_size and used_spad_size_per_lane < max_spad_per_lane)
                     if check_spad_size:
-                        dir_path = f"{extension_config.CONFIG_TORCHSIM_DIR}/validation/gemm_candidates"
+                        trace_name = os.environ.get("TOGSIM_SSD_TRACE_NAME", "default")
+                        dir_path = f"{extension_config.CONFIG_TORCHSIM_DIR}/validation/{trace_name}/gemm_candidates"
                         os.makedirs(dir_path, exist_ok=True)
                         file_path = f"{dir_path}/gemm_{M}_{K}_{N}.txt"
                         line_to_write = f"{tile_M} {tile_K} {tile_N}\n"

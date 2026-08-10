@@ -128,7 +128,12 @@ class ExtensionOverrides(common.OpOverrides):
     @staticmethod
     def masked(mask, body, other, *args, tile_size=16, dtype="f32", ninf_declared=False, **kwargs):
         result = body()
-        val = ops.constant(other, dtype, *args, **kwargs)
+        # The "other"/fallback value must match the dtype the masked body actually produces --
+        # standard Inductor callers never pass `dtype=` explicitly, so the "f32" default above
+        # silently mistyped the fallback constant whenever body() computed a non-float value
+        # (e.g. a bool/i1 comparison), producing a type mismatch downstream.
+        result_dtype = V.kernel.var_info[result][1]
+        val = ops.constant(other, result_dtype, *args, **kwargs)
         result = ops.where(mask, result, val)
         return result, V.kernel.var_info[result]
 
@@ -193,7 +198,10 @@ class ExtensionOverrides(common.OpOverrides):
         # Case C: Integer -> Integer (Extension / Truncation)
         elif not src_is_float and not dst_is_float:
             if dst_bits > src_bits:
-                op_str = f"arith.extsi %{operand} : {src_shape} to {shape}"
+                # i1 (bool) has no sign bit to extend -- extsi would turn `true` into
+                # all-ones (e.g. 0xFF for i8) instead of 1. Zero-extend booleans.
+                extend_op = "arith.extui" if src_mlir_dtype == "i1" else "arith.extsi"
+                op_str = f"{extend_op} %{operand} : {src_shape} to {shape}"
             elif dst_bits < src_bits:
                 # Use arith.trunci for integer truncation
                 op_str = f"arith.trunci %{operand} : {src_shape} to {shape}"

@@ -265,10 +265,24 @@ src/CMakeFiles/Simulator.dir/SparseCore.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulator.dir/SparseCore.cc.s"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SparseCore.cc -o CMakeFiles/Simulator.dir/SparseCore.cc.s
 
+src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o: src/CMakeFiles/Simulator.dir/flags.make
+src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdLegoSimLink.cc
+src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o -MF CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o.d -o CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdLegoSimLink.cc
+
+src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.i"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdLegoSimLink.cc > CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.i
+
+src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.s"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdLegoSimLink.cc -o CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.s
+
 src/CMakeFiles/Simulator.dir/SsdTrace.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/SsdTrace.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdTrace.cc
 src/CMakeFiles/Simulator.dir/SsdTrace.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/Simulator.dir/SsdTrace.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/Simulator.dir/SsdTrace.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/SsdTrace.cc.o -MF CMakeFiles/Simulator.dir/SsdTrace.cc.o.d -o CMakeFiles/Simulator.dir/SsdTrace.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/SsdTrace.cc
 
 src/CMakeFiles/Simulator.dir/SsdTrace.cc.i: cmake_force
@@ -282,7 +296,7 @@ src/CMakeFiles/Simulator.dir/SsdTrace.cc.s: cmake_force
 src/CMakeFiles/Simulator.dir/Tile.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/Tile.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Tile.cc
 src/CMakeFiles/Simulator.dir/Tile.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/Simulator.dir/Tile.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/Simulator.dir/Tile.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/Tile.cc.o -MF CMakeFiles/Simulator.dir/Tile.cc.o.d -o CMakeFiles/Simulator.dir/Tile.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Tile.cc
 
 src/CMakeFiles/Simulator.dir/Tile.cc.i: cmake_force
@@ -296,7 +310,7 @@ src/CMakeFiles/Simulator.dir/Tile.cc.s: cmake_force
 src/CMakeFiles/Simulator.dir/TileGraph.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/TileGraph.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/TileGraph.cc
 src/CMakeFiles/Simulator.dir/TileGraph.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/Simulator.dir/TileGraph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/Simulator.dir/TileGraph.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/TileGraph.cc.o -MF CMakeFiles/Simulator.dir/TileGraph.cc.o.d -o CMakeFiles/Simulator.dir/TileGraph.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/TileGraph.cc
 
 src/CMakeFiles/Simulator.dir/TileGraph.cc.i: cmake_force
@@ -310,7 +324,7 @@ src/CMakeFiles/Simulator.dir/TileGraph.cc.s: cmake_force
 src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/TileGraphParser.cc
 src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o -MF CMakeFiles/Simulator.dir/TileGraphParser.cc.o.d -o CMakeFiles/Simulator.dir/TileGraphParser.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/TileGraphParser.cc
 
 src/CMakeFiles/Simulator.dir/TileGraphParser.cc.i: cmake_force
@@ -321,10 +335,24 @@ src/CMakeFiles/Simulator.dir/TileGraphParser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulator.dir/TileGraphParser.cc.s"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/TileGraphParser.cc -o CMakeFiles/Simulator.dir/TileGraphParser.cc.s
 
+src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o: src/CMakeFiles/Simulator.dir/flags.make
+src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/WeightAddressRanges.cc
+src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o -MF CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o.d -o CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/WeightAddressRanges.cc
+
+src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Simulator.dir/WeightAddressRanges.cc.i"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/WeightAddressRanges.cc > CMakeFiles/Simulator.dir/WeightAddressRanges.cc.i
+
+src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulator.dir/WeightAddressRanges.cc.s"
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/WeightAddressRanges.cc -o CMakeFiles/Simulator.dir/WeightAddressRanges.cc.s
+
 src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/helper/CommandLineParser.cc
 src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o -MF CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o.d -o CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/helper/CommandLineParser.cc
 
 src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.i: cmake_force
@@ -338,7 +366,7 @@ src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.s: cmake_force
 src/CMakeFiles/Simulator.dir/main.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/main.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/main.cc
 src/CMakeFiles/Simulator.dir/main.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/Simulator.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/Simulator.dir/main.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/main.cc.o -MF CMakeFiles/Simulator.dir/main.cc.o.d -o CMakeFiles/Simulator.dir/main.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/main.cc
 
 src/CMakeFiles/Simulator.dir/main.cc.i: cmake_force
@@ -352,7 +380,7 @@ src/CMakeFiles/Simulator.dir/main.cc.s: cmake_force
 src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o: src/CMakeFiles/Simulator.dir/flags.make
 src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o: /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/scheduler/Scheduler.cc
 src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o: src/CMakeFiles/Simulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o -MF CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o.d -o CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o -c /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/scheduler/Scheduler.cc
 
 src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.i: cmake_force
@@ -379,10 +407,12 @@ Simulator_OBJECTS = \
 "CMakeFiles/Simulator.dir/L2Cache.cc.o" \
 "CMakeFiles/Simulator.dir/Simulator.cc.o" \
 "CMakeFiles/Simulator.dir/SparseCore.cc.o" \
+"CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o" \
 "CMakeFiles/Simulator.dir/SsdTrace.cc.o" \
 "CMakeFiles/Simulator.dir/Tile.cc.o" \
 "CMakeFiles/Simulator.dir/TileGraph.cc.o" \
 "CMakeFiles/Simulator.dir/TileGraphParser.cc.o" \
+"CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o" \
 "CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o" \
 "CMakeFiles/Simulator.dir/main.cc.o" \
 "CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o"
@@ -404,10 +434,12 @@ bin/Simulator: src/CMakeFiles/Simulator.dir/Interconnect.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/L2Cache.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/Simulator.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/SparseCore.cc.o
+bin/Simulator: src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/SsdTrace.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/Tile.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/TileGraph.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/TileGraphParser.cc.o
+bin/Simulator: src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/helper/CommandLineParser.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/main.cc.o
 bin/Simulator: src/CMakeFiles/Simulator.dir/scheduler/Scheduler.cc.o
@@ -419,10 +451,11 @@ bin/Simulator: lib/libonnx_proto.a
 bin/Simulator: lib/libsstStonne.a
 bin/Simulator: lib/libyaml-cpp.a
 bin/Simulator: lib/libfmt.a
+bin/Simulator: /workspace/legomerged/eclab_legosim/interchiplet/lib/libinterchiplet_c.a
 bin/Simulator: lib/libprotobuf.a
 bin/Simulator: /root/.conan/data/zlib/1.3.1/_/_/package/dfbe50feef7f3c6223a476cd5aeadb687084a646/lib/libz.a
 bin/Simulator: src/CMakeFiles/Simulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable ../bin/Simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable ../bin/Simulator"
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Simulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

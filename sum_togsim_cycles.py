@@ -51,7 +51,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--base-dir",
-        default="/workspace/PyTorchSim/togsim_results",
+        default="/workspace/legomerged/eclab_legosim/PyTorchSim/togsim_results",
         help="Base TOGSim results directory (default: /workspace/PyTorchSim/togsim_results)",
     )
     parser.add_argument(

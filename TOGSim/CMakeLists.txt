@@ -56,3 +56,21 @@ target_include_directories(Simulator PUBLIC ${PROJECT_SOURCE_DIR}/src)
 target_include_directories(Simulator PUBLIC ${ONNX_INCLUDE_DIRS})
 target_link_libraries(Simulator booksim2 ramulator sstStonne)
 target_link_libraries(Simulator ${PROTOBUF_LIB} onnx_proto sstStonne ${CONAN_LIBS} stdc++fs)
+
+# LegoSim / interchiplet integration: lets DMA.cc query a live SSD/DRAM
+# latency simlet through the interchiplet sync protocol instead of replaying
+# a pre-recorded trace.
+if(NOT DEFINED ENV{SIMULATOR_ROOT})
+    set(LEGOSIM_ROOT "/workspace/legomerged/eclab_legosim")
+else()
+    set(LEGOSIM_ROOT $ENV{SIMULATOR_ROOT})
+endif()
+target_include_directories(Simulator PUBLIC ${LEGOSIM_ROOT}/interchiplet/includes)
+target_include_directories(Simulator PUBLIC ${PROJECT_SOURCE_DIR}/legosim)
+target_link_libraries(Simulator ${LEGOSIM_ROOT}/interchiplet/lib/libinterchiplet_c.a pthread)
+
+# SSD/DRAM latency simlet -- standalone binary, only needs the (header-only)
+# interchiplet protocol, none of TOGSim's own dependencies.
+add_executable(ssd_simlet "${PROJECT_SOURCE_DIR}/legosim/ssd_simlet.cpp")
+target_include_directories(ssd_simlet PUBLIC ${LEGOSIM_ROOT}/interchiplet/includes)
+target_link_libraries(ssd_simlet ${LEGOSIM_ROOT}/interchiplet/lib/libinterchiplet_c.a pthread)

@@ -9,6 +9,7 @@ from safetensors import safe_open
 from accelerate.utils import set_module_tensor_to_device
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 from transformers.cache_utils import DynamicCache, StaticCache
+from transformers.masking_utils import create_causal_mask
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaForCausalLM, LlamaDecoderLayer, LlamaRMSNorm, LlamaRotaryEmbedding, LlamaModel
 
@@ -153,23 +154,33 @@ def _forward_streamed(model, loader, input_ids, attention_mask, past_key_values,
     base_model = model.model
     inputs_embeds = base_model.embed_tokens(input_ids)
 
-    past_seen_tokens = past_key_values.get_seq_length()
+    # int(...): SimStaticCache.get_seq_length() already returns a plain int, but HF's real
+    # StaticCache returns a tensor -- this call is eager (outside any torch.compile boundary),
+    # so converting it here is a harmless host sync either way.
+    past_seen_tokens = int(past_key_values.get_seq_length())
     cache_position = torch.arange(
         past_seen_tokens, past_seen_tokens + inputs_embeds.shape[1], device=inputs_embeds.device
     )
     position_ids = cache_position.unsqueeze(0)
 
-    causal_mask = base_model._update_causal_mask(
-        attention_mask, inputs_embeds, cache_position, past_key_values, False
+    causal_mask = create_causal_mask(
+        config=base_model.config,
+        input_embeds=inputs_embeds,
+        attention_mask=attention_mask,
+        cache_position=cache_position,
+        past_key_values=past_key_values,
+        position_ids=position_ids,
     )
     hidden_states = inputs_embeds
     position_embeddings = base_model.rotary_emb(hidden_states, position_ids)
 
-    past_key_values.set_write_offset(past_seen_tokens)
+    if hasattr(past_key_values, "set_write_offset"):
+        past_key_values.set_write_offset(past_seen_tokens)
     for layer_idx, decoder_layer in enumerate(base_model.layers):
         loader.load_module_(decoder_layer, f"model.layers.{layer_idx}", device, dtype)
-        past_key_values.set_active_layer(layer_idx)
-        layer_outputs = decoder_layer(
+        if hasattr(past_key_values, "set_active_layer"):
+            past_key_values.set_active_layer(layer_idx)
+        hidden_states = decoder_layer(
             hidden_states,
             attention_mask=causal_mask,
             position_ids=position_ids,
@@ -178,7 +189,6 @@ def _forward_streamed(model, loader, input_ids, attention_mask, past_key_values,
             cache_position=cache_position,
             position_embeddings=position_embeddings,
         )
-        hidden_states = layer_outputs[0]
         loader.unload_module_(decoder_layer)
 
     hidden_states = base_model.norm(hidden_states)
@@ -191,8 +201,13 @@ def _prelude(base_model, input_ids, attention_mask, past_key_values, cache_posit
     path can compile it as its own graph instead of dispatching each op eagerly."""
     inputs_embeds = base_model.embed_tokens(input_ids)
     position_ids = cache_position.unsqueeze(0)
-    causal_mask = base_model._update_causal_mask(
-        attention_mask, inputs_embeds, cache_position, past_key_values, False
+    causal_mask = create_causal_mask(
+        config=base_model.config,
+        input_embeds=inputs_embeds,
+        attention_mask=attention_mask,
+        cache_position=cache_position,
+        past_key_values=past_key_values,
+        position_ids=position_ids,
     )
     position_embeddings = base_model.rotary_emb(inputs_embeds, position_ids)
     return inputs_embeds, causal_mask, position_ids, position_embeddings
@@ -203,13 +218,56 @@ def _epilogue(base_model, lm_head, hidden_states):
     return lm_head(base_model.norm(hidden_states)).float()
 
 
+def _dump_module_weight_ranges(module, name_prefix):
+    """Writes `module`'s parameter address ranges to model_weight_ranges.txt (same
+    format/location run_llama_gen already uses for the whole-model case) so
+    TOGSim's live LegoSim SSD path can tell weight DMAs apart from activations/KV-cache
+    by address instead of by name (see TOGSim/include/WeightAddressRanges.h).
+
+    Overwrites the file rather than appending: call this right after load_module_()
+    for the layer about to run. unload_module_() frees these addresses back to the
+    allocator, and the next layer's load_module_() call can reuse them, so only the
+    most recently loaded layer's ranges are valid at any given moment -- stale entries
+    from an already-unloaded layer would misattribute a later access to the wrong
+    tensor (or the wrong tensor kind entirely, since freed memory can be reused for a
+    KV-cache write instead of a weight).
+
+    No-op if TOGSIM_SSD_TRACE_DIR/TOGSIM_SSD_TRACE_NAME aren't set, i.e. when not
+    running under the LegoSim SSD integration at all.
+    """
+    trace_dir = os.environ.get("TOGSIM_SSD_TRACE_DIR")
+    trace_name = os.environ.get("TOGSIM_SSD_TRACE_NAME")
+    if not trace_dir or not trace_name:
+        return
+    out_dir = os.path.join(trace_dir, trace_name)
+    os.makedirs(out_dir, exist_ok=True)
+    out_path = os.path.join(out_dir, "model_weight_ranges.txt")
+    with open(out_path, "w") as f:
+        for name, p in module.named_parameters(recurse=True):
+            if p is None:
+                continue
+            base = p.data_ptr()
+            size_bytes = p.untyped_storage().size()
+            end = base + size_bytes
+            f.write(
+                f"{name_prefix}.{name}\tbase={base}\tend={end}\tsize_bytes={size_bytes}"
+                f"\tshape={tuple(p.shape)}\tdtype={p.dtype}\n"
+            )
+        f.flush()
+        os.fsync(f.fileno())
+    subprocess.run(
+        [sys.executable, os.path.join(os.path.dirname(__file__), "../../merge_weight_ranges.py")],
+        check=True,
+    )
+
+
 @torch.no_grad()
 def _forward_streamed_npu(model, loader, prelude_fn, epilogue_fn, input_ids, attention_mask, past_key_values, device, dtype):
     """Same as _forward_streamed, but the embed/mask/rope prelude and the norm/lm_head epilogue
     are each run through a caller-supplied (compiled) callable instead of plain eager ops, so only
     the necessary glue between layers (the weight load/unload calls) still runs eagerly."""
     base_model = model.model
-    past_seen_tokens = past_key_values.get_seq_length()
+    past_seen_tokens = int(past_key_values.get_seq_length())
     cache_position = torch.arange(
         past_seen_tokens, past_seen_tokens + input_ids.shape[1], device=input_ids.device
     )
@@ -219,14 +277,17 @@ def _forward_streamed_npu(model, loader, prelude_fn, epilogue_fn, input_ids, att
     )
     hidden_states = inputs_embeds
 
-    past_key_values.set_write_offset(past_seen_tokens)
+    # set_write_offset/set_active_layer only exist on SimStaticCache -- HF's real StaticCache
+    # derives the write position and the real layer_idx from the calling attention module
+    # directly, so neither call applies there.
+    if hasattr(past_key_values, "set_write_offset"):
+        past_key_values.set_write_offset(past_seen_tokens)
     for layer_idx, decoder_layer in enumerate(base_model.layers):
         loader.load_module_(decoder_layer, f"model.layers.{layer_idx}", device, dtype)
-        # Every layer's self_attn.layer_idx is forced to 0 (see run_llama_gen_streamed_npu) so
-        # they all share Dynamo guards and reuse one compiled kernel; tell the cache which real
-        # layer this call actually targets from outside the compiled call.
-        past_key_values.set_active_layer(layer_idx)
-        layer_outputs = decoder_layer(
+        _dump_module_weight_ranges(decoder_layer, f"model.layers.{layer_idx}")
+        if hasattr(past_key_values, "set_active_layer"):
+            past_key_values.set_active_layer(layer_idx)
+        hidden_states = decoder_layer(
             hidden_states,
             attention_mask=causal_mask,
             position_ids=position_ids,
@@ -235,7 +296,6 @@ def _forward_streamed_npu(model, loader, prelude_fn, epilogue_fn, input_ids, att
             cache_position=cache_position,
             position_embeddings=position_embeddings,
         )
-        hidden_states = layer_outputs[0]
         loader.unload_module_(decoder_layer)
 
     return epilogue_fn(base_model, model.lm_head, hidden_states)
@@ -247,6 +307,7 @@ def run_llama_gen_streamed_cpu(
     prompt="Hello!",
     dtype="float32",
     max_new_tokens=5,
+    num_layers=None,
 ):
     torch.manual_seed(0)
     print("\n[Running Llama-2-7B streamed-layer CPU Test]")
@@ -257,6 +318,9 @@ def run_llama_gen_streamed_cpu(
     print(f"Loading tokenizer/config from HF: {model_id}")
     tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
     config = AutoConfig.from_pretrained(model_id)
+    if num_layers is not None:
+        print(f"Truncating to {num_layers} layer(s) for a fast smoke test")
+        config.num_hidden_layers = num_layers
 
     print("Building model skeleton on the meta device (no weights loaded yet)")
     with torch.device("meta"):
@@ -280,8 +344,9 @@ def run_llama_gen_streamed_cpu(
     gen_mask = inputs["attention_mask"]
 
     max_cache_len = gen_ids.shape[1] + max_new_tokens
-    past_key_values = SimStaticCache(
-        config, max_batch_size=gen_ids.shape[0], max_cache_len=max_cache_len, device=device, dtype=torch_dtype
+    print("Using StaticCache for the KV cache")
+    past_key_values = StaticCache(
+        config=config, max_batch_size=gen_ids.shape[0], max_cache_len=max_cache_len, device=device, dtype=torch_dtype
     )
     print("Generating on CPU (streaming one decoder layer at a time)...")
     for step in range(max_new_tokens):
@@ -303,12 +368,18 @@ def run_llama_gen_streamed_npu(
     prompt="Hello!",
     dtype="float32",
     max_new_tokens=5,
+    num_layers=None,
 ):
     """Same layer-streamed loading as run_llama_gen_streamed_cpu, but each decoder layer's
     weights are streamed straight onto the NPU (simulated DRAM) instead of host CPU memory, and
     each layer's forward is compiled once so weight-swapping happens between compiled calls
     rather than inside a single whole-model graph (which wouldn't tolerate weights changing
-    device/identity mid-graph)."""
+    device/identity mid-graph).
+
+    `num_layers`, if given, truncates `config.num_hidden_layers` before building the model -- lets
+    a fast 1-2 layer smoke test (or a single-layer timing sample to extrapolate from, since every
+    layer has identical shapes) exercise the full NPU compile/simulate pipeline without paying for
+    all 32 layers."""
     torch.manual_seed(0)
     print("\n[Running Llama-2-7B streamed-layer NPU Test]")
     dtype_map = {"float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}
@@ -317,6 +388,9 @@ def run_llama_gen_streamed_npu(
     print(f"Loading tokenizer/config from HF: {model_id}")
     tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
     config = AutoConfig.from_pretrained(model_id)
+    if num_layers is not None:
+        print(f"Truncating to {num_layers} layer(s) for a fast smoke test")
+        config.num_hidden_layers = num_layers
 
     print("Building model skeleton on the meta device (no weights loaded yet)")
     with torch.device("meta"):
@@ -373,8 +447,9 @@ def run_llama_gen_streamed_npu(
     gen_mask = inputs["attention_mask"].to(device)
 
     max_cache_len = gen_ids.shape[1] + max_new_tokens
-    past_key_values = SimStaticCache(
-        config, max_batch_size=gen_ids.shape[0], max_cache_len=max_cache_len, device=device, dtype=torch_dtype
+    print("Using StaticCache for the KV cache")
+    past_key_values = StaticCache(
+        config=config, max_batch_size=gen_ids.shape[0], max_cache_len=max_cache_len, device=device, dtype=torch_dtype
     )
 
     print("Generating on NPU (streaming one decoder layer at a time)...")
@@ -396,163 +471,6 @@ def run_llama_gen_streamed_npu(
     print(f"\n[NPU dispatch summary] {len(_dispatch_log)} kernel(s) launched through NPU simulator")
 
 
-@torch.no_grad()
-def run_llama_gen(
-    device,
-    model_id="meta-llama/Llama-2-7b-hf",
-    prompt="Hello!",
-    dtype="float32",
-    rtol=1e-3,
-    atol=1e-3,
-    max_new_tokens=5,
-    cpu_only=False,
-):
-    torch.manual_seed(0)
-    print("\n[Running Llama-2-7B HF Test]")
-    dtype_map = {"float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}
-    torch_dtype = dtype_map.get(dtype, torch.float32)
-
-    print(f"Loading tokenizer/model from HF: {model_id}")
-    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
-    cpu_model = AutoModelForCausalLM.from_pretrained(
-        model_id, 
-        torch_dtype=torch_dtype, 
-        device_map="cpu",
-        low_cpu_mem_usage=True,
-    ).eval()
-
-    print("Running CPU-only generation")
-    inputs = tokenizer(prompt, return_tensors="pt")
-    input_ids_cpu = inputs["input_ids"]
-    attention_mask_cpu = inputs["attention_mask"]
-    gen_ids_cpu = input_ids_cpu
-    gen_mask_cpu = attention_mask_cpu
-    
-    # Pre-allocate static KV cache
-    # max_cache_len = input_ids_cpu.shape[1] + max_new_tokens + 1 # prompt + generation length
-    # past_key_values = StaticCache(
-    #     config=cpu_model.config,
-    #     max_batch_size=1,
-    #     max_cache_len=max_cache_len,
-    #     device=torch.device("cpu"),
-    #     dtype=torch_dtype,
-    # )
-    # for step in range(max_new_tokens):
-    #     if step == 0:
-    #         step_input_ids = gen_ids_cpu
-    #     else:
-    #         step_input_ids = gen_ids_cpu[:, -1:]
-        
-    #     with torch.autocast(device_type=device.type, enabled=False):
-    #         out = cpu_model.forward(
-    #             input_ids=step_input_ids,
-    #             attention_mask=gen_mask_cpu,
-    #             use_cache=True,
-    #             past_key_values=past_key_values,
-    #             return_dict=True,
-    #         )
-    #     next_token = out.logits[:, -1, :].argmax(dim=-1, keepdim=True)
-    #     gen_ids_cpu = torch.cat([gen_ids_cpu, next_token], dim=1)
-    #     gen_mask_cpu = torch.cat([gen_mask_cpu, torch.ones_like(next_token)], dim=1)
-    #     # past_key_values = out.past_key_values
-    #     # print_kv_cache(step, past_key_values, "cpu")
-    #     print(f"Step {step}: outputs={tokenizer.decode(gen_ids_cpu[0], skip_special_tokens=True)}")
-    #     if next_token.item() == tokenizer.eos_token_id:
-    #         print("[CPU] EOS reached, stopping early.")
-    #         break
-    # if cpu_only:
-    #     return
-
-    inputs = tokenizer(prompt, return_tensors="pt")
-    input_ids_cpu = inputs["input_ids"]
-    attention_mask_cpu = inputs["attention_mask"]
-    input_ids_dev = input_ids_cpu.to(device)
-    attention_mask_dev = attention_mask_cpu.to(device)
-    # inputs_dev = inputs.to(device)
-    # print("inputs: \n", inputs_dev)
-
-    dev_model = cpu_model.to(device=device, dtype=torch_dtype)
-
-    trace_dir = os.environ.get("TOGSIM_SSD_TRACE_DIR")
-    trace_name = os.environ.get("TOGSIM_SSD_TRACE_NAME")
-    if not trace_dir or not trace_name:
-        raise RuntimeError("TOGSIM_SSD_TRACE_DIR and TOGSIM_SSD_TRACE_NAME must be set")
-
-    out_dir = os.path.join(trace_dir, trace_name)
-    os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, "model_weight_ranges.txt")
-    with open(out_path, "w") as f:
-        for name, p in dev_model.named_parameters():
-            if p is None:
-                continue
-            base = p.data_ptr()
-            size_bytes = p.untyped_storage().size()
-            end = base + size_bytes
-            f.write(
-                f"{name}\tbase={base}\tend={end}\tsize_bytes={size_bytes}"
-                f"\tshape={tuple(p.shape)}\tdtype={p.dtype}\n"
-            )
-    # Run merge_weight_ranges.py
-    subprocess.run(
-        [sys.executable, os.path.join(os.path.dirname(__file__), "../../merge_weight_ranges.py")],
-        check=True,
-    )
-
-    print("Compiling Llama-2-7B with torch.compile(...)")
-    dev_model.forward = torch.compile(dev_model.forward, dynamic=False)
-
-    print("Generating on NPU...")
-    gen_ids = input_ids_dev
-    gen_mask = attention_mask_dev
-    prompt_len = input_ids_dev.shape[1]
-    past_key_values = None
-    # npu_past_key_values = StaticCache(
-    #     config=dev_model.config,
-    #     max_batch_size=1,
-    #     max_cache_len=max_cache_len,
-    #     device=device,
-    #     dtype=torch_dtype,
-    # )
-
-    # Patch TOGSimulator.launch_kernel to trace every NPU dispatch
-    from Simulator.simulator import TOGSimulator
-    _dispatch_log = []
-    _orig_launch = TOGSimulator.launch_kernel
-    def _traced_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp=0):
-        _dispatch_log.append(tog_path)
-        print(f"  [NPU dispatch #{len(_dispatch_log)}] {tog_path}")
-        return _orig_launch(self, device_index, stream_index, tog_path, attribute_path, timestamp)
-    TOGSimulator.launch_kernel = _traced_launch
-
-    for step in range(max_new_tokens):
-        if step == 0:
-            step_input_ids = gen_ids
-            # cache_position = torch.arange(0, prompt_len, device=device)
-        else:
-            step_input_ids = gen_ids[:, -1:]
-            # cache_position = torch.tensor([prompt_len + step - 1], device=device)
-
-        # with TOGSimulator() as sim:
-        out = dev_model.forward(
-            input_ids=step_input_ids,
-            attention_mask=gen_mask,
-            use_cache=True,
-            past_key_values=past_key_values,
-            # cache_position=cache_position,
-            return_dict=True,
-        )
-        next_token = out.logits[:, -1, :].argmax(dim=-1, keepdim=True)
-        gen_ids = torch.cat([gen_ids, next_token], dim=1)
-        gen_mask = torch.cat([gen_mask, torch.ones_like(next_token)], dim=1)
-        past_key_values = out.past_key_values
-        # print_kv_cache(step, past_key_values, "npu")
-        print(f"Step {step}: outputs={tokenizer.decode(gen_ids[0], skip_special_tokens=True)}")
-        if next_token.item() == tokenizer.eos_token_id:
-            print("[NPU] EOS reached, stopping early.")
-            break
-    # print(tokenizer.decode(gen_ids[0], skip_special_tokens=True))
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Test Custom Llama (random weights, no tokenizer)")
     parser.add_argument("--batch", type=int, default=1)
@@ -562,7 +480,7 @@ if __name__ == "__main__":
     parser.add_argument("--atol", type=float, default=1e-3)
     parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--hf_model", type=str, default="meta-llama/Llama-2-7b-hf")
-    parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool")
+    parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool that can be used to")
     parser.add_argument("--cpu_only", action="store_true")
     parser.add_argument("--generate", action="store_true")
     parser.add_argument("--stream_layers", action="store_true",
@@ -570,40 +488,28 @@ if __name__ == "__main__":
                               "(CPU by default, or NPU if combined with --npu)")
     parser.add_argument("--npu", action="store_true",
                          help="With --stream_layers, stream layers onto the NPU instead of the CPU")
+    parser.add_argument("--num_layers", type=int, default=None,
+                         help="Truncate config.num_hidden_layers to this many layers for a fast "
+                              "smoke test instead of compiling/running the full model")
     args = parser.parse_args()
 
     sys.path.append(os.environ.get("PYTORCHSIM_ROOT_PATH", "/workspace/PyTorchSim"))
 
-    if args.stream_layers:
-        if args.npu:
-            torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
-            run_llama_gen_streamed_npu(
-                device=torch.device("npu:0"),
-                model_id=args.hf_model,
-                prompt=args.prompt,
-                dtype=args.dtype,
-                max_new_tokens=args.max_new_tokens,
-            )
-        else:
-            run_llama_gen_streamed_cpu(
-                model_id=args.hf_model,
-                prompt=args.prompt,
-                dtype=args.dtype,
-                max_new_tokens=args.max_new_tokens,
-            )
-    else:
-        device = torch.device("cpu" if args.cpu_only else "npu:0")
-        #test_triu(device, size=(32, 128), diagonal=1)
-        if not args.cpu_only:
-            torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
-
-        run_llama_gen(
-            device=device,
+    if args.npu:
+        torch.compiler.is_compiling = lambda: True # FIXME. How to fix this?
+        run_llama_gen_streamed_npu(
+            device=torch.device("npu:0"),
             model_id=args.hf_model,
             prompt=args.prompt,
             dtype=args.dtype,
-            rtol=args.rtol,
-            atol=args.atol,
             max_new_tokens=args.max_new_tokens,
-            cpu_only=args.cpu_only,
+            num_layers=args.num_layers,
+        )
+    else:
+        run_llama_gen_streamed_cpu(
+            model_id=args.hf_model,
+            prompt=args.prompt,
+            dtype=args.dtype,
+            max_new_tokens=args.max_new_tokens,
+            num_layers=args.num_layers,
         )

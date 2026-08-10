@@ -44,8 +44,14 @@ struct DramBwSnapshot {
   double util_avg_ch_pct = 0;
 };
 
+// `window_cycles` is measured against Simulator's shared core-clock counter
+// (*_core_cycles, ticking at core_freq_mhz -- see callers), so it must be
+// converted to real time via `window_freq_mhz` = core_freq_mhz, not
+// dram_freq_mhz. Passing dram_freq_mhz here previously inflated the reported
+// rate by dram_freq_mhz/core_freq_mhz (DRAM's internal clock runs faster
+// than the core), which could push util_avg_ch_pct past 100%.
 DramBwSnapshot make_dram_bw_snapshot(long long total_rw_transactions, uint64_t window_cycles,
-                                     uint32_t n_ch, uint32_t req_size, double dram_freq_mhz,
+                                     uint32_t n_ch, uint32_t req_size, double window_freq_mhz,
                                      float peak_gbps_per_channel) {
   DramBwSnapshot out;
   if (window_cycles == 0 || n_ch == 0)
@@ -53,7 +59,7 @@ DramBwSnapshot make_dram_bw_snapshot(long long total_rw_transactions, uint64_t w
   const double tx = static_cast<double>(total_rw_transactions);
   const double w = static_cast<double>(window_cycles);
   const double bytes_per_cycle = tx * static_cast<double>(req_size) / w;
-  out.bandwidth_gbs = bytes_per_cycle * dram_freq_mhz / 1000.0;
+  out.bandwidth_gbs = bytes_per_cycle * window_freq_mhz / 1000.0;
   const double peak_total_gbs =
       static_cast<double>(peak_gbps_per_channel) * static_cast<double>(n_ch);
   if (peak_gbps_per_channel > 0.f && peak_total_gbs > 0.0)
@@ -272,10 +278,11 @@ void DramRamulator2::cycle() {
   if (iv <= 0)
     return;
   const uint64_t cc = *_core_cycles;
-  if (cc % static_cast<uint64_t>(iv) != 0 || cc == 0)
+  if (cc % static_cast<uint64_t>(iv) != 0 || cc == 0 || cc == _last_bw_print_core_cycle)
     return;
+  _last_bw_print_core_cycle = cc;
 
-  const double f_mhz = static_cast<double>(_config.dram_freq_mhz);
+  const double f_mhz = static_cast<double>(_config.core_freq_mhz);
   const uint64_t w = static_cast<uint64_t>(iv);
   long long r_all = 0;
   long long w_all = 0;
@@ -352,7 +359,7 @@ void DramRamulator2::print_stat() {
   const uint64_t cycles = *_core_cycles;
   if (cycles == 0)
     return;
-  const double f_mhz = static_cast<double>(_config.dram_freq_mhz);
+  const double f_mhz = static_cast<double>(_config.core_freq_mhz);
   spdlog::info("[DRAM] Per-channel average bandwidth");
   long long tr_all = 0;
   long long tw_all = 0;

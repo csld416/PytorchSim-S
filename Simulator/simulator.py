@@ -2,6 +2,7 @@ import os
 import shlex
 import ctypes
 import subprocess
+import signal
 import re
 import sys
 import yaml
@@ -537,6 +538,95 @@ class TOGSimulator():
         return cmd
 
     @staticmethod
+    def _build_legosim_yaml(togsim_bin, config, trace_file_path, run_dir, log_level=""):
+        """
+        Write a two-simlet interchiplet benchmark YAML pairing TOGSim (phase1[0],
+        chiplet (0,0)) with the LegoSim SSD simlet (phase1[1], chiplet (1,0); see
+        TOGSim/legosim/ssd_simlet.cpp), plus a no-op phase2 filler -- interchiplet
+        indexes phase2[0] unconditionally even though we don't need NoC modeling
+        here (the SSD simlet's answer already carries the real latency).
+
+        TOGSim's own coordinates/peer coordinates must match SsdLegoSimLink's
+        env-var defaults (TOGSIM_LEGOSIM_X/Y=0,0 and TOGSIM_SSD_LEGOSIM_X/Y=1,0),
+        which _legosim_env() sets for this same subprocess.
+        """
+        ssd_bin = os.path.join(os.path.dirname(togsim_bin), "ssd_simlet")
+        togsim_args = ["--config", str(config), "--models_list", str(trace_file_path)]
+        if log_level:
+            togsim_args += ["--log_level", log_level]
+
+        bandwidth = extension_config.CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS
+        base_latency = extension_config.CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS
+
+        yaml_doc = {
+            "phase1": [
+                {
+                    "cmd": str(togsim_bin),
+                    "args": togsim_args,
+                    "log": "togsim.log",
+                    "is_to_stdout": False,
+                    "clock_rate": 1.0,
+                },
+                {
+                    "cmd": str(ssd_bin),
+                    "args": ["1", "0", "0", "0", str(bandwidth), str(base_latency)],
+                    "log": "ssd_simlet.log",
+                    "is_to_stdout": False,
+                    "clock_rate": 1.0,
+                },
+            ],
+            "phase2": [
+                {
+                    "cmd": "/bin/true",
+                    "args": [],
+                    "log": "noop.log",
+                    "is_to_stdout": False,
+                    "clock_rate": 1.0,
+                },
+            ],
+        }
+        run_dir.mkdir(parents=True, exist_ok=True)
+        yaml_path = run_dir / "legosim.yml"
+        with open(yaml_path, "w") as f:
+            yaml.safe_dump(yaml_doc, f)
+        return yaml_path
+
+    @staticmethod
+    def _legosim_env():
+        env = os.environ.copy()
+        legosim_root = extension_config.CONFIG_LEGOSIM_ROOT
+        env["SIMULATOR_ROOT"] = legosim_root
+        env["TOGSIM_SSD_LEGOSIM"] = "1"
+        env["TOGSIM_LEGOSIM_X"] = "0"
+        env["TOGSIM_LEGOSIM_Y"] = "0"
+        env["TOGSIM_SSD_LEGOSIM_X"] = "1"
+        env["TOGSIM_SSD_LEGOSIM_Y"] = "0"
+        return env
+
+    @staticmethod
+    def _run_interchiplet(cmd_list, cwd, env, timeout_sec):
+        """
+        Runs `interchiplet` and waits for it, killing its whole process group
+        on timeout: interchiplet forks TOGSim/ssd_simlet as grandchildren, and
+        a plain `Popen.kill()` on timeout would only kill interchiplet itself,
+        leaving them orphaned and blocked on each other's pipes.
+        """
+        proc = subprocess.Popen(
+            cmd_list, cwd=cwd, env=env,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            start_new_session=True,
+        )
+        try:
+            stdout, stderr = proc.communicate(timeout=timeout_sec)
+        except subprocess.TimeoutExpired:
+            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+            proc.wait()
+            raise
+        if proc.returncode != 0:
+            raise subprocess.CalledProcessError(proc.returncode, cmd_list, output=stdout, stderr=stderr)
+        return stdout, stderr
+
+    @staticmethod
     def run_standalone(
         model_path,
         attribute_path="",
@@ -586,22 +676,50 @@ class TOGSimulator():
             trace_file.flush()
             os.fsync(trace_file.fileno())
 
-        try:
-            cmd = f"{TOGSimulator.get_togsim_command(config_path, togsim_path)} --models_list {trace_file_path}"
-            if extension_config.CONFIG_TOGSIM_DEBUG_LEVEL:
-                cmd += f" --log_level {extension_config.CONFIG_TOGSIM_DEBUG_LEVEL}"
+        use_legosim_ssd = extension_config.CONFIG_TOGSIM_LEGOSIM_SSD
 
-            if not autotune_mode:
-                logger.debug(f"[TOGSim] cmd> {cmd}")
-                logger.info("[TOGSim] TOGSim simulation started")
-            with ProgressBar("[TOGSim] Running simulation", silent_mode=autotune_mode):
-                completed = subprocess.run(
-                    shlex.split(cmd),
-                    capture_output=True,
-                    check=True,
-                    timeout=timeout_sec,
+        try:
+            if use_legosim_ssd:
+                togsim_bin = os.path.join(togsim_path, "build/bin/Simulator")
+                run_dir = base_dir / f"{idx}.legosim_run"
+                yaml_path = TOGSimulator._build_legosim_yaml(
+                    togsim_bin, os.path.join(togsim_path, config_path), trace_file_path, run_dir,
+                    log_level=extension_config.CONFIG_TOGSIM_DEBUG_LEVEL,
                 )
-                result = completed.stdout
+                interchiplet_bin = os.path.join(
+                    extension_config.CONFIG_LEGOSIM_ROOT, "interchiplet/bin/interchiplet"
+                )
+                # -t 1: run exactly one round -- TOGSim already ran its one kernel
+                # to completion, there's nothing to re-converge on a second round.
+                cmd = f"{interchiplet_bin} {yaml_path} -w 2 -f 2 -t 1"
+
+                if not autotune_mode:
+                    logger.debug(f"[TOGSim] cmd> {cmd}")
+                    logger.info("[TOGSim] TOGSim simulation started (LegoSim SSD path)")
+                with ProgressBar("[TOGSim] Running simulation", silent_mode=autotune_mode):
+                    TOGSimulator._run_interchiplet(
+                        shlex.split(cmd), cwd=run_dir, env=TOGSimulator._legosim_env(),
+                        timeout_sec=timeout_sec,
+                    )
+                # TOGSim is phase1[0] of the YAML above -> round 1, phase 1, thread 0.
+                togsim_log = run_dir / "proc_r1_p1_t0" / "togsim.log"
+                result = togsim_log.read_bytes() if togsim_log.exists() else b""
+            else:
+                cmd = f"{TOGSimulator.get_togsim_command(config_path, togsim_path)} --models_list {trace_file_path}"
+                if extension_config.CONFIG_TOGSIM_DEBUG_LEVEL:
+                    cmd += f" --log_level {extension_config.CONFIG_TOGSIM_DEBUG_LEVEL}"
+
+                if not autotune_mode:
+                    logger.debug(f"[TOGSim] cmd> {cmd}")
+                    logger.info("[TOGSim] TOGSim simulation started")
+                with ProgressBar("[TOGSim] Running simulation", silent_mode=autotune_mode):
+                    completed = subprocess.run(
+                        shlex.split(cmd),
+                        capture_output=True,
+                        check=True,
+                        timeout=timeout_sec,
+                    )
+                    result = completed.stdout
         except subprocess.TimeoutExpired as e:
             logger.warning(
                 "[TOGSim] Simulator subprocess exceeded timeout (%.1f s); terminating.",

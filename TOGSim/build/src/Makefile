@@ -512,6 +512,30 @@ SparseCore.cc.s:
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SparseCore.cc.s
 .PHONY : SparseCore.cc.s
 
+SsdLegoSimLink.o: SsdLegoSimLink.cc.o
+.PHONY : SsdLegoSimLink.o
+
+# target to build an object file
+SsdLegoSimLink.cc.o:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.o
+.PHONY : SsdLegoSimLink.cc.o
+
+SsdLegoSimLink.i: SsdLegoSimLink.cc.i
+.PHONY : SsdLegoSimLink.i
+
+# target to preprocess a source file
+SsdLegoSimLink.cc.i:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.i
+.PHONY : SsdLegoSimLink.cc.i
+
+SsdLegoSimLink.s: SsdLegoSimLink.cc.s
+.PHONY : SsdLegoSimLink.s
+
+# target to generate assembly for a file
+SsdLegoSimLink.cc.s:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/SsdLegoSimLink.cc.s
+.PHONY : SsdLegoSimLink.cc.s
+
 SsdTrace.o: SsdTrace.cc.o
 .PHONY : SsdTrace.o
 
@@ -607,6 +631,30 @@ TileGraphParser.s: TileGraphParser.cc.s
 TileGraphParser.cc.s:
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/TileGraphParser.cc.s
 .PHONY : TileGraphParser.cc.s
+
+WeightAddressRanges.o: WeightAddressRanges.cc.o
+.PHONY : WeightAddressRanges.o
+
+# target to build an object file
+WeightAddressRanges.cc.o:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.o
+.PHONY : WeightAddressRanges.cc.o
+
+WeightAddressRanges.i: WeightAddressRanges.cc.i
+.PHONY : WeightAddressRanges.i
+
+# target to preprocess a source file
+WeightAddressRanges.cc.i:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.i
+.PHONY : WeightAddressRanges.cc.i
+
+WeightAddressRanges.s: WeightAddressRanges.cc.s
+.PHONY : WeightAddressRanges.s
+
+# target to generate assembly for a file
+WeightAddressRanges.cc.s:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/WeightAddressRanges.cc.s
+.PHONY : WeightAddressRanges.cc.s
 
 helper/CommandLineParser.o: helper/CommandLineParser.cc.o
 .PHONY : helper/CommandLineParser.o
@@ -735,6 +783,9 @@ help:
 	@echo "... SparseCore.o"
 	@echo "... SparseCore.i"
 	@echo "... SparseCore.s"
+	@echo "... SsdLegoSimLink.o"
+	@echo "... SsdLegoSimLink.i"
+	@echo "... SsdLegoSimLink.s"
 	@echo "... SsdTrace.o"
 	@echo "... SsdTrace.i"
 	@echo "... SsdTrace.s"
@@ -747,6 +798,9 @@ help:
 	@echo "... TileGraphParser.o"
 	@echo "... TileGraphParser.i"
 	@echo "... TileGraphParser.s"
+	@echo "... WeightAddressRanges.o"
+	@echo "... WeightAddressRanges.i"
+	@echo "... WeightAddressRanges.s"
 	@echo "... helper/CommandLineParser.o"
 	@echo "... helper/CommandLineParser.i"
 	@echo "... helper/CommandLineParser.s"

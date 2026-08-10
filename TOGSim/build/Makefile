@@ -163,6 +163,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ssd_simlet
+
+# Build rule for target.
+ssd_simlet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ssd_simlet
+.PHONY : ssd_simlet
+
+# fast build rule for target.
+ssd_simlet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_simlet.dir/build.make CMakeFiles/ssd_simlet.dir/build
+.PHONY : ssd_simlet/fast
+
+#=============================================================================
 # Target rules for targets named Simulator
 
 # Build rule for target.
@@ -942,6 +955,30 @@ onnxifi_dummy/fast:
 	$(MAKE) $(MAKESILENT) -f extern/onnx/CMakeFiles/onnxifi_dummy.dir/build.make extern/onnx/CMakeFiles/onnxifi_dummy.dir/build
 .PHONY : onnxifi_dummy/fast
 
+legosim/ssd_simlet.o: legosim/ssd_simlet.cpp.o
+.PHONY : legosim/ssd_simlet.o
+
+# target to build an object file
+legosim/ssd_simlet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_simlet.dir/build.make CMakeFiles/ssd_simlet.dir/legosim/ssd_simlet.cpp.o
+.PHONY : legosim/ssd_simlet.cpp.o
+
+legosim/ssd_simlet.i: legosim/ssd_simlet.cpp.i
+.PHONY : legosim/ssd_simlet.i
+
+# target to preprocess a source file
+legosim/ssd_simlet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_simlet.dir/build.make CMakeFiles/ssd_simlet.dir/legosim/ssd_simlet.cpp.i
+.PHONY : legosim/ssd_simlet.cpp.i
+
+legosim/ssd_simlet.s: legosim/ssd_simlet.cpp.s
+.PHONY : legosim/ssd_simlet.s
+
+# target to generate assembly for a file
+legosim/ssd_simlet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_simlet.dir/build.make CMakeFiles/ssd_simlet.dir/legosim/ssd_simlet.cpp.s
+.PHONY : legosim/ssd_simlet.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1009,11 +1046,15 @@ help:
 	@echo "... ramulator-frontend"
 	@echo "... ramulator-memorysystem"
 	@echo "... ramulator-translation"
+	@echo "... ssd_simlet"
 	@echo "... sstStonne"
 	@echo "... sstStonne_shared"
 	@echo "... test_plugin"
 	@echo "... tests"
 	@echo "... yaml-cpp"
+	@echo "... legosim/ssd_simlet.o"
+	@echo "... legosim/ssd_simlet.i"
+	@echo "... legosim/ssd_simlet.s"
 .PHONY : help
 
 

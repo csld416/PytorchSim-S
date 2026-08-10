@@ -1,7 +1,9 @@
 #include "DMA.h"
+#include "SsdLegoSimLink.h"
 #include "SsdTrace.h"
 #include "TileGraph.h"
 #include "TraceLogTags.h"
+#include "WeightAddressRanges.h"
 
 #include <cmath>
 
@@ -53,7 +55,35 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
   if (!_generated_once) {
     if (_current_inst->is_dma_read()) {
       uint64_t latency_ns = 0;
-      if (SsdTraceManager::instance().pop_latency_for_instruction(_id, *_current_inst, &latency_ns)) {
+      bool have_latency = false;
+      if (SsdLegoSimLink::instance().enabled()) {
+        // Live path: only DMAs landing inside a currently-loaded weight
+        // tensor's address range are routed to the SSD simlet -- activations,
+        // KV cache, etc. keep using the normal DRAM timing model below.
+        //
+        // Classifying by name (SsdTraceManager::is_weight_name()'s "not a
+        // registered runtime input" fallback) was tried and reverted:
+        // TileGraphParser.cc registers *every* top-level kernel argument
+        // (weights included) as a "runtime input" via address_info, so that
+        // heuristic excluded real weight DMAs too. Classifying by address
+        // instead works because PyTorchSimDevice's tensors are backed by
+        // real host memory, so a weight's data_ptr() on the Python side is
+        // the exact same address reported here. See WeightAddressRanges.h.
+        const uint64_t base_addr = static_cast<uint64_t>(_current_inst->get_base_dram_address());
+        if (WeightAddressRanges::instance().is_weight_address(base_addr)) {
+          const uint64_t total_bits = static_cast<uint64_t>(_current_inst->get_tile_numel()) *
+                                      static_cast<uint64_t>(_current_inst->get_elem_bits());
+          const uint64_t total_bytes = (total_bits + 7) >> 3;
+          latency_ns = SsdLegoSimLink::instance().query_latency_ns(
+              base_addr, total_bytes, _current_inst->get_global_inst_id(),
+              _current_inst->get_addr_name());
+          have_latency = true;
+        }
+      } else {
+        have_latency =
+            SsdTraceManager::instance().pop_latency_for_instruction(_id, *_current_inst, &latency_ns);
+      }
+      if (have_latency) {
         const double period_ns = _core_freq_mhz > 0 ? 1000.0 / static_cast<double>(_core_freq_mhz) : 0.0;
         uint64_t latency_cycles = 0;
         if (period_ns > 0.0) {

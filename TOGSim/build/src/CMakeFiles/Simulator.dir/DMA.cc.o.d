@@ -353,10 +353,21 @@ src/CMakeFiles/Simulator.dir/DMA.cc.o: \
  /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Memfetch.h \
  /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/Cache_defs.h \
  /usr/include/c++/11/bitset \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/SsdLegoSimLink.h \
+ /workspace/legomerged/eclab_legosim/interchiplet/includes/pipe_comm.h \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h /usr/include/c++/11/iostream \
+ /workspace/legomerged/eclab_legosim/interchiplet/includes/global_define.h \
+ /workspace/legomerged/eclab_legosim/interchiplet/includes/sync_protocol.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/legosim/ssd_protocol.h \
  /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/SsdTrace.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
  /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/TileGraph.h \
  /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/IntervalTree.h \
- /usr/include/c++/11/iostream \
- /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/TraceLogTags.h
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/TraceLogTags.h \
+ /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/include/WeightAddressRanges.h

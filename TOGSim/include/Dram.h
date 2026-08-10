@@ -73,6 +73,14 @@ class DramRamulator2 : public Dram {
   std::vector<std::unique_ptr<Ramulator2>> _mem;
   int _tx_ch_log2;
   int _tx_log2;
+  // Last *_core_cycles value the periodic bandwidth snapshot printed at.
+  // dram_freq_mhz > core_freq_mhz means multiple DramRamulator2::cycle()
+  // calls (DRAM's own clock) can land on the same *_core_cycles value before
+  // it next increments (core's slower clock); without this guard the
+  // interval-print condition (cc % dram_print_interval == 0) would re-fire
+  // on every one of those calls, printing a near-empty duplicate snapshot
+  // right after the real one (counters were just reset).
+  uint64_t _last_bw_print_core_cycle = UINT64_MAX;
 };
 
 class SimpleDRAM: public Dram {

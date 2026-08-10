@@ -6,6 +6,7 @@
 #include <atomic>
 
 #include "Simulator.h"
+#include "SsdLegoSimLink.h"
 #include "TileGraphParser.h"
 #include "helper/CommandLineParser.h"
 
@@ -160,6 +161,9 @@ int main(int argc, char** argv) {
     spdlog::error("No trace file provided. Use --models_list to specify trace file path.");
     exit(1);
   }
+  // If the live LegoSim SSD path was used, tell the SSD simlet to stop
+  // waiting for more requests so interchiplet's phase1 wait can complete.
+  SsdLegoSimLink::instance().shutdown();
   delete simulator;
 
   /* Simulation time measurement */
