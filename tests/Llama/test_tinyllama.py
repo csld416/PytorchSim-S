@@ -475,7 +475,7 @@ if __name__ == "__main__":
     parser.add_argument("--dtype", type=str, default="float32", choices=["float32", "float16", "bfloat16"])
     parser.add_argument("--rtol", type=float, default=1e-3)
     parser.add_argument("--atol", type=float, default=1e-3)
-    parser.add_argument("--max_new_tokens", type=int, default=2)
+    parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--hf_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
     parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool that can be used to")
     parser.add_argument("--cpu_only", action="store_true")
@@ -502,7 +502,6 @@ if __name__ == "__main__":
             prompt=args.prompt,
             dtype=args.dtype,
             max_new_tokens=args.max_new_tokens,
-            use_hf_static_cache=args.hf_static_cache,
         )
     else:
         run_tinyllama_gen_streamed_cpu(

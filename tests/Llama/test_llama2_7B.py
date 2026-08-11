@@ -483,9 +483,6 @@ if __name__ == "__main__":
     parser.add_argument("--prompt", type=str, default="Machine learning is a powerful tool that can be used to")
     parser.add_argument("--cpu_only", action="store_true")
     parser.add_argument("--generate", action="store_true")
-    parser.add_argument("--stream_layers", action="store_true",
-                         help="Load one decoder layer's weights at a time instead of the whole model "
-                              "(CPU by default, or NPU if combined with --npu)")
     parser.add_argument("--npu", action="store_true",
                          help="With --stream_layers, stream layers onto the NPU instead of the CPU")
     parser.add_argument("--num_layers", type=int, default=None,

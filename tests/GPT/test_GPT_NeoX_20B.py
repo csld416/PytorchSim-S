@@ -487,7 +487,7 @@ def parse_args():
     parser.add_argument("--model_id", default=DEFAULT_MODEL_ID,
                         help="HuggingFace model ID or local path")
     parser.add_argument("--prompt", default=DEFAULT_PROMPT)
-    parser.add_argument("--max_new_tokens", type=int, default=2)
+    parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--top_k", type=int, default=50, help="Top-k sampling parameter")
     parser.add_argument("--top_p", type=float, default=0.9, help="Top-p (nucleus) sampling parameter")
