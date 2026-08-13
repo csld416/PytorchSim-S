@@ -30,7 +30,26 @@ rm -rf /workspace/PyTorchSim
 ```bash
 cd /workspace/legomerged
 git clone git@github.com:Weng20011103/eclab_legosim.git
-# 後續參考eclab_docs/install_legosim.md
+
+apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    ca-certificates \
+    wget curl git unzip pkg-config \
+    software-properties-common \
+    vim tzdata tmux libgoogle-perftools-dev protobuf-compiler libprotobuf-dev libcapstone-dev libhdf5-dev openssh-client \
+    zlib1g-dev \
+    libbz2-dev \
+    libboost-dev \
+    libboost-all-dev \
+    libsqlite3-dev \
+    xutils-dev \
+    bison \
+    flex \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev
+
+# 後續參考eclab_legosim/eclab_docs/install_legosim.md
+# 但不裝"GPGPUSim"
 ```
 
 克隆PyTorchSim倉庫
@@ -38,6 +57,10 @@ git clone git@github.com:Weng20011103/eclab_legosim.git
 cd eclab_legosim
 rm -rf PyTorchSim
 git clone git@github.com:whoami9203/PyTorchSim.git
+
+# 安裝PyTorchSimDevice (openreg)
+cd PyTorchSimDevice
+python3 -m pip install --no-build-isolation -e .
 ```
 
 停止容器：

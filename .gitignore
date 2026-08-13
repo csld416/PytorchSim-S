@@ -6,6 +6,7 @@ output
 togsim_results/*
 outputs/*
 ssd_traces/*
+validation/*
 experiments/artifact/logs/*# tutorial generated artifacts
 tutorial/session1/fused/
 tutorial/session1/togsim_results/
