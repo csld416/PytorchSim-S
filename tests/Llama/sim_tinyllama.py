@@ -223,14 +223,14 @@ if __name__ == "__main__":
     )
     parser.add_argument("--phase", type=str, required=True, choices=["prefill", "decode"])
     parser.add_argument("--batch", type=int, default=1)
-    parser.add_argument("--seq_len", type=int, default=128, help="prefill: number of prompt tokens to simulate")
-    parser.add_argument("--context_len", type=int, default=128,
+    parser.add_argument("--seq_len", type=int, default=500, help="prefill: number of prompt tokens to simulate")
+    parser.add_argument("--context_len", type=int, default=500,
                          help="decode: number of prior tokens the single decode step attends over "
                               "(the KV cache is randomly pre-filled to this length instead of being "
                               "produced by a real prefill)")
     parser.add_argument("--dtype", type=str, default="float32", choices=["float32", "float16", "bfloat16"])
     parser.add_argument("--hf_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-    parser.add_argument("--num_layers", type=int, default=None,
+    parser.add_argument("--num_layers", type=int, default=1,
                          help="Truncate config.num_hidden_layers to this many layers")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--npu", action="store_true")
