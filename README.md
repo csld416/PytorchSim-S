@@ -46,10 +46,12 @@ apt-get update && apt-get install -y --no-install-recommends \
     bison \
     flex \
     libgl1-mesa-dev \
-    libglu1-mesa-dev
+    libglu1-mesa-dev \
+    python2
 
 # 後續參考eclab_legosim/eclab_docs/install_legosim.md
 # 但不裝"GPGPUSim"
+# 不用管setup_env.sh中GPGPUSim的部分
 ```
 
 克隆PyTorchSim倉庫
