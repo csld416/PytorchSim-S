@@ -71,10 +71,13 @@ python3 -m pip install transformers==4.54.0
 
 停止容器：
 ```bash
-docker stop ollie-PyTorchSim
+docker stop function92-PyTorchSim
 ```
 
 重啟容器：
 ```bash
-docker restart ollie-PyTorchSim
+docker restart function92-PyTorchSim
 ```
+
+執行指令參考:
+[commands.md](./docs/eclab_docs/commands.md)

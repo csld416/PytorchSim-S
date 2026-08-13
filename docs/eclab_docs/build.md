@@ -1,4 +1,6 @@
 # build 相關指令
+如果要修改TOGSim或PyTorchSimDevice (openreg)的程式碼，改完請在container裡執行以下指令重新編譯安裝。
+
 TOGSim
 ```bash
 cd TOGSim && \
