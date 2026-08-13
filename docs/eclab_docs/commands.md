@@ -8,6 +8,15 @@ source setup_env.sh test1 0
 source setup_env.sh test1 1
 ```
 
+Llama2-7B 存取權
+```bash
+1. 去 meta-llama/Llama-2-7b-hf 頁面，確認有填表申請並且 Meta 已批准
+2. 到 huggingface.co/settings/tokens 建立一個 token（Read 權限就夠）
+3. 在 container 裡登入
+   huggingface-cli login
+   貼上 token 後 Enter
+```
+
 清除輸出
 ```bash
 # 保留cache

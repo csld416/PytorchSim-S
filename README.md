@@ -63,6 +63,10 @@ git clone git@github.com:whoami9203/PyTorchSim.git
 # 安裝PyTorchSimDevice (openreg)
 cd PyTorchSimDevice
 python3 -m pip install --no-build-isolation -e .
+
+# 安裝其他module
+python3 -m pip install accelerate
+python3 -m pip install transformers==4.54.0
 ```
 
 停止容器：
