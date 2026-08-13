@@ -475,7 +475,7 @@ SITE:STRING=2913d5a6c284
 //USE_RAMULATOR
 USE_RAMULATOR:BOOL=ON
 
-//Build yaml-cpp shared library
+//Build yaml-cpp as a shared library
 YAML_BUILD_SHARED_LIBS:BOOL=OFF
 
 //Value Computed by CMake
@@ -645,8 +645,6 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/root/.local/lib/python3.11/site-packages/cmake/data/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/root/.local/lib/python3.11/site-packages/cmake/data/bin/cpack
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/root/.local/lib/python3.11/site-packages/cmake/data/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -766,7 +764,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

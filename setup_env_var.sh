@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ $# -lt 1 ]]; then
-	echo "Usage: $0 TRACE_NAME [TOGSIM_LEGOSIM_SSD]"
+	echo "Usage: $0 TRACE_NAME [TOGSIM_LEGOSIM_SSD] [TOGSIM_LEGOSIM_DRAM]"
 	exit 1
 fi
 
@@ -10,9 +10,15 @@ fi
 
 TRACE_NAME=$1
 TOGSIM_LEGOSIM_SSD=${2:-0}
+TOGSIM_LEGOSIM_DRAM=${3:-0}
 
 if [[ "${TOGSIM_LEGOSIM_SSD}" != "0" && "${TOGSIM_LEGOSIM_SSD}" != "1" ]]; then
 	echo "Error: TOGSIM_LEGOSIM_SSD must be 0 or 1 (got '${TOGSIM_LEGOSIM_SSD}')"
+	exit 1
+fi
+
+if [[ "${TOGSIM_LEGOSIM_DRAM}" != "0" && "${TOGSIM_LEGOSIM_DRAM}" != "1" ]]; then
+	echo "Error: TOGSIM_LEGOSIM_DRAM must be 0 or 1 (got '${TOGSIM_LEGOSIM_DRAM}')"
 	exit 1
 fi
 
@@ -21,6 +27,7 @@ export PYTORCHSIM_ROOT_PATH=${TORCHSIM_DIR}
 export TOGSIM_DEBUG_LEVEL=info
 export TOGSIM_SSD_TRACE_NAME=${TRACE_NAME}
 export TOGSIM_LEGOSIM_SSD=${TOGSIM_LEGOSIM_SSD}
+export TOGSIM_LEGOSIM_DRAM=${TOGSIM_LEGOSIM_DRAM}
 
 mkdir -p ${TORCHSIM_DIR}/ssd_traces
 mkdir -p ${TORCHSIM_DIR}/ssd_traces/${TRACE_NAME}

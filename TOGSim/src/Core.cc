@@ -113,10 +113,20 @@ void Core::compute_cycle() {
 void Core::dma_cycle() {
   _dma.update_ssd(_core_cycle);
   if (auto ssd_inst = _dma.take_ssd_finished()) {
-    if (ssd_inst->is_dma_read() && ssd_inst->is_async_dma()) {
-      finish_instruction(ssd_inst, InstFinishTraceTag::DmaIssueComplete);
+    if (ssd_inst->is_dma_write()) {
+      // Writes never flow through _dma_finished_queue's drain loop below --
+      // it only has branches for reads -- so finish them directly here.
+      // Mirrors the "Only DMA write operation is finished!" path further
+      // down, which this instruction bypassed by completing via the
+      // external-latency-oracle path (SSD or DRAM legosim) instead of the
+      // real Dram/Interconnect model.
+      finish_instruction(ssd_inst);
+    } else {
+      if (ssd_inst->is_dma_read() && ssd_inst->is_async_dma()) {
+        finish_instruction(ssd_inst, InstFinishTraceTag::DmaIssueComplete);
+      }
+      _dma_finished_queue.push_back(std::move(ssd_inst));
     }
-    _dma_finished_queue.push_back(std::move(ssd_inst));
   }
   /* Check finished dma operation */
   while(_dma_finished_queue.size()) {

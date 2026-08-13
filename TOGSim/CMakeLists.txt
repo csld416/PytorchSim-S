@@ -74,3 +74,10 @@ target_link_libraries(Simulator ${LEGOSIM_ROOT}/interchiplet/lib/libinterchiplet
 add_executable(ssd_simlet "${PROJECT_SOURCE_DIR}/legosim/ssd_simlet.cpp")
 target_include_directories(ssd_simlet PUBLIC ${LEGOSIM_ROOT}/interchiplet/includes)
 target_link_libraries(ssd_simlet ${LEGOSIM_ROOT}/interchiplet/lib/libinterchiplet_c.a pthread)
+
+# DRAM+interconnect latency simlet -- catch-all counterpart to ssd_simlet
+# covering every DMA access (not just weight reads), standing in for
+# TOGSim's real Dram/Interconnect models. Same standalone build shape.
+add_executable(dram_simlet "${PROJECT_SOURCE_DIR}/legosim/dram_simlet.cpp")
+target_include_directories(dram_simlet PUBLIC ${LEGOSIM_ROOT}/interchiplet/includes)
+target_link_libraries(dram_simlet ${LEGOSIM_ROOT}/interchiplet/lib/libinterchiplet_c.a pthread)

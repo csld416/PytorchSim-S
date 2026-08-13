@@ -153,6 +153,18 @@ def __getattr__(name):
     if name == "CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS":
         return float(os.environ.get("TOGSIM_LEGOSIM_SSD_BASE_LATENCY_NS", "100.0"))
 
+    # LegoSim live DRAM+interconnect latency integration (see
+    # TOGSim/include/DramLegoSimLink.h). Unlike the SSD path above (weight
+    # reads only), this is a catch-all covering every DMA access -- reads
+    # and writes -- and fully replaces TOGSim's real Dram/Interconnect
+    # models for the run when enabled.
+    if name == "CONFIG_TOGSIM_LEGOSIM_DRAM":
+        return os.environ.get("TOGSIM_LEGOSIM_DRAM", "0") == "1"
+    if name == "CONFIG_LEGOSIM_DRAM_BANDWIDTH_GBPS":
+        return float(os.environ.get("TOGSIM_LEGOSIM_DRAM_BANDWIDTH_GBPS", "800.0"))
+    if name == "CONFIG_LEGOSIM_DRAM_BASE_LATENCY_NS":
+        return float(os.environ.get("TOGSIM_LEGOSIM_DRAM_BASE_LATENCY_NS", "15.0"))
+
 # SRAM Buffer allocation plan
 def load_plan_from_module(module_path):
     if module_path is None:

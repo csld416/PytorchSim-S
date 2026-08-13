@@ -538,43 +538,64 @@ class TOGSimulator():
         return cmd
 
     @staticmethod
-    def _build_legosim_yaml(togsim_bin, config, trace_file_path, run_dir, log_level=""):
+    def _build_legosim_yaml(togsim_bin, config, trace_file_path, run_dir, log_level="",
+                             use_ssd=True, use_dram=False):
         """
-        Write a two-simlet interchiplet benchmark YAML pairing TOGSim (phase1[0],
-        chiplet (0,0)) with the LegoSim SSD simlet (phase1[1], chiplet (1,0); see
-        TOGSim/legosim/ssd_simlet.cpp), plus a no-op phase2 filler -- interchiplet
-        indexes phase2[0] unconditionally even though we don't need NoC modeling
-        here (the SSD simlet's answer already carries the real latency).
+        Write an interchiplet benchmark YAML pairing TOGSim (phase1[0], chiplet
+        (0,0)) with whichever LegoSim simlet(s) are requested: the SSD simlet
+        (chiplet (1,0); see TOGSim/legosim/ssd_simlet.cpp, weight-read latency
+        only) and/or the DRAM simlet (chiplet (2,0); see
+        TOGSim/legosim/dram_simlet.cpp, catch-all for every other DMA access,
+        replacing TOGSim's real Dram/Interconnect models), plus a no-op phase2
+        filler -- interchiplet indexes phase2[0] unconditionally even though we
+        don't need NoC modeling here (each simlet's answer already carries the
+        real latency).
 
-        TOGSim's own coordinates/peer coordinates must match SsdLegoSimLink's
-        env-var defaults (TOGSIM_LEGOSIM_X/Y=0,0 and TOGSIM_SSD_LEGOSIM_X/Y=1,0),
-        which _legosim_env() sets for this same subprocess.
+        TOGSim's own coordinates/peer coordinates must match SsdLegoSimLink's/
+        DramLegoSimLink's env-var defaults (TOGSIM_LEGOSIM_X/Y=0,0,
+        TOGSIM_SSD_LEGOSIM_X/Y=1,0, TOGSIM_DRAM_PEER_LEGOSIM_X/Y=2,0), which
+        _legosim_env() sets for this same subprocess.
         """
-        ssd_bin = os.path.join(os.path.dirname(togsim_bin), "ssd_simlet")
         togsim_args = ["--config", str(config), "--models_list", str(trace_file_path)]
         if log_level:
             togsim_args += ["--log_level", log_level]
 
-        bandwidth = extension_config.CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS
-        base_latency = extension_config.CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS
+        phase1 = [
+            {
+                "cmd": str(togsim_bin),
+                "args": togsim_args,
+                "log": "togsim.log",
+                "is_to_stdout": False,
+                "clock_rate": 1.0,
+            },
+        ]
+
+        if use_ssd:
+            ssd_bin = os.path.join(os.path.dirname(togsim_bin), "ssd_simlet")
+            bandwidth = extension_config.CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS
+            base_latency = extension_config.CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS
+            phase1.append({
+                "cmd": str(ssd_bin),
+                "args": ["1", "0", "0", "0", str(bandwidth), str(base_latency)],
+                "log": "ssd_simlet.log",
+                "is_to_stdout": False,
+                "clock_rate": 1.0,
+            })
+
+        if use_dram:
+            dram_bin = os.path.join(os.path.dirname(togsim_bin), "dram_simlet")
+            bandwidth = extension_config.CONFIG_LEGOSIM_DRAM_BANDWIDTH_GBPS
+            base_latency = extension_config.CONFIG_LEGOSIM_DRAM_BASE_LATENCY_NS
+            phase1.append({
+                "cmd": str(dram_bin),
+                "args": ["2", "0", "0", "0", str(bandwidth), str(base_latency)],
+                "log": "dram_simlet.log",
+                "is_to_stdout": False,
+                "clock_rate": 1.0,
+            })
 
         yaml_doc = {
-            "phase1": [
-                {
-                    "cmd": str(togsim_bin),
-                    "args": togsim_args,
-                    "log": "togsim.log",
-                    "is_to_stdout": False,
-                    "clock_rate": 1.0,
-                },
-                {
-                    "cmd": str(ssd_bin),
-                    "args": ["1", "0", "0", "0", str(bandwidth), str(base_latency)],
-                    "log": "ssd_simlet.log",
-                    "is_to_stdout": False,
-                    "clock_rate": 1.0,
-                },
-            ],
+            "phase1": phase1,
             "phase2": [
                 {
                     "cmd": "/bin/true",
@@ -592,24 +613,30 @@ class TOGSimulator():
         return yaml_path
 
     @staticmethod
-    def _legosim_env():
+    def _legosim_env(use_ssd=True, use_dram=False):
         env = os.environ.copy()
         legosim_root = extension_config.CONFIG_LEGOSIM_ROOT
         env["SIMULATOR_ROOT"] = legosim_root
-        env["TOGSIM_SSD_LEGOSIM"] = "1"
         env["TOGSIM_LEGOSIM_X"] = "0"
         env["TOGSIM_LEGOSIM_Y"] = "0"
-        env["TOGSIM_SSD_LEGOSIM_X"] = "1"
-        env["TOGSIM_SSD_LEGOSIM_Y"] = "0"
+        if use_ssd:
+            env["TOGSIM_SSD_LEGOSIM"] = "1"
+            env["TOGSIM_SSD_LEGOSIM_X"] = "1"
+            env["TOGSIM_SSD_LEGOSIM_Y"] = "0"
+        if use_dram:
+            env["TOGSIM_DRAM_LEGOSIM"] = "1"
+            env["TOGSIM_DRAM_PEER_LEGOSIM_X"] = "2"
+            env["TOGSIM_DRAM_PEER_LEGOSIM_Y"] = "0"
         return env
 
     @staticmethod
     def _run_interchiplet(cmd_list, cwd, env, timeout_sec):
         """
         Runs `interchiplet` and waits for it, killing its whole process group
-        on timeout: interchiplet forks TOGSim/ssd_simlet as grandchildren, and
-        a plain `Popen.kill()` on timeout would only kill interchiplet itself,
-        leaving them orphaned and blocked on each other's pipes.
+        on timeout: interchiplet forks TOGSim/ssd_simlet/dram_simlet as
+        grandchildren, and a plain `Popen.kill()` on timeout would only kill
+        interchiplet itself, leaving them orphaned and blocked on each other's
+        pipes.
         """
         proc = subprocess.Popen(
             cmd_list, cwd=cwd, env=env,
@@ -677,28 +704,37 @@ class TOGSimulator():
             os.fsync(trace_file.fileno())
 
         use_legosim_ssd = extension_config.CONFIG_TOGSIM_LEGOSIM_SSD
+        use_legosim_dram = extension_config.CONFIG_TOGSIM_LEGOSIM_DRAM
 
         try:
-            if use_legosim_ssd:
+            if use_legosim_ssd or use_legosim_dram:
                 togsim_bin = os.path.join(togsim_path, "build/bin/Simulator")
                 run_dir = base_dir / f"{idx}.legosim_run"
                 yaml_path = TOGSimulator._build_legosim_yaml(
                     togsim_bin, os.path.join(togsim_path, config_path), trace_file_path, run_dir,
                     log_level=extension_config.CONFIG_TOGSIM_DEBUG_LEVEL,
+                    use_ssd=use_legosim_ssd, use_dram=use_legosim_dram,
                 )
                 interchiplet_bin = os.path.join(
                     extension_config.CONFIG_LEGOSIM_ROOT, "interchiplet/bin/interchiplet"
                 )
                 # -t 1: run exactly one round -- TOGSim already ran its one kernel
                 # to completion, there's nothing to re-converge on a second round.
+                # Phase1 process count (2 or 3, depending on which simlets are
+                # enabled) doesn't affect these flags -- interchiplet iterates
+                # the YAML's process list regardless of its length.
                 cmd = f"{interchiplet_bin} {yaml_path} -w 2 -f 2 -t 1"
 
                 if not autotune_mode:
                     logger.debug(f"[TOGSim] cmd> {cmd}")
-                    logger.info("[TOGSim] TOGSim simulation started (LegoSim SSD path)")
+                    path_desc = "+".join(
+                        p for p, on in (("SSD", use_legosim_ssd), ("DRAM", use_legosim_dram)) if on
+                    )
+                    logger.info(f"[TOGSim] TOGSim simulation started (LegoSim {path_desc} path)")
                 with ProgressBar("[TOGSim] Running simulation", silent_mode=autotune_mode):
                     TOGSimulator._run_interchiplet(
-                        shlex.split(cmd), cwd=run_dir, env=TOGSimulator._legosim_env(),
+                        shlex.split(cmd), cwd=run_dir,
+                        env=TOGSimulator._legosim_env(use_ssd=use_legosim_ssd, use_dram=use_legosim_dram),
                         timeout_sec=timeout_sec,
                     )
                 # TOGSim is phase1[0] of the YAML above -> round 1, phase 1, thread 0.
