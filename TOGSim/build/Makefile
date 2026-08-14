@@ -176,6 +176,19 @@ ssd_simlet/fast:
 .PHONY : ssd_simlet/fast
 
 #=============================================================================
+# Target rules for targets named dram_simlet
+
+# Build rule for target.
+dram_simlet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dram_simlet
+.PHONY : dram_simlet
+
+# fast build rule for target.
+dram_simlet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dram_simlet.dir/build.make CMakeFiles/dram_simlet.dir/build
+.PHONY : dram_simlet/fast
+
+#=============================================================================
 # Target rules for targets named Simulator
 
 # Build rule for target.
@@ -955,6 +968,30 @@ onnxifi_dummy/fast:
 	$(MAKE) $(MAKESILENT) -f extern/onnx/CMakeFiles/onnxifi_dummy.dir/build.make extern/onnx/CMakeFiles/onnxifi_dummy.dir/build
 .PHONY : onnxifi_dummy/fast
 
+legosim/dram_simlet.o: legosim/dram_simlet.cpp.o
+.PHONY : legosim/dram_simlet.o
+
+# target to build an object file
+legosim/dram_simlet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dram_simlet.dir/build.make CMakeFiles/dram_simlet.dir/legosim/dram_simlet.cpp.o
+.PHONY : legosim/dram_simlet.cpp.o
+
+legosim/dram_simlet.i: legosim/dram_simlet.cpp.i
+.PHONY : legosim/dram_simlet.i
+
+# target to preprocess a source file
+legosim/dram_simlet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dram_simlet.dir/build.make CMakeFiles/dram_simlet.dir/legosim/dram_simlet.cpp.i
+.PHONY : legosim/dram_simlet.cpp.i
+
+legosim/dram_simlet.s: legosim/dram_simlet.cpp.s
+.PHONY : legosim/dram_simlet.s
+
+# target to generate assembly for a file
+legosim/dram_simlet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dram_simlet.dir/build.make CMakeFiles/dram_simlet.dir/legosim/dram_simlet.cpp.s
+.PHONY : legosim/dram_simlet.cpp.s
+
 legosim/ssd_simlet.o: legosim/ssd_simlet.cpp.o
 .PHONY : legosim/ssd_simlet.o
 
@@ -1025,6 +1062,7 @@ help:
 	@echo "... gen_onnx_proto"
 	@echo "... Simulator"
 	@echo "... booksim2"
+	@echo "... dram_simlet"
 	@echo "... fmt"
 	@echo "... gmock"
 	@echo "... gmock_main"
@@ -1052,6 +1090,9 @@ help:
 	@echo "... test_plugin"
 	@echo "... tests"
 	@echo "... yaml-cpp"
+	@echo "... legosim/dram_simlet.o"
+	@echo "... legosim/dram_simlet.i"
+	@echo "... legosim/dram_simlet.s"
 	@echo "... legosim/ssd_simlet.o"
 	@echo "... legosim/ssd_simlet.i"
 	@echo "... legosim/ssd_simlet.s"

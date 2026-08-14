@@ -145,6 +145,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ssd_simlet.dir/DependInfo.cmake"
+  "CMakeFiles/dram_simlet.dir/DependInfo.cmake"
   "src/CMakeFiles/Simulator.dir/DependInfo.cmake"
   "extern/ramulator2/CMakeFiles/ramulator.dir/DependInfo.cmake"
   "_deps/yaml-cpp-build/CMakeFiles/Experimental.dir/DependInfo.cmake"

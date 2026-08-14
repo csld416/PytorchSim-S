@@ -129,7 +129,18 @@ void SsdTraceManager::load_weight_list() {
 
 uint64_t SsdTraceManager::assign_process_index() {
   namespace fs = std::filesystem;
-  const fs::path counter_path = fs::path(_trace_base_dir) / _trace_name / "togsim_process_counter.txt";
+  // Lives under the results dir (TORCHSIM_LOG_PATH, i.e. togsim_results/<trace>/),
+  // not ssd_traces/ -- this counts TOGSim process launches for _latency_path
+  // numbering, unrelated to the SSD trace *data* under ssd_traces/ (whose own
+  // dma_trace_counter.txt in open_trace() rightly stays there). Keeping it next
+  // to the results that already get cleaned/reset together avoids it drifting
+  // out of sync across ad hoc reruns that clear togsim_results/ but not
+  // ssd_traces/ (or vice versa).
+  const char* result_dir_env = std::getenv("TORCHSIM_LOG_PATH");
+  const fs::path result_dir = result_dir_env && std::string(result_dir_env).size()
+                                   ? fs::path(result_dir_env)
+                                   : fs::path("/workspace/PyTorchSim/togsim_results") / _trace_name;
+  const fs::path counter_path = result_dir / "togsim_process_counter.txt";
   uint64_t counter = 0;
   if (fs::exists(counter_path)) {
     std::ifstream in(counter_path);

@@ -470,7 +470,7 @@ Ramulator_IS_TOP_LEVEL:STATIC=OFF
 Ramulator_SOURCE_DIR:STATIC=/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/extern/ramulator2
 
 //Name of the computer/site where compile is being run
-SITE:STRING=2913d5a6c284
+SITE:STRING=a6a767b33dec
 
 //USE_RAMULATOR
 USE_RAMULATOR:BOOL=ON

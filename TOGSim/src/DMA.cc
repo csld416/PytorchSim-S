@@ -1,4 +1,5 @@
 #include "DMA.h"
+#include "DramLegoSimLink.h"
 #include "SsdLegoSimLink.h"
 #include "SsdTrace.h"
 #include "TileGraph.h"
@@ -53,9 +54,9 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
     return access_vec;
 
   if (!_generated_once) {
+    uint64_t latency_ns = 0;
+    bool have_latency = false;
     if (_current_inst->is_dma_read()) {
-      uint64_t latency_ns = 0;
-      bool have_latency = false;
       if (SsdLegoSimLink::instance().enabled()) {
         // Live path: only DMAs landing inside a currently-loaded weight
         // tensor's address range are routed to the SSD simlet -- activations,
@@ -83,19 +84,34 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
         have_latency =
             SsdTraceManager::instance().pop_latency_for_instruction(_id, *_current_inst, &latency_ns);
       }
-      if (have_latency) {
-        const double period_ns = _core_freq_mhz > 0 ? 1000.0 / static_cast<double>(_core_freq_mhz) : 0.0;
-        uint64_t latency_cycles = 0;
-        if (period_ns > 0.0) {
-          latency_cycles = static_cast<uint64_t>(std::ceil(static_cast<double>(latency_ns) / period_ns));
-        }
-        if (latency_cycles == 0)
-          latency_cycles = 1;
-        _ssd_pending = true;
-        _ssd_finish_cycle = core_cycle + latency_cycles;
-        _finished = false;
-        return access_vec;
+    }
+    if (!have_latency && DramLegoSimLink::instance().enabled()) {
+      // Catch-all: every DMA (read or write) not already claimed by the SSD
+      // path above is routed to the DRAM-legosim simlet instead of the real
+      // Dram/Interconnect timing model -- this is what lets DRAM-legosim
+      // mode fully replace Dram/Interconnect rather than just standing in
+      // for weight reads the way the SSD path does.
+      const uint64_t base_addr = static_cast<uint64_t>(_current_inst->get_base_dram_address());
+      const uint64_t total_bits = static_cast<uint64_t>(_current_inst->get_tile_numel()) *
+                                  static_cast<uint64_t>(_current_inst->get_elem_bits());
+      const uint64_t total_bytes = (total_bits + 7) >> 3;
+      latency_ns = DramLegoSimLink::instance().query_latency_ns(
+          base_addr, total_bytes, _current_inst->get_global_inst_id(),
+          _current_inst->get_addr_name(), static_cast<uint64_t>(core_cycle));
+      have_latency = true;
+    }
+    if (have_latency) {
+      const double period_ns = _core_freq_mhz > 0 ? 1000.0 / static_cast<double>(_core_freq_mhz) : 0.0;
+      uint64_t latency_cycles = 0;
+      if (period_ns > 0.0) {
+        latency_cycles = static_cast<uint64_t>(std::ceil(static_cast<double>(latency_ns) / period_ns));
       }
+      if (latency_cycles == 0)
+        latency_cycles = 1;
+      _ssd_pending = true;
+      _ssd_finish_cycle = core_cycle + latency_cycles;
+      _finished = false;
+      return access_vec;
     }
     std::shared_ptr<std::set<addr_type>> addr_set =
       _current_inst->get_dram_address(_dram_req_size);
