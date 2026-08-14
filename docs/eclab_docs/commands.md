@@ -2,10 +2,10 @@
 設置環境變數,輸出位置
 ```bash
 #source setup_env_var.sh ${TOGSIM_SSD_TRACE_NAME} [0/1]
-# No LegoSim
-source setup_env_var.sh test1 0
-# With LegoSim
-source setup_env_var.sh test1 1
+# Original
+source setup_env_var.sh test1 0 0 0
+# With DRAM simlet linked by LegoSim
+source setup_env_var.sh test1 0 1 1
 ```
 
 Llama2-7B 存取權

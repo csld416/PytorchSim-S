@@ -81,3 +81,6 @@ docker restart function92-PyTorchSim
 
 執行指令參考:
 [commands.md](./docs/eclab_docs/commands.md)
+
+修改PyTorchSim參考:
+[build.md](./docs/eclab_docs/build.md)
