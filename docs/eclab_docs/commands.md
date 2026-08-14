@@ -1,11 +1,11 @@
 # 指令集
 設置環境變數,輸出位置
 ```bash
-#source setup_env.sh ${TOGSIM_SSD_TRACE_NAME} [0/1]
+#source setup_env_var.sh ${TOGSIM_SSD_TRACE_NAME} [0/1]
 # No LegoSim
-source setup_env.sh test1 0
+source setup_env_var.sh test1 0
 # With LegoSim
-source setup_env.sh test1 1
+source setup_env_var.sh test1 1
 ```
 
 Llama2-7B 存取權
@@ -20,9 +20,9 @@ Llama2-7B 存取權
 清除輸出
 ```bash
 # 保留cache
-bash clean_output.sh 0
+bash cleanup_results.sh 0
 # 清除cache (會重新跑gem5 建議清除)
-bash clean_output.sh 1
+bash cleanup_results.sh 1
 ``` 
 
 執行模擬
@@ -58,13 +58,13 @@ python3 test/GPT/test_GPT_NeoX_20B.py --npu
 python3 sum_togsim_cycles.py
 ```
 
-擷取model weights traces (如果想要手動執行)
+擷取model weights traces (先不用管)
 ```bash
 python3 merge_weight_ranges.py
 python3 extract_weight_traces.py
 ```
 
 # 輸出位置
-log檔案: togsim_output/${TOGSIM_SSD_TRACE_NAME}/
+log檔案: togsim_results/${TOGSIM_SSD_TRACE_NAME}/
 
 DMA traces: ssd_traces/${TOGSIM_SSD_TRACE_NAME}/
