@@ -368,6 +368,30 @@ Dram.cc.s:
 	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/Dram.cc.s
 .PHONY : Dram.cc.s
 
+DramLegoSimLink.o: DramLegoSimLink.cc.o
+.PHONY : DramLegoSimLink.o
+
+# target to build an object file
+DramLegoSimLink.cc.o:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/DramLegoSimLink.cc.o
+.PHONY : DramLegoSimLink.cc.o
+
+DramLegoSimLink.i: DramLegoSimLink.cc.i
+.PHONY : DramLegoSimLink.i
+
+# target to preprocess a source file
+DramLegoSimLink.cc.i:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/DramLegoSimLink.cc.i
+.PHONY : DramLegoSimLink.cc.i
+
+DramLegoSimLink.s: DramLegoSimLink.cc.s
+.PHONY : DramLegoSimLink.s
+
+# target to generate assembly for a file
+DramLegoSimLink.cc.s:
+	cd /workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Simulator.dir/build.make src/CMakeFiles/Simulator.dir/DramLegoSimLink.cc.s
+.PHONY : DramLegoSimLink.cc.s
+
 Hashing.o: Hashing.cc.o
 .PHONY : Hashing.o
 
@@ -765,6 +789,9 @@ help:
 	@echo "... Dram.o"
 	@echo "... Dram.i"
 	@echo "... Dram.s"
+	@echo "... DramLegoSimLink.o"
+	@echo "... DramLegoSimLink.i"
+	@echo "... DramLegoSimLink.s"
 	@echo "... Hashing.o"
 	@echo "... Hashing.i"
 	@echo "... Hashing.s"

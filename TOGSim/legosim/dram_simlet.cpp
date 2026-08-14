@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
   const int self_y = std::atoi(argv[2]);
   const int peer_x = std::atoi(argv[3]);
   const int peer_y = std::atoi(argv[4]);
-  const double bandwidth_gbps = argc > 5 ? std::atof(argv[5]) : 800.0;
+  const double bandwidth_gbps = argc > 5 ? std::atof(argv[5]) : 76.0;
   const double base_latency_ns = argc > 6 ? std::atof(argv[6]) : 15.0;
 
   InterChiplet::PipeComm pipe_comm;

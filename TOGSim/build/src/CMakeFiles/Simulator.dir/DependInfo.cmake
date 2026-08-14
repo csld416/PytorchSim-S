@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/DMA.cc" "src/CMakeFiles/Simulator.dir/DMA.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/DMA.cc.o.d"
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/DelayQueue.cc" "src/CMakeFiles/Simulator.dir/DelayQueue.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/DelayQueue.cc.o.d"
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Dram.cc" "src/CMakeFiles/Simulator.dir/Dram.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/Dram.cc.o.d"
+  "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/DramLegoSimLink.cc" "src/CMakeFiles/Simulator.dir/DramLegoSimLink.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/DramLegoSimLink.cc.o.d"
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Hashing.cc" "src/CMakeFiles/Simulator.dir/Hashing.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/Hashing.cc.o.d"
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Instruction.cc" "src/CMakeFiles/Simulator.dir/Instruction.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/Instruction.cc.o.d"
   "/workspace/legomerged/eclab_legosim/PyTorchSim/TOGSim/src/Interconnect.cc" "src/CMakeFiles/Simulator.dir/Interconnect.cc.o" "gcc" "src/CMakeFiles/Simulator.dir/Interconnect.cc.o.d"

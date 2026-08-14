@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Simulator.dir/DelayQueue.cc.o.d"
   "CMakeFiles/Simulator.dir/Dram.cc.o"
   "CMakeFiles/Simulator.dir/Dram.cc.o.d"
+  "CMakeFiles/Simulator.dir/DramLegoSimLink.cc.o"
+  "CMakeFiles/Simulator.dir/DramLegoSimLink.cc.o.d"
   "CMakeFiles/Simulator.dir/Hashing.cc.o"
   "CMakeFiles/Simulator.dir/Hashing.cc.o.d"
   "CMakeFiles/Simulator.dir/Instruction.cc.o"
