@@ -13,6 +13,13 @@
 // compute_latency_ns() for a real DRAM/NoC simulator's estimate to get
 // actual modeled numbers.
 //
+// Like artifact/HBM_DDR/DDR.cpp and HBM.cpp, this simlet tracks a running
+// `timeNow` across requests instead of always reporting cycle 0 -- this is
+// what lets a real phase-2 NoC simlet (see TOGSIM_LEGOSIM_DRAM_NOC in
+// Simulator/simulator.py) actually influence the read/write pairing
+// (interchiplet's getEndCycle()) instead of being computed against a fixed
+// baseline every time.
+//
 // argv: <self_x> <self_y> <peer_x> <peer_y> [bandwidth_gbps] [base_latency_ns]
 // Defaults match the (0,0)=NPU / (2,0)=DRAM convention used elsewhere in
 // this integration (ssd_simlet occupies (1,0), so dram_simlet can run
@@ -62,12 +69,18 @@ int main(int argc, char** argv) {
 
   InterChiplet::PipeComm pipe_comm;
 
+  // Current known simulated time for this chiplet, threaded through
+  // readSync/writeSync's cycle argument -- same role as DDR.cpp/HBM.cpp's
+  // local `timeNow`.
+  InterChiplet::TimeType timeNow = 1;
+
   while (true) {
     // Receive one request from TOGSim.
     std::string req_file = InterChiplet::receiveSync(peer_x, peer_y, self_x, self_y);
     SsdLatencyRequest req{};
     pipe_comm.read_data(req_file.c_str(), &req, sizeof(req));
-    InterChiplet::readSync(0, peer_x, peer_y, self_x, self_y, sizeof(req), 0);
+    InterChiplet::TimeType time_end =
+        InterChiplet::readSync(timeNow, peer_x, peer_y, self_x, self_y, sizeof(req), 0);
 
     SsdLatencyResponse resp{};
     if (!req.terminate) {
@@ -76,14 +89,25 @@ int main(int argc, char** argv) {
                 << " nbytes=" << req.nbytes << " inst_id=" << req.inst_id
                 << " addr_name=" << req.addr_name
                 << " -> latency_ns=" << resp.latency_ns << std::endl;
+
+      // Advance timeNow past the modeled DRAM access latency, added on top
+      // of wherever the request actually landed (time_end -- informed by
+      // phase-2 NoC delay when a real NoC simlet is plugged in). Mirrors
+      // DDR.cpp/HBM.cpp's `timeNow = true_time + time_end`. latency_ns is
+      // used directly as a cycle count here, the same placeholder
+      // convention DDR.cpp uses for its own fixed constant; this internal
+      // timeline is independent of the ns-to-core-cycle conversion DMA.cc
+      // applies to resp.latency_ns on the TOGSim side.
+      timeNow = static_cast<InterChiplet::TimeType>(resp.latency_ns) + time_end;
     } else {
       resp.latency_ns = 0;
+      timeNow = time_end;
     }
 
     // Send the response back (also used to ack the terminate sentinel).
     std::string resp_file = InterChiplet::sendSync(self_x, self_y, peer_x, peer_y);
     pipe_comm.write_data(resp_file.c_str(), &resp, sizeof(resp));
-    InterChiplet::writeSync(0, self_x, self_y, peer_x, peer_y, sizeof(resp), 0);
+    InterChiplet::writeSync(timeNow, self_x, self_y, peer_x, peer_y, sizeof(resp), 0);
 
     if (req.terminate) {
       std::cout << "[dram_simlet] received terminate sentinel, exiting." << std::endl;

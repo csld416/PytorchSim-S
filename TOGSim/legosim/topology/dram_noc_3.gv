@@ -1,0 +1,12 @@
+graph dram_noc_3
+{
+    edge[weight=1]
+    node[pipeline_stage_delay=1]
+
+    // Minimal line topology covering every chiplet coordinate this
+    // integration uses: TOGSim=0, ssd_simlet=1, dram_simlet=2 (see
+    // TOGSim/include/SsdLegoSimLink.h / DramLegoSimLink.h). Used as phase2
+    // when TOGSIM_LEGOSIM_DRAM_NOC=1 plugs a real popnet into the legosim
+    // YAML instead of the no-op /bin/true filler.
+    0--1--2
+}
