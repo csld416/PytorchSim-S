@@ -56,6 +56,8 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
   if (!_generated_once) {
     uint64_t latency_ns = 0;
     bool have_latency = false;
+    uint64_t ssd_completion_cycle = 0;
+    bool have_ssd_completion_cycle = false;
     if (_current_inst->is_dma_read()) {
       if (SsdLegoSimLink::instance().enabled()) {
         // Live path: only DMAs landing inside a currently-loaded weight
@@ -75,17 +77,21 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
           const uint64_t total_bits = static_cast<uint64_t>(_current_inst->get_tile_numel()) *
                                       static_cast<uint64_t>(_current_inst->get_elem_bits());
           const uint64_t total_bytes = (total_bits + 7) >> 3;
-          latency_ns = SsdLegoSimLink::instance().query_latency_ns(
-              base_addr, total_bytes, _current_inst->get_global_inst_id(),
-              _current_inst->get_addr_name());
-          have_latency = true;
+          // Protocol bring-up uses logical offset zero. A stable tensor-range
+          // to SSD-offset mapper will replace this temporary mapping.
+          constexpr uint64_t kTemporarySsdOffset = 0;
+          ssd_completion_cycle = SsdLegoSimLink::instance().issue_read(
+              kTemporarySsdOffset, total_bytes,
+              static_cast<uint64_t>(core_cycle));
+          have_ssd_completion_cycle = true;
         }
       } else {
         have_latency =
             SsdTraceManager::instance().pop_latency_for_instruction(_id, *_current_inst, &latency_ns);
       }
     }
-    if (!have_latency && DramLegoSimLink::instance().enabled()) {
+    if (!have_latency && !have_ssd_completion_cycle &&
+        DramLegoSimLink::instance().enabled()) {
       // Catch-all: every DMA (read or write) not already claimed by the SSD
       // path above is routed to the DRAM-legosim simlet instead of the real
       // Dram/Interconnect timing model -- this is what lets DRAM-legosim
@@ -100,11 +106,21 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
           _current_inst->get_addr_name(), static_cast<uint64_t>(core_cycle));
       have_latency = true;
     }
-    if (have_latency) {
-      const double period_ns = _core_freq_mhz > 0 ? 1000.0 / static_cast<double>(_core_freq_mhz) : 0.0;
+    if (have_latency || have_ssd_completion_cycle) {
       uint64_t latency_cycles = 0;
-      if (period_ns > 0.0) {
-        latency_cycles = static_cast<uint64_t>(std::ceil(static_cast<double>(latency_ns) / period_ns));
+      if (have_ssd_completion_cycle) {
+        latency_cycles = ssd_completion_cycle > core_cycle
+                             ? ssd_completion_cycle - core_cycle
+                             : 1;
+      } else {
+        const double period_ns =
+            _core_freq_mhz > 0
+                ? 1000.0 / static_cast<double>(_core_freq_mhz)
+                : 0.0;
+        if (period_ns > 0.0) {
+          latency_cycles = static_cast<uint64_t>(
+              std::ceil(static_cast<double>(latency_ns) / period_ns));
+        }
       }
       if (latency_cycles == 0)
         latency_cycles = 1;

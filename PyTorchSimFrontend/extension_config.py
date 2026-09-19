@@ -148,6 +148,33 @@ def __getattr__(name):
         return os.environ.get("TOGSIM_LEGOSIM_SSD", "0") == "1"
     if name == "CONFIG_LEGOSIM_ROOT":
         return os.environ.get("SIMULATOR_ROOT", "/workspace/legomerged/eclab_legosim")
+    nussd_root = os.environ.get(
+        "NUSSD_ROOT", os.path.abspath(os.path.join(CONFIG_TORCHSIM_DIR, os.pardir))
+    )
+    if name == "CONFIG_SIMPLESSD_LEGOSIM_BIN":
+        return os.environ.get(
+            "SIMPLESSD_LEGOSIM_BIN",
+            os.path.join(nussd_root, "SimpleSSD-Standalone", "build", "simplessd-legosim"),
+        )
+    if name == "CONFIG_SIMPLESSD_SIM_CONFIG":
+        return os.environ.get(
+            "SIMPLESSD_SIM_CONFIG",
+            os.path.join(nussd_root, "SimpleSSD-Standalone", "config", "sample.cfg"),
+        )
+    if name == "CONFIG_SIMPLESSD_SSD_CONFIG":
+        return os.environ.get(
+            "SIMPLESSD_SSD_CONFIG",
+            os.path.join(
+                nussd_root,
+                "SimpleSSD-Standalone",
+                "simplessd",
+                "config",
+                "sample_nocache.cfg",
+            ),
+        )
+    if name == "CONFIG_SIMPLESSD_LEGOSIM_CLOCK_RATE":
+        # Runtime LegoSim time is ns; SimpleSSD's event-engine ticks are ps.
+        return float(os.environ.get("SIMPLESSD_LEGOSIM_CLOCK_RATE", "1000.0"))
     if name == "CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS":
         return float(os.environ.get("TOGSIM_LEGOSIM_SSD_BANDWIDTH_GBPS", "8.0"))
     if name == "CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS":

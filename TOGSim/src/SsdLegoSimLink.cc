@@ -1,13 +1,21 @@
 #include "SsdLegoSimLink.h"
 
 #include <cstdlib>
+#include <limits>
 
 #include <spdlog/spdlog.h>
+
+#include "ssd_ipc_trace.h"
 
 namespace {
 long env_long(const char* name, long fallback) {
   const char* v = std::getenv(name);
   return v ? std::atol(v) : fallback;
+}
+
+NUSSD::SsdIpcTrace& protocol_trace() {
+  static NUSSD::SsdIpcTrace trace("NPU", "npu.events.tsv");
+  return trace;
 }
 }  // namespace
 
@@ -30,36 +38,107 @@ SsdLegoSimLink::SsdLegoSimLink() {
                _self_x, _self_y, _peer_x, _peer_y);
 }
 
-SsdLatencyResponse SsdLegoSimLink::round_trip(const SsdLatencyRequest& req) {
-  // Request leg: self -> peer.
-  std::string req_file = InterChiplet::sendSync(_self_x, _self_y, _peer_x, _peer_y);
-  _pipe_comm.write_data(req_file.c_str(), const_cast<SsdLatencyRequest*>(&req), sizeof(req));
-  InterChiplet::writeSync(0, _self_x, _self_y, _peer_x, _peer_y, sizeof(req), 0);
-
-  // Response leg: peer -> self.
-  std::string resp_file = InterChiplet::receiveSync(_peer_x, _peer_y, _self_x, _self_y);
-  SsdLatencyResponse resp{};
-  _pipe_comm.read_data(resp_file.c_str(), &resp, sizeof(resp));
-  InterChiplet::readSync(0, _peer_x, _peer_y, _self_x, _self_y, sizeof(resp), 0);
-  return resp;
+uint64_t SsdLegoSimLink::allocate_request_id() {
+  if (_next_request_id == 0 ||
+      _next_request_id > static_cast<uint64_t>(std::numeric_limits<long>::max())) {
+    spdlog::critical("[SsdLegoSimLink] exhausted LegoSim request descriptors");
+    std::exit(EXIT_FAILURE);
+  }
+  return _next_request_id++;
 }
 
-uint64_t SsdLegoSimLink::query_latency_ns(uint64_t addr, uint64_t nbytes, uint64_t inst_id,
-                                          const std::string& addr_name) {
-  SsdLatencyRequest req{};
-  req.addr = addr;
-  req.nbytes = nbytes;
-  req.inst_id = inst_id;
-  req.set_addr_name(addr_name);
-  req.terminate = 0;
-  return round_trip(req).latency_ns;
+SsdLegoSimLink::RoundTrip SsdLegoSimLink::round_trip(
+    const NUSSD::SsdIpcRequest& request,
+    InterChiplet::TimeType issue_cycle,
+    uint64_t request_wire_bytes,
+    uint64_t response_wire_bytes) {
+  if (request_wire_bytes > static_cast<uint64_t>(std::numeric_limits<int>::max()) ||
+      response_wire_bytes > static_cast<uint64_t>(std::numeric_limits<int>::max())) {
+    spdlog::critical("[SsdLegoSimLink] transfer exceeds LegoSim byte-count range");
+    std::exit(EXIT_FAILURE);
+  }
+
+  const long desc = static_cast<long>(request.request_id);
+
+  // FIFO carries the semantic request; WRITE models its interconnect leg.
+  std::string req_file = InterChiplet::sendSync(_self_x, _self_y, _peer_x, _peer_y);
+  if (_pipe_comm.write_data(req_file.c_str(),
+                            const_cast<NUSSD::SsdIpcRequest*>(&request),
+                            sizeof(request)) !=
+      static_cast<int>(sizeof(request))) {
+    spdlog::critical("[SsdLegoSimLink] failed to send complete SSD request");
+    std::exit(EXIT_FAILURE);
+  }
+  protocol_trace().emit("NPU_REQUEST_FIFO_SENT", request, issue_cycle);
+  const InterChiplet::TimeType command_arrival_cycle = InterChiplet::writeSync(
+      issue_cycle, _self_x, _self_y, _peer_x, _peer_y,
+      static_cast<int>(request_wire_bytes), desc);
+  protocol_trace().emit("NPU_COMMAND_ARRIVAL_RESOLVED", request,
+                        command_arrival_cycle);
+
+  // FIFO carries completion metadata; READ models the returned data/ack leg.
+  std::string resp_file = InterChiplet::receiveSync(_peer_x, _peer_y, _self_x, _self_y);
+  NUSSD::SsdIpcResponse response;
+  if (_pipe_comm.read_data(resp_file.c_str(), &response, sizeof(response)) !=
+      static_cast<int>(sizeof(response))) {
+    spdlog::critical("[SsdLegoSimLink] failed to receive complete SSD response");
+    std::exit(EXIT_FAILURE);
+  }
+  protocol_trace().emit("NPU_RESPONSE_FIFO_RECEIVED", request, issue_cycle,
+                        response.completed_tick_ps, response.status);
+  const uint64_t actual_response_wire_bytes =
+      response.status == NUSSD::SsdIpcStatus::Success
+          ? response_wire_bytes
+          : NUSSD::kSsdReadCommandBytes;
+  InterChiplet::TimeType resolved_cycle = InterChiplet::readSync(
+      issue_cycle, _peer_x, _peer_y, _self_x, _self_y,
+      static_cast<int>(actual_response_wire_bytes), desc);
+  protocol_trace().emit("NPU_RESPONSE_ARRIVED", request, resolved_cycle,
+                        response.completed_tick_ps, response.status);
+
+  if (!NUSSD::hasValidHeader(response) ||
+      response.request_id != request.request_id ||
+      response.status != NUSSD::SsdIpcStatus::Success) {
+    spdlog::critical(
+        "[SsdLegoSimLink] invalid SSD response: request_id={} response_id={} status={}",
+        request.request_id, response.request_id,
+        static_cast<uint16_t>(response.status));
+    std::exit(EXIT_FAILURE);
+  }
+
+  _last_cycle = resolved_cycle;
+  protocol_trace().emit("NPU_REQUEST_COMPLETE", request, resolved_cycle,
+                        response.completed_tick_ps, response.status);
+  return {response, resolved_cycle};
+}
+
+uint64_t SsdLegoSimLink::issue_read(uint64_t offset_bytes, uint64_t nbytes,
+                                    uint64_t issue_cycle) {
+  if (nbytes == 0 ||
+      nbytes > static_cast<uint64_t>(std::numeric_limits<int>::max())) {
+    spdlog::critical("[SsdLegoSimLink] invalid SSD read length: {}", nbytes);
+    std::exit(EXIT_FAILURE);
+  }
+  NUSSD::SsdIpcRequest request;
+  request.operation = NUSSD::SsdIpcOperation::Read;
+  request.request_id = allocate_request_id();
+  request.offset_bytes = offset_bytes;
+  request.length_bytes = nbytes;
+  protocol_trace().emit("NPU_ISSUE", request, issue_cycle);
+
+  RoundTrip result = round_trip(request, issue_cycle,
+                                NUSSD::kSsdReadCommandBytes, nbytes);
+  return static_cast<uint64_t>(result.resolved_cycle);
 }
 
 void SsdLegoSimLink::shutdown() {
   if (!_enabled || _shutdown_sent) return;
   _shutdown_sent = true;
-  SsdLatencyRequest req{};
-  req.terminate = 1;
-  round_trip(req);
-  spdlog::info("[SsdLegoSimLink] sent terminate sentinel, SSD simlet acked.");
+  NUSSD::SsdIpcRequest request;
+  request.operation = NUSSD::SsdIpcOperation::Shutdown;
+  request.request_id = allocate_request_id();
+  protocol_trace().emit("NPU_SHUTDOWN", request, _last_cycle);
+  round_trip(request, _last_cycle, NUSSD::kSsdReadCommandBytes,
+             NUSSD::kSsdReadCommandBytes);
+  spdlog::info("[SsdLegoSimLink] sent shutdown request, SimpleSSD acked.");
 }

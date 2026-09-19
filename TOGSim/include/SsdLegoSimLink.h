@@ -1,21 +1,16 @@
 #pragma once
 
 #include <cstdint>
-#include <string>
 
 #include "pipe_comm.h"
-#include "ssd_protocol.h"
+#include "ssd_ipc_protocol.h"
 
-// Live counterpart to SsdTraceManager's replay path (see SsdTrace.h):
-// instead of popping a pre-recorded latency out of a trace file, this asks
-// an external LegoSim SSD/DRAM simlet for a latency, over the interchiplet
-// sync protocol, and blocks until it answers. Only makes sense when TOGSim
-// itself is running as one of interchiplet's phase1 processes (see
-// artifact/auto_transformer/CMakeLists.txt's `run` target for the general
-// pattern) -- outside of that, there's nothing on the other end of stdin.
+// Runtime client for the external SimpleSSD LegoSim process. Semantic request
+// and completion metadata travel through PipeComm; matching READ/WRITE events
+// tell LegoSim how many bytes cross the modeled interconnect and at what time.
 //
 // Enabled by setting TOGSIM_SSD_LEGOSIM=1. Chiplet coordinates default to
-// the (0,0)=compute / (1,0)=DRAM convention used elsewhere in this
+// the (0,0)=compute / (1,0)=SSD convention used by this integration,
 // integration, overridable via TOGSIM_LEGOSIM_X/Y and
 // TOGSIM_SSD_LEGOSIM_X/Y.
 class SsdLegoSimLink {
@@ -24,11 +19,10 @@ class SsdLegoSimLink {
 
   bool enabled() const { return _enabled; }
 
-  // Blocks until the SSD simlet answers. `addr`/`nbytes` describe the DMA
-  // access; `inst_id`/`addr_name` are only for identification/logging on the
-  // simlet side (addr_name is truncated to kSsdAddrNameCapacity-1 bytes).
-  uint64_t query_latency_ns(uint64_t addr, uint64_t nbytes, uint64_t inst_id,
-                            const std::string& addr_name);
+  // Issues a logical SSD read at `issue_cycle` and returns the absolute
+  // TOGSim cycle at which the data response has crossed the interconnect.
+  uint64_t issue_read(uint64_t offset_bytes, uint64_t nbytes,
+                      uint64_t issue_cycle);
 
   // Tells the SSD simlet to exit its request loop and waits for its ack.
   // Call once, right before TOGSim's process would otherwise exit. Safe to
@@ -38,7 +32,16 @@ class SsdLegoSimLink {
  private:
   SsdLegoSimLink();
 
-  SsdLatencyResponse round_trip(const SsdLatencyRequest& req);
+  struct RoundTrip {
+    NUSSD::SsdIpcResponse response;
+    InterChiplet::TimeType resolved_cycle;
+  };
+
+  RoundTrip round_trip(const NUSSD::SsdIpcRequest& request,
+                       InterChiplet::TimeType issue_cycle,
+                       uint64_t request_wire_bytes,
+                       uint64_t response_wire_bytes);
+  uint64_t allocate_request_id();
 
   long _self_x = 0;
   long _self_y = 0;
@@ -46,5 +49,7 @@ class SsdLegoSimLink {
   long _peer_y = 0;
   bool _enabled = false;
   bool _shutdown_sent = false;
+  uint64_t _next_request_id = 1;
+  InterChiplet::TimeType _last_cycle = 1;
   InterChiplet::PipeComm _pipe_comm;
 };
