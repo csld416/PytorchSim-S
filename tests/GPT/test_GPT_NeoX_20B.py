@@ -24,6 +24,7 @@ from transformers import AutoConfig, AutoTokenizer, AutoModelForCausalLM
 from transformers.cache_utils import StaticCache
 from transformers.masking_utils import create_causal_mask
 from transformers.models.gpt_neox.modeling_gpt_neox import GPTNeoXRotaryEmbedding
+from PyTorchSimFrontend.weight_placement import write_module_weight_placements
 
 
 DEFAULT_MODEL_ID = "EleutherAI/gpt-neox-20b"
@@ -148,39 +149,8 @@ def _build_meta_model(config, torch_dtype):
 
 
 def _dump_module_weight_ranges(module, name_prefix):
-    """Writes `module`'s parameter address ranges to model_weight_ranges.txt so TOGSim's live
-    LegoSim SSD path can tell weight DMAs apart from activations/KV-cache by address instead of by
-    name (see TOGSim/include/WeightAddressRanges.h). Same as
-    tests/Llama/test_llama2_7B.py::_dump_module_weight_ranges -- duplicated here rather than
-    imported, matching this file's existing StreamedCheckpointLoader duplication.
-
-    No-op if TOGSIM_SSD_TRACE_DIR/TOGSIM_SSD_TRACE_NAME aren't set, i.e. when not running under the
-    LegoSim SSD integration at all.
-    """
-    trace_dir = os.environ.get("TOGSIM_SSD_TRACE_DIR")
-    trace_name = os.environ.get("TOGSIM_SSD_TRACE_NAME")
-    if not trace_dir or not trace_name:
-        return
-    out_dir = os.path.join(trace_dir, trace_name)
-    os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, "model_weight_ranges.txt")
-    with open(out_path, "w") as f:
-        for name, p in module.named_parameters(recurse=True):
-            if p is None:
-                continue
-            base = p.data_ptr()
-            size_bytes = p.untyped_storage().size()
-            end = base + size_bytes
-            f.write(
-                f"{name_prefix}.{name}\tbase={base}\tend={end}\tsize_bytes={size_bytes}"
-                f"\tshape={tuple(p.shape)}\tdtype={p.dtype}\n"
-            )
-        f.flush()
-        os.fsync(f.fileno())
-    subprocess.run(
-        [sys.executable, os.path.join(os.path.dirname(__file__), "../../merge_weight_ranges.py")],
-        check=True,
-    )
+    """Publish active host ranges and stable logical SSD placements."""
+    return write_module_weight_placements(module, name_prefix)
 
 
 def _prelude(base_model, input_ids, attention_mask, past_key_values, cache_position):

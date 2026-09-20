@@ -12,6 +12,7 @@ from transformers.cache_utils import DynamicCache, StaticCache
 from transformers.masking_utils import create_causal_mask
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaForCausalLM, LlamaDecoderLayer, LlamaRMSNorm, LlamaRotaryEmbedding, LlamaModel
+from PyTorchSimFrontend.weight_placement import write_module_weight_placements
 
 
 class StreamedCheckpointLoader:
@@ -219,46 +220,8 @@ def _epilogue(base_model, lm_head, hidden_states):
 
 
 def _dump_module_weight_ranges(module, name_prefix):
-    """Writes `module`'s parameter address ranges to model_weight_ranges.txt (same
-    format/location run_llama_gen already uses for the whole-model case) so
-    TOGSim's live LegoSim SSD path can tell weight DMAs apart from activations/KV-cache
-    by address instead of by name (see TOGSim/include/WeightAddressRanges.h).
-
-    Overwrites the file rather than appending: call this right after load_module_()
-    for the layer about to run. unload_module_() frees these addresses back to the
-    allocator, and the next layer's load_module_() call can reuse them, so only the
-    most recently loaded layer's ranges are valid at any given moment -- stale entries
-    from an already-unloaded layer would misattribute a later access to the wrong
-    tensor (or the wrong tensor kind entirely, since freed memory can be reused for a
-    KV-cache write instead of a weight).
-
-    No-op if TOGSIM_SSD_TRACE_DIR/TOGSIM_SSD_TRACE_NAME aren't set, i.e. when not
-    running under the LegoSim SSD integration at all.
-    """
-    trace_dir = os.environ.get("TOGSIM_SSD_TRACE_DIR")
-    trace_name = os.environ.get("TOGSIM_SSD_TRACE_NAME")
-    if not trace_dir or not trace_name:
-        return
-    out_dir = os.path.join(trace_dir, trace_name)
-    os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, "model_weight_ranges.txt")
-    with open(out_path, "w") as f:
-        for name, p in module.named_parameters(recurse=True):
-            if p is None:
-                continue
-            base = p.data_ptr()
-            size_bytes = p.untyped_storage().size()
-            end = base + size_bytes
-            f.write(
-                f"{name_prefix}.{name}\tbase={base}\tend={end}\tsize_bytes={size_bytes}"
-                f"\tshape={tuple(p.shape)}\tdtype={p.dtype}\n"
-            )
-        f.flush()
-        os.fsync(f.fileno())
-    subprocess.run(
-        [sys.executable, os.path.join(os.path.dirname(__file__), "../../merge_weight_ranges.py")],
-        check=True,
-    )
+    """Publish active host ranges and stable logical SSD placements."""
+    return write_module_weight_placements(module, name_prefix)
 
 
 @torch.no_grad()

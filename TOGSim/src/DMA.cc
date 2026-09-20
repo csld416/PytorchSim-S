@@ -73,15 +73,14 @@ std::shared_ptr<std::vector<mem_fetch*>> DMA::get_memory_access(cycle_type core_
         // real host memory, so a weight's data_ptr() on the Python side is
         // the exact same address reported here. See WeightAddressRanges.h.
         const uint64_t base_addr = static_cast<uint64_t>(_current_inst->get_base_dram_address());
-        if (WeightAddressRanges::instance().is_weight_address(base_addr)) {
-          const uint64_t total_bits = static_cast<uint64_t>(_current_inst->get_tile_numel()) *
-                                      static_cast<uint64_t>(_current_inst->get_elem_bits());
-          const uint64_t total_bytes = (total_bits + 7) >> 3;
-          // Protocol bring-up uses logical offset zero. A stable tensor-range
-          // to SSD-offset mapper will replace this temporary mapping.
-          constexpr uint64_t kTemporarySsdOffset = 0;
+        const uint64_t total_bits = static_cast<uint64_t>(_current_inst->get_tile_numel()) *
+                                    static_cast<uint64_t>(_current_inst->get_elem_bits());
+        const uint64_t total_bytes = (total_bits + 7) >> 3;
+        uint64_t ssd_offset = 0;
+        if (WeightAddressRanges::instance().translate(
+                base_addr, total_bytes, &ssd_offset)) {
           ssd_completion_cycle = SsdLegoSimLink::instance().issue_read(
-              kTemporarySsdOffset, total_bytes,
+              ssd_offset, total_bytes,
               static_cast<uint64_t>(core_cycle));
           have_ssd_completion_cycle = true;
         }
