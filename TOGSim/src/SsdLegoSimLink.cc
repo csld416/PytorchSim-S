@@ -58,7 +58,13 @@ SsdLegoSimLink::RoundTrip SsdLegoSimLink::round_trip(
     std::exit(EXIT_FAILURE);
   }
 
-  const long desc = static_cast<long>(request.request_id);
+  // Keep LegoSim's synchronization descriptor at zero. The preceding SEND
+  // command has no descriptor, and interchiplet compares that command with
+  // PopNet's first delay record at the start of the next round. Encoding the
+  // request ID here makes those descriptors differ and causes interchiplet to
+  // discard every network delay. The fixed-size FIFO message remains the
+  // authoritative request-ID carrier and is validated end to end below.
+  constexpr long desc = 0;
 
   // FIFO carries the semantic request; WRITE models its interconnect leg.
   std::string req_file = InterChiplet::sendSync(_self_x, _self_y, _peer_x, _peer_y);

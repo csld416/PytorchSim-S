@@ -544,14 +544,15 @@ class TOGSimulator():
     def get_togsim_command(config_path, togsim_path=None):
         if togsim_path is None:
             togsim_path = os.path.join(extension_config.CONFIG_TORCHSIM_DIR, "TOGSim")
-        bin = os.path.join(togsim_path, "build/bin/Simulator")
+        bin = extension_config.CONFIG_TOGSIM_SIMULATOR_BIN
         config = os.path.join(togsim_path, config_path)
         cmd = f"{bin} --config {config}"
         return cmd
 
     @staticmethod
     def _build_legosim_yaml(togsim_bin, config, trace_file_path, run_dir, log_level="",
-                             use_ssd=True, use_dram=False, use_dram_noc=False, core_freq_mhz=None):
+                             use_ssd=True, use_dram=False, use_ssd_noc=False,
+                             use_dram_noc=False, core_freq_mhz=None):
         """
         Write an interchiplet benchmark YAML pairing TOGSim (phase1[0], chiplet
         (0,0)) with whichever LegoSim simlet(s) are requested: the runtime
@@ -560,17 +561,12 @@ class TOGSimulator():
         TOGSim/legosim/dram_simlet.cpp, catch-all for every other DMA access,
         replacing TOGSim's real Dram/Interconnect models).
 
-        phase2 is normally a no-op /bin/true filler -- interchiplet indexes
-        phase2[0] unconditionally. The SimpleSSD process supplies real storage
-        service timing in this first integration step; link timing is added
-        after the protocol smoke path is stable. When
-        use_dram_noc is set (only meaningful together with use_dram), phase2
-        instead runs a real popnet against TOGSim/legosim/topology/dram_noc_3.gv
-        (covering every chiplet coordinate this integration uses), exercising
-        interchiplet's real two-phase fixed-point loop -- dram_simlet and
-        DramLegoSimLink track a running timeNow (see their own comments)
-        specifically so this NoC delay has somewhere to land instead of being
-        silently discarded.
+        phase2 is normally a no-op /bin/true filler because interchiplet
+        indexes phase2[0] unconditionally. With use_ssd_noc, phase2 runs
+        PopNet over the two-node NPU--SSD topology; the 64-byte read command
+        and payload-sized response emitted by SsdLegoSimLink/SimpleSSD become
+        real network transactions. With use_dram_noc, phase2 instead runs
+        PopNet against TOGSim/legosim/topology/dram_noc_3.gv.
 
         TOGSim's own coordinates/peer coordinates must match SsdLegoSimLink's/
         DramLegoSimLink's env-var defaults (TOGSIM_LEGOSIM_X/Y=0,0,
@@ -632,7 +628,41 @@ class TOGSimulator():
                 "clock_rate": 1.0,
             })
 
-        if use_dram_noc:
+        if use_ssd_noc and use_dram:
+            raise ValueError(
+                "SSD PopNet currently supports the SSD-only external-service path; "
+                "disable TOGSIM_LEGOSIM_DRAM"
+            )
+
+        if use_ssd_noc:
+            popnet_bin = os.path.join(
+                extension_config.CONFIG_LEGOSIM_ROOT,
+                "popnet_chiplet/build/popnet",
+            )
+            topology_path = extension_config.CONFIG_LEGOSIM_SSD_POPNET_TOPOLOGY
+            popnet_clock_rate = extension_config.CONFIG_LEGOSIM_SSD_POPNET_CLOCK_RATE
+            flit_words = extension_config.CONFIG_LEGOSIM_SSD_POPNET_FLIT_WORDS
+            if popnet_clock_rate <= 0.0:
+                raise ValueError("TOGSIM_LEGOSIM_SSD_POPNET_CLOCK_RATE must be positive")
+            if flit_words <= 0:
+                raise ValueError("TOGSIM_LEGOSIM_SSD_POPNET_FLIT_WORDS must be positive")
+            if not os.path.isfile(topology_path):
+                raise FileNotFoundError(f"SSD PopNet topology not found: {topology_path}")
+            phase2 = [
+                {
+                    "cmd": str(popnet_bin),
+                    "args": [
+                        "-A", "2", "-c", "1", "-V", "3", "-B", "12", "-O", "12",
+                        "-F", str(flit_words), "-L", "1000", "-T", "20000000000",
+                        "-r", "1", "-I", "../bench.txt", "-G", str(topology_path),
+                        "-R", "4", "-D", "../delayInfo.txt", "-P",
+                    ],
+                    "log": "popnet_0.log",
+                    "is_to_stdout": False,
+                    "clock_rate": popnet_clock_rate,
+                },
+            ]
+        elif use_dram_noc:
             popnet_bin = os.path.join(extension_config.CONFIG_LEGOSIM_ROOT, "popnet_chiplet/build/popnet")
             # togsim_bin is <togsim_root>/build/bin/Simulator; strip those
             # three components back to <togsim_root> to find legosim/topology/.
@@ -837,6 +867,51 @@ class TOGSimulator():
             )
 
     @staticmethod
+    def _validate_popnet_feedback(run_dir, interchiplet_stdout):
+        """Fail if PopNet did not produce delay data consumed by round 2."""
+        output = interchiplet_stdout.decode("utf-8", errors="replace")
+
+        failed_children = [
+            (pid, int(status))
+            for pid, status in re.findall(
+                r"Simulation process (\d+) terminate with status = (\d+)", output
+            )
+            if int(status) != 0
+        ]
+        if failed_children:
+            details = ", ".join(
+                f"pid {pid}: status {status}" for pid, status in failed_children
+            )
+            raise RuntimeError(
+                "LegoSim child process failed even though the interchiplet "
+                f"coordinator exited successfully ({details})"
+            )
+
+        if ("Delay information is canncelled" in output or
+                "Delay information is cancelled" in output):
+            raise RuntimeError(
+                "LegoSim cancelled PopNet feedback because the round-2 "
+                "communication order or descriptor did not match round 1"
+            )
+
+        delay_path = Path(run_dir) / "delayInfo.txt"
+        if not delay_path.is_file() or delay_path.stat().st_size == 0:
+            raise RuntimeError(
+                f"PopNet did not produce a non-empty delay file: {delay_path}"
+            )
+
+        round2_log = Path(run_dir) / "proc_r2_p1_t0" / "interchiplet.log"
+        round2_text = (
+            round2_log.read_text(encoding="utf-8", errors="replace")
+            if round2_log.is_file() else ""
+        )
+        loaded = re.search(r"Load (\d+) delay records", round2_text)
+        if loaded is None or int(loaded.group(1)) == 0:
+            raise RuntimeError(
+                "PopNet delay feedback was not loaded into LegoSim round 2"
+            )
+
+    @staticmethod
     def run_standalone(
         model_path,
         attribute_path="",
@@ -888,6 +963,10 @@ class TOGSimulator():
 
         use_legosim_ssd = extension_config.CONFIG_TOGSIM_LEGOSIM_SSD
         use_legosim_dram = extension_config.CONFIG_TOGSIM_LEGOSIM_DRAM
+        # The SSD NoC is meaningful only with the live SSD service.
+        use_ssd_noc = (
+            use_legosim_ssd and extension_config.CONFIG_TOGSIM_LEGOSIM_SSD_NOC
+        )
         # Only meaningful together with use_legosim_dram -- ignore the toggle
         # otherwise rather than requiring callers to keep the two in sync.
         use_dram_noc = use_legosim_dram and extension_config.CONFIG_TOGSIM_LEGOSIM_DRAM_NOC
@@ -900,7 +979,7 @@ class TOGSimulator():
 
         try:
             if use_legosim_ssd or use_legosim_dram:
-                togsim_bin = os.path.join(togsim_path, "build/bin/Simulator")
+                togsim_bin = extension_config.CONFIG_TOGSIM_SIMULATOR_BIN
                 run_dir = base_dir / f"{idx}.legosim_run"
                 trace_dir = None
                 if os.environ.get("NUSSD_PROTOCOL_TRACE") == "1":
@@ -914,36 +993,47 @@ class TOGSimulator():
                 yaml_path = TOGSimulator._build_legosim_yaml(
                     togsim_bin, os.path.join(togsim_path, config_path), trace_file_path, run_dir,
                     log_level=extension_config.CONFIG_TOGSIM_DEBUG_LEVEL,
-                    use_ssd=use_legosim_ssd, use_dram=use_legosim_dram, use_dram_noc=use_dram_noc,
+                    use_ssd=use_legosim_ssd, use_dram=use_legosim_dram,
+                    use_ssd_noc=use_ssd_noc, use_dram_noc=use_dram_noc,
                     core_freq_mhz=core_freq_mhz,
                 )
                 interchiplet_bin = os.path.join(
                     extension_config.CONFIG_LEGOSIM_ROOT, "interchiplet/bin/interchiplet"
                 )
-                # -t 1: run exactly one round -- TOGSim already ran its one kernel
-                # to completion, and with the no-op phase2 filler there's nothing
-                # to re-converge on a second round. With use_dram_noc, phase2 is a
-                # real popnet instead, so we let it iterate CONFIG_LEGOSIM_DRAM_NOC_ROUNDS
-                # times: dram_simlet/DramLegoSimLink track a running timeNow (see
-                # their own comments) specifically so popnet's delayInfo.txt feeds
-                # back into a real round 2+ instead of being computed once and
-                # discarded. Note interchiplet's own convergence check (round-over-
-                # round cycle difference) never fires here regardless -- it's driven
-                # by explicit CYCLE sync commands neither dram_simlet nor
-                # DramLegoSimLink issue (matching DDR.cpp/HBM.cpp, which don't
-                # either) -- so all requested rounds always run; -t is a hard cap,
-                # not a target. -w 3 (not 2) so chiplet address 2 (dram_simlet) is
-                # always in range, needed for use_dram_noc's real popnet topology
-                # and harmless otherwise (DIM_Y is always 0 for every chiplet this
-                # integration uses, so width doesn't affect address resolution).
-                rounds = extension_config.CONFIG_LEGOSIM_DRAM_NOC_ROUNDS if use_dram_noc else 1
-                cmd = f"{interchiplet_bin} {yaml_path} -w 3 -f 2 -t {rounds}"
+                # PopNet runs after phase1 and writes delayInfo.txt for the next
+                # iteration, so a real network path needs more than one round.
+                # SimpleSSD emits a final CYCLE command and carries each resolved
+                # request/response arrival forward through currentCycle, allowing
+                # SSD PopNet delay to feed back into round 2+. Without any NoC,
+                # one round remains sufficient for the /bin/true filler.
+                if use_ssd_noc:
+                    rounds = extension_config.CONFIG_LEGOSIM_SSD_NOC_ROUNDS
+                elif use_dram_noc:
+                    rounds = extension_config.CONFIG_LEGOSIM_DRAM_NOC_ROUNDS
+                else:
+                    rounds = 1
+                if rounds < 2 and (use_ssd_noc or use_dram_noc):
+                    raise ValueError("LegoSim PopNet paths require at least two rounds")
+                # interchiplet uses -f while producing bench.txt; PopNet uses
+                # -F while consuming it. They must describe the same number of
+                # 64-bit words per flit or payload serialization is scaled by
+                # their ratio (the former hard-coded 2 halved an SSD -F 1
+                # response before it reached PopNet).
+                interchiplet_flit_words = (
+                    extension_config.CONFIG_LEGOSIM_SSD_POPNET_FLIT_WORDS
+                    if use_ssd_noc else 2
+                )
+                cmd = (
+                    f"{interchiplet_bin} {yaml_path} -w 3 "
+                    f"-f {interchiplet_flit_words} -t {rounds}"
+                )
 
                 if not autotune_mode:
                     logger.debug(f"[TOGSim] cmd> {cmd}")
                     path_desc = "+".join(
                         p for p, on in (
-                            ("SSD", use_legosim_ssd), ("DRAM", use_legosim_dram), ("NoC", use_dram_noc),
+                            ("SSD", use_legosim_ssd), ("DRAM", use_legosim_dram),
+                            ("SSD-NoC", use_ssd_noc), ("DRAM-NoC", use_dram_noc),
                         ) if on
                     )
                     logger.info(f"[TOGSim] TOGSim simulation started (LegoSim {path_desc} path)")
@@ -965,20 +1055,31 @@ class TOGSimulator():
                     phase1_basenames.append("simplessd-legosim")
                 if use_legosim_dram:
                     phase1_basenames.append("dram_simlet")
-                phase2_basenames = ["popnet"] if use_dram_noc else ["true"]
+                phase2_basenames = ["popnet"] if (use_ssd_noc or use_dram_noc) else ["true"]
                 TOGSimulator._split_interchiplet_log(
                     run_dir, interchiplet_stdout, phase1_basenames, phase2_basenames
                 )
+                if use_ssd_noc or use_dram_noc:
+                    TOGSimulator._validate_popnet_feedback(
+                        run_dir, interchiplet_stdout
+                    )
                 # Split every round's raw togsim.log into pure interchiplet
                 # protocol (kept as togsim.log) vs. TOGSim's own log (moved to
                 # a sibling pytorchsim.log) -- see _split_togsim_logs().
                 TOGSimulator._split_togsim_logs(run_dir)
-                # TOGSim is phase1[0] of the YAML above -> round 1, phase 1, thread 0.
-                # Round one is the result source for the normal one-shot SSD
-                # protocol path. Optional DRAM-NoC mode may execute more rounds
-                # to refine its phase-2 delays.
-                pytorchsim_log = run_dir / "proc_r1_p1_t0" / "pytorchsim.log"
-                result = pytorchsim_log.read_bytes() if pytorchsim_log.exists() else b""
+                # PopNet delay is calculated after phase1 and fed into the next
+                # round. Return the last completed round rather than round 1 so
+                # the timing result exposed to PyTorch includes that feedback.
+                round_logs = list(run_dir.glob("proc_r*_p1_t0/pytorchsim.log"))
+                def round_number(path):
+                    match = re.fullmatch(r"proc_r(\d+)_p1_t0", path.parent.name)
+                    return int(match.group(1)) if match else -1
+                pytorchsim_log = max(round_logs, key=round_number) if round_logs else None
+                result = (
+                    pytorchsim_log.read_bytes()
+                    if pytorchsim_log is not None and pytorchsim_log.exists()
+                    else b""
+                )
             else:
                 cmd = f"{TOGSimulator.get_togsim_command(config_path, togsim_path)} --models_list {trace_file_path}"
                 if extension_config.CONFIG_TOGSIM_DEBUG_LEVEL:

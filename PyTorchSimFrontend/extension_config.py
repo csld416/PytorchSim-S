@@ -156,6 +156,11 @@ def __getattr__(name):
             "SIMPLESSD_LEGOSIM_BIN",
             os.path.join(nussd_root, "SimpleSSD-Standalone", "build", "simplessd-legosim"),
         )
+    if name == "CONFIG_TOGSIM_SIMULATOR_BIN":
+        return os.environ.get(
+            "TOGSIM_SIMULATOR_BIN",
+            os.path.join(CONFIG_TORCHSIM_DIR, "TOGSim", "build", "bin", "Simulator"),
+        )
     if name == "CONFIG_SIMPLESSD_SIM_CONFIG":
         return os.environ.get(
             "SIMPLESSD_SIM_CONFIG",
@@ -175,6 +180,28 @@ def __getattr__(name):
     if name == "CONFIG_SIMPLESSD_LEGOSIM_CLOCK_RATE":
         # Runtime LegoSim time is ns; SimpleSSD's event-engine ticks are ps.
         return float(os.environ.get("SIMPLESSD_LEGOSIM_CLOCK_RATE", "1000.0"))
+    if name == "CONFIG_TOGSIM_LEGOSIM_SSD_NOC":
+        return os.environ.get("TOGSIM_LEGOSIM_SSD_NOC", "0") == "1"
+    if name == "CONFIG_LEGOSIM_SSD_NOC_ROUNDS":
+        return int(os.environ.get("TOGSIM_LEGOSIM_SSD_NOC_ROUNDS", "3"))
+    if name == "CONFIG_LEGOSIM_SSD_POPNET_TOPOLOGY":
+        return os.environ.get(
+            "TOGSIM_LEGOSIM_SSD_POPNET_TOPOLOGY",
+            os.path.join(
+                nussd_root,
+                "SimpleSSD-Standalone",
+                "topology",
+                "line_2_ufs4.gv",
+            ),
+        )
+    if name == "CONFIG_LEGOSIM_SSD_POPNET_CLOCK_RATE":
+        # The runtime bridge's common LegoSim time unit is ns. At the UFS 4.0
+        # baseline, 0.725 PopNet cycles/ns means one cycle is 1.37931 ns.
+        return float(os.environ.get("TOGSIM_LEGOSIM_SSD_POPNET_CLOCK_RATE", "0.725"))
+    if name == "CONFIG_LEGOSIM_SSD_POPNET_FLIT_WORDS":
+        # PopNet counts 64-bit words per flit. One word/cycle at the UFS clock
+        # above is 8 bytes / 1.37931 ns ~= 5.8 GB/s.
+        return int(os.environ.get("TOGSIM_LEGOSIM_SSD_POPNET_FLIT_WORDS", "1"))
     if name == "CONFIG_LEGOSIM_SSD_BANDWIDTH_GBPS":
         return float(os.environ.get("TOGSIM_LEGOSIM_SSD_BANDWIDTH_GBPS", "8.0"))
     if name == "CONFIG_LEGOSIM_SSD_BASE_LATENCY_NS":
